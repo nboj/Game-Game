@@ -32,7 +32,7 @@ public class Projectile : MonoBehaviour {
         transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z + rotation);
     }
 
-    void OnBecameInvisible() { 
+    void OnBecameInvisible() {   
         Destroy(gameObject);
     }
 }
