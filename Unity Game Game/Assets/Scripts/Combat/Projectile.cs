@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 
-public class Projectile : MonoBehaviour { 
+namespace RPG.Combat {
+    public class Projectile : MonoBehaviour { 
     [BoxGroup("Projectile Properties", centerLabel:true)]
     [SerializeField] float _projectileSpeed; 
     [BoxGroup("Projectile Properties", centerLabel:true)]
-    [SerializeField] float _projectileDamage;
-    [BoxGroup("Projectile Properties", centerLabel:true)]
-    [SerializeField] float _timeBetweenAttacks; 
+    [SerializeField] float _projectileDamage; 
     [BoxGroup("Other Properties", centerLabel:true)]
     [SerializeField] bool _hasRotation;  
     [BoxGroup("Other Properties", centerLabel:true)]
     [SerializeField] float _rotationAmount; 
     private Vector2 _projectileDirection;
-    public Vector2 ProjectileDirection {get => _projectileDirection; set => _projectileDirection = value;} 
-    public float TimeBetweenAttacks {get => _timeBetweenAttacks; set => _timeBetweenAttacks = value;} 
+    public Vector2 ProjectileDirection {get => _projectileDirection; set => _projectileDirection = value;}  
  
     private void Update() {
         transform.position += new Vector3(_projectileDirection.x, _projectileDirection.y, 0) * Time.deltaTime * _projectileSpeed;
@@ -35,4 +33,6 @@ public class Projectile : MonoBehaviour {
     void OnBecameInvisible() {   
         Destroy(gameObject);
     }
+}
+
 }

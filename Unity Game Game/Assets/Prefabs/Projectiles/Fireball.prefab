@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 865180078440634331}
-  - component: {fileID: 6511816168935830942}
+  - component: {fileID: 2340827025834033583}
   - component: {fileID: 2569263396556119498}
   m_Layer: 0
   m_Name: Fireball
@@ -33,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6511816168935830942
+--- !u!114 &2340827025834033583
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,12 +42,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2249215198371374184}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51656b086f7f1fb479820379fdb91ae7, type: 3}
+  m_Script: {fileID: 11500000, guid: bbaa1e266bfc1614e9edcc739e43b485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _projectileSpeed: 20
   _projectileDamage: 20
-  _timeBetweenAttacks: 1
+  _hasRotation: 0
+  _rotationAmount: 0
 --- !u!212 &2569263396556119498
 SpriteRenderer:
   m_ObjectHideFlags: 0
