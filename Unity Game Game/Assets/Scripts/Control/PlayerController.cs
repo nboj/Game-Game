@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Sirenix.OdinInspector; 
 using RPG.Combat;
+using RPG.Core;
 using UnityEngine.UI;
 
 namespace RPG.Control {
@@ -18,18 +19,19 @@ namespace RPG.Control {
     [LabelWidth(100)]
     [Required]
     [SerializeField] Slider[] _itemSliders;
+    [SerializeField] WeaponSO[] weapons;
     private Rigidbody2D _playerRigidbody;
     private Vector2 _playerVelocity;
-    private Animator _playerAnimator;
-    private Weapon[] _playerWeapons;
+    private Animator _playerAnimator; 
     private int _selectedWeaponIndex;
     private Fighter _playerFighter;
     private Color _originalSlotColor;
     private Color _selectedSlotColor = Color.white;
+    public int WeaponsArrayLength { get => weapons.Length; }
+    public int SelectedIndex { get => _selectedWeaponIndex; }
     private void Start() {
         _playerRigidbody = GetComponent<Rigidbody2D>();
-        _playerAnimator = GetComponent<Animator>();
-        _playerWeapons = transform.GetComponentsInChildren<Weapon>(); 
+        _playerAnimator = GetComponent<Animator>(); 
         _playerFighter = GetComponent<Fighter>(); 
         Image panel = _itemSliders[_selectedWeaponIndex].transform.parent.GetComponent<Image>();
         _originalSlotColor = panel.color;
@@ -45,7 +47,7 @@ namespace RPG.Control {
     }
 
     private void OnFire() {
-        _playerFighter.Fire(_playerWeapons[_selectedWeaponIndex], _itemSliders[_selectedWeaponIndex ]);
+        _playerFighter.FireWeapon(weapons[_selectedWeaponIndex]);
     }
 
     private void OnButton1() {
