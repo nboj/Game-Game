@@ -15,10 +15,14 @@ namespace RPG.Control {
     [Required]
     [SerializeField] float _playerSpeed = 10;
     [BoxGroup("Player Controls", centerLabel:true)]
-    [LabelText("Reload UI Sliders")]
+    [LabelText("UI Slots")]
     [LabelWidth(100)]
     [Required]
-    [SerializeField] Slider[] _itemSliders;
+    [SerializeField] Image[] itemSlots; 
+    [BoxGroup("Player Controls", centerLabel:true)]
+    [LabelText("Player Weapons")]
+    [LabelWidth(100)]
+    [Required]
     [SerializeField] WeaponSO[] weapons;
     private Rigidbody2D _playerRigidbody;
     private Vector2 _playerVelocity;
@@ -33,7 +37,7 @@ namespace RPG.Control {
         _playerRigidbody = GetComponent<Rigidbody2D>();
         _playerAnimator = GetComponent<Animator>(); 
         _playerFighter = GetComponent<Fighter>(); 
-        Image panel = _itemSliders[_selectedWeaponIndex].transform.parent.GetComponent<Image>();
+        Image panel = itemSlots[_selectedWeaponIndex];
         _originalSlotColor = panel.color;
         panel.color = _selectedSlotColor;
     }
@@ -59,11 +63,11 @@ namespace RPG.Control {
     }
  
     private void SetSelectedSlot(int slotIndex) { 
-        Image prePanel = _itemSliders[_selectedWeaponIndex].transform.parent.GetComponent<Image>();
+        Image prePanel = itemSlots[_selectedWeaponIndex];
         if(_selectedWeaponIndex == slotIndex) return; 
         prePanel.color = _originalSlotColor;
         _selectedWeaponIndex = slotIndex; 
-        Image postPanel = _itemSliders[_selectedWeaponIndex].transform.parent.GetComponent<Image>();
+        Image postPanel = itemSlots[_selectedWeaponIndex];
         postPanel.color = _selectedSlotColor;
     }
 
