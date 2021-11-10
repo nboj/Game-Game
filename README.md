@@ -11,10 +11,6 @@
     </br></br>
     <u>License</u></br>
     Feel free to Modify, redistribute but not sell this document.</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br> 
-    <details>
-        <summary>Details</summary>
-        hellowwwwwww
-    </details>
     <ul align="Left">
         <h2 align="Center"><b>Table Of Contents</b></h2></br> 
             <details>
