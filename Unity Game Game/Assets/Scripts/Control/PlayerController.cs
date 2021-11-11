@@ -23,7 +23,7 @@ namespace RPG.Control {
     [LabelText("Player Weapons")]
     [LabelWidth(100)]
     [Required]
-    [SerializeField] WeaponSO[] weapons;
+    [SerializeField] WeaponSO[] weapons; 
     private Rigidbody2D _playerRigidbody;
     private Vector2 _playerVelocity;
     private Animator _playerAnimator; 
@@ -31,6 +31,8 @@ namespace RPG.Control {
     private Fighter _playerFighter;
     private Color _originalSlotColor;
     private Color _selectedSlotColor = Color.white;
+    private Vector3 playerDirection;  
+    private bool isMoving = false;
     public int WeaponsArrayLength { get => weapons.Length; }
     public int SelectedIndex { get => _selectedWeaponIndex; }
     private void Start() {
@@ -39,10 +41,45 @@ namespace RPG.Control {
         _playerFighter = GetComponent<Fighter>(); 
         Image panel = itemSlots[_selectedWeaponIndex];
         _originalSlotColor = panel.color;
-        panel.color = _selectedSlotColor;
+        panel.color = _selectedSlotColor;  
     }
  
-    private void Update() {
+    private void Update() { 
+        playerDirection = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()) - transform.position;  
+        if (_playerVelocity.x > 0 || _playerVelocity.y > 0 || _playerVelocity.x < 0 || _playerVelocity.y < 0) { 
+            isMoving = true;
+            _playerAnimator.SetBool("isIdleDown", false);   
+           if (playerDirection.y < 0 && playerDirection.y < Mathf.Abs(playerDirection.x) && playerDirection.y < -Mathf.Abs(playerDirection.x)) {  
+                transform.localScale = new Vector3(1, 1, 1);
+                _playerAnimator.SetBool("isWalking", false);
+                _playerAnimator.SetBool("isWalkingDown", true);
+            } else if (playerDirection.x < 0) {  
+                transform.localScale = new Vector3(-1, 1, 1);
+                _playerAnimator.SetBool("isWalkingDown", false);
+                _playerAnimator.SetBool("isWalking", true);  
+            } else if (playerDirection.x >= 0) { 
+                transform.localScale = new Vector3(1, 1, 1);
+                _playerAnimator.SetBool("isWalkingDown", false);
+                _playerAnimator.SetBool("isWalking", true);   
+            }
+        }  else {
+            _playerAnimator.SetBool("isWalkingDown", false);
+            _playerAnimator.SetBool("isWalking", false);  
+            isMoving = false; 
+            if (playerDirection.y < 0 && playerDirection.y < Mathf.Abs(playerDirection.x) && playerDirection.y < -Mathf.Abs(playerDirection.x)) { 
+                _playerAnimator.SetBool("isIdleDown", true);
+                transform.localScale = new Vector3(1, 1, 1); 
+            } else if (playerDirection.x < 0) { 
+                _playerAnimator.SetBool("isIdleDown", false);
+                transform.localScale = new Vector3(-1, 1, 1);
+            } else if (playerDirection.x >= 0) { 
+                _playerAnimator.SetBool("isIdleDown", false);
+                transform.localScale = new Vector3(1, 1, 1);
+            }
+        }
+             
+        
+        
         _playerRigidbody.velocity = _playerVelocity;
     }
 
@@ -72,15 +109,8 @@ namespace RPG.Control {
     }
 
     private Vector2 GetPlayerVelocity(InputValue value) {
-        Vector2 inputAxis = value.Get<Vector2>();
-        bool isHorizontal = Mathf.Abs(inputAxis.x) > Mathf.Epsilon;
-        bool isVertical = Mathf.Abs(inputAxis.y) > Mathf.Epsilon;
-        if (isHorizontal) {
-            transform.localScale = new Vector3(Mathf.Sign(inputAxis.x), 1, 1);
-            _playerAnimator.SetBool("isWalking", true);
-        } else {
-            _playerAnimator.SetBool("isWalking", false);
-        }
+        Vector2 inputAxis = value.Get<Vector2>();    
+        
         return inputAxis * _playerSpeed;
     }
 }
