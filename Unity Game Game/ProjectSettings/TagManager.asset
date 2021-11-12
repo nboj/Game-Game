@@ -41,9 +41,30 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Projectile
-    uniqueID: 937805133
+  - name: Ground
+    uniqueID: 2882884165
+    locked: 0
+  - name: Water
+    uniqueID: 682729861
+    locked: 0
+  - name: Foreground
+    uniqueID: 1443263683
+    locked: 0
+  - name: Mountains
+    uniqueID: 3571857863
+    locked: 0
+  - name: Buildings
+    uniqueID: 3904078409
+    locked: 0
+  - name: Foreground 2
+    uniqueID: 2781520693
     locked: 0
   - name: Player
     uniqueID: 3119322565
+    locked: 0
+  - name: Projectile
+    uniqueID: 672951723
+    locked: 0
+  - name: Collider
+    uniqueID: 113545105
     locked: 0
