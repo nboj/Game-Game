@@ -5,7 +5,8 @@ using UnityEngine.InputSystem;
 using Sirenix.OdinInspector; 
 using RPG.Combat;
 using RPG.Core;
-using UnityEngine.UI;
+using UnityEngine.UI; 
+using UnityEngine.SceneManagement;
 
 namespace RPG.Control {
     public class PlayerController : MonoBehaviour {
@@ -30,6 +31,7 @@ namespace RPG.Control {
         [LabelWidth(100)]
         [Required]
         [SerializeField] WeaponSO[] weapons; 
+        private BoxCollider2D boxCollider;
         private Rigidbody2D _playerRigidbody;
         private Vector2 _playerVelocity;
         private Animator _playerAnimator; 
@@ -39,27 +41,38 @@ namespace RPG.Control {
         private Color _selectedSlotColor = Color.white;
         private Vector3 playerDirection;   
         private bool canAttack;
+        private bool canControl;
         private LastMovementState lastMovementState;
+        private int lastSceneIndex;
         public int WeaponsArrayLength { get => weapons.Length; }
         public int SelectedIndex { get => _selectedWeaponIndex; }
-
+        public bool CanAttack { get => canAttack; set => canAttack = value; }
+        public bool CanControl { get => canControl; set => canControl = value; }
         
         private void Start() {
             _playerRigidbody = GetComponent<Rigidbody2D>();
             _playerAnimator = GetComponent<Animator>(); 
             _playerFighter = GetComponent<Fighter>(); 
+            boxCollider = GetComponent<BoxCollider2D>();
             Image panel = itemSlots[_selectedWeaponIndex];
             _originalSlotColor = panel.color;
             panel.color = _selectedSlotColor;  
             canAttack = false;
+            canControl = true;
         }
     
         private void Update() { 
-            if (canAttack) {
-                PointToMouse();
-            } else {
-                MoveNormal();
+            if (canControl) {
+                if (canAttack) {
+                    PointToMouse();
+                } else {
+                    MoveNormal();
+                }
+                MovePlayer();
             }
+        }
+
+        private void MovePlayer() {  
             _playerRigidbody.velocity = _playerVelocity;
         }
 
@@ -159,6 +172,15 @@ namespace RPG.Control {
 
         private void OnButton2() { 
             SetSelectedSlot(1);
+        }
+
+        private void OnFButton() {
+            if (boxCollider.IsTouchingLayers(LayerMask.GetMask("Door"))) {
+                RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.zero, 1f); 
+                Door door = hit.collider.GetComponent<Door>();  
+                lastSceneIndex = SceneManager.GetActiveScene().buildIndex;
+                door.Travel(); 
+            }
         }
     
         private void SetSelectedSlot(int slotIndex) { 
