@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Sirenix.OdinInspector; 
@@ -15,21 +13,9 @@ namespace RPG.Control {
             DOWN,
             LEFT,
             RIGHT
-        }
-        [BoxGroup("Player Controls", centerLabel:true)]
-        [LabelText("Player Speed")]
-        [LabelWidth(100)]
-        [Required]
-        [SerializeField] float _playerSpeed = 10;
-        [BoxGroup("Player Controls", centerLabel:true)]
-        [LabelText("UI Slots")]
-        [LabelWidth(100)]
-        [Required]
-        [SerializeField] Image[] itemSlots; 
-        [BoxGroup("Player Controls", centerLabel:true)]
-        [LabelText("Player Weapons")]
-        [LabelWidth(100)]
-        [Required]
+        } 
+        [SerializeField] float _playerSpeed = 10; 
+        [SerializeField] Image[] itemSlots;  
         [SerializeField] WeaponSO[] weapons; 
         private BoxCollider2D boxCollider;
         private Rigidbody2D _playerRigidbody;
@@ -44,10 +30,16 @@ namespace RPG.Control {
         private bool canControl;
         private LastMovementState lastMovementState;
         private int lastSceneIndex;
+        private Vector2 oldPos; 
+        private bool canTeleport = false;
+        private UISlotsController uISlotsController;
+        public bool CanTeleport { get => canTeleport; set => canTeleport = value; }
         public int WeaponsArrayLength { get => weapons.Length; }
         public int SelectedIndex { get => _selectedWeaponIndex; }
         public bool CanAttack { get => canAttack; set => canAttack = value; }
         public bool CanControl { get => canControl; set => canControl = value; }
+        public int LastScene { get => lastSceneIndex; } 
+        public Vector2 OldPos { get => oldPos; set => oldPos = value; }
         
         private void Start() {
             _playerRigidbody = GetComponent<Rigidbody2D>();
@@ -59,9 +51,21 @@ namespace RPG.Control {
             panel.color = _selectedSlotColor;  
             canAttack = false;
             canControl = true;
+            lastSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            oldPos = transform.position; 
+            uISlotsController = FindObjectOfType<UISlotsController>();
+            for (int i = 0; i < weapons.Length; i++) {
+                uISlotsController.SetLeftSlot(i, weapons[i].Projectile.GetComponent<SpriteRenderer>().sprite);
+            }
         }
     
         private void Update() { 
+            if (canTeleport) {
+                if (lastSceneIndex == SceneManager.GetActiveScene().buildIndex) {
+                    canTeleport = false;
+                    canTeleportToOldPos();
+                }
+            }
             if (canControl) {
                 if (canAttack) {
                     PointToMouse();
@@ -174,22 +178,26 @@ namespace RPG.Control {
             SetSelectedSlot(1);
         }
 
-        private void OnFButton() {
-            if (boxCollider.IsTouchingLayers(LayerMask.GetMask("Door"))) {
-                RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.zero, 1f); 
-                Door door = hit.collider.GetComponent<Door>();  
-                lastSceneIndex = SceneManager.GetActiveScene().buildIndex;
-                door.Travel(); 
+        private void OnFButton() { 
+            LayerMask doorMask = LayerMask.GetMask("Door"); 
+            if (boxCollider.IsTouchingLayers(doorMask)) { 
+                RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.zero), 1f,  doorMask); 
+                Door door = hit.collider.gameObject.GetComponent<Door>();  
+                int index = SceneManager.GetActiveScene().buildIndex; 
+                Vector2 pos = transform.position; 
+                door.Travel();  
+                lastSceneIndex = index;  
             }
         }
+
+        public void canTeleportToOldPos() {  
+            transform.position = oldPos;  
+        }
     
-        private void SetSelectedSlot(int slotIndex) { 
-            Image prePanel = itemSlots[_selectedWeaponIndex];
-            if(_selectedWeaponIndex == slotIndex) return; 
-            prePanel.color = _originalSlotColor;
-            _selectedWeaponIndex = slotIndex; 
-            Image postPanel = itemSlots[_selectedWeaponIndex];
-            postPanel.color = _selectedSlotColor;
+        private void SetSelectedSlot(int slotIndex) {  
+            if(_selectedWeaponIndex == slotIndex) return;  
+            _selectedWeaponIndex = slotIndex;  
+            uISlotsController.SetLeftSelectedSlot(slotIndex);   
         }
 
         private Vector2 GetPlayerVelocity(InputValue value) {

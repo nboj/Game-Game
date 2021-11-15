@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 828860431541291950}
   - component: {fileID: 4295116548432097697}
   - component: {fileID: 1166635639076641431}
+  - component: {fileID: 1679969948452692478}
   m_Layer: 17
   m_Name: Door
   m_TagString: Untagged
@@ -47,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: 
+  sendBack: 0
 --- !u!212 &4295116548432097697
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -115,3 +117,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.50811505}
   serializedVersion: 2
   m_Radius: 1.508115
+--- !u!95 &1679969948452692478
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3404526322551535555}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0bbc5dcd3a7478b4989e37d0dbdf18f7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
