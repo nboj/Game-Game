@@ -49,7 +49,7 @@ namespace RPG.Control {
             Image panel = itemSlots[_selectedWeaponIndex];
             _originalSlotColor = panel.color;
             panel.color = _selectedSlotColor;  
-            canAttack = false;
+            canAttack = true;
             canControl = true;
             lastSceneIndex = SceneManager.GetActiveScene().buildIndex;
             oldPos = transform.position; 
@@ -172,10 +172,12 @@ namespace RPG.Control {
 
         private void OnButton1() {
             SetSelectedSlot(0);
+            OnFire();
         }
 
         private void OnButton2() { 
             SetSelectedSlot(1);
+            OnFire();
         }
 
         private void OnFButton() { 

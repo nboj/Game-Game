@@ -10,7 +10,7 @@ public class UISlotsController : MonoBehaviour {
     private int leftSelectedIndex;
     private int rightSelectedIndex;
 
-    private void Start() {
+    private void Awake() {
         leftSelectedIndex = 0;
         rightSelectedIndex = 0;
         rightSelectedSlot.sprite = emptySlot;
