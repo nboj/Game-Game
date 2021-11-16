@@ -15,8 +15,7 @@ namespace RPG.Control {
             RIGHT
         } 
         [SerializeField] float _playerSpeed = 10; 
-        [SerializeField] Image[] itemSlots;  
-        [SerializeField] WeaponSO[] weapons; 
+        [SerializeField] Image[] itemSlots;   
         [SerializeField] bool canAttack = false;
         private BoxCollider2D boxCollider;
         private Rigidbody2D _playerRigidbody;
@@ -33,8 +32,7 @@ namespace RPG.Control {
         private Vector2 oldPos; 
         private bool canTeleport = false;
         private UISlotsController uISlotsController;
-        public bool CanTeleport { get => canTeleport; set => canTeleport = value; }
-        public int WeaponsArrayLength { get => weapons.Length; }
+        public bool CanTeleport { get => canTeleport; set => canTeleport = value; } 
         public int SelectedIndex { get => _selectedWeaponIndex; }
         public bool CanAttack { get => canAttack; set => canAttack = value; }
         public bool CanControl { get => canControl; set => canControl = value; }
@@ -52,7 +50,8 @@ namespace RPG.Control {
             canControl = true;
             lastSceneIndex = SceneManager.GetActiveScene().buildIndex;
             oldPos = transform.position; 
-            uISlotsController = FindObjectOfType<UISlotsController>();
+            uISlotsController = FindObjectOfType<UISlotsController>(); 
+            WeaponSO[] weapons = _playerFighter.Weapons;
             for (int i = 0; i < weapons.Length; i++) {
                 uISlotsController.SetLeftSlot(i, weapons[i].Projectile.GetComponent<SpriteRenderer>().sprite);
             }
@@ -137,6 +136,7 @@ namespace RPG.Control {
             playerDirection = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()) - transform.position;  
             if (_playerVelocity.x > 0 || _playerVelocity.y > 0 || _playerVelocity.x < 0 || _playerVelocity.y < 0) { 
                 _playerAnimator.SetBool("isIdleDown", false);   
+                _playerAnimator.SetBool("isIdleUp", false);   
                 if (playerDirection.y < 0 && playerDirection.y < Mathf.Abs(playerDirection.x) && playerDirection.y < -Mathf.Abs(playerDirection.x)) {  
                     transform.localScale = new Vector3(1, 1, 1);
                     _playerAnimator.SetBool("isWalking", false);
@@ -187,8 +187,10 @@ namespace RPG.Control {
         }
 
         private void OnFire() {
-            if (canAttack)
-                _playerFighter.FireWeapon(weapons[_selectedWeaponIndex]);
+            if (canAttack) { 
+                Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+                _playerFighter.FireWeapon(mousePos, _selectedWeaponIndex);
+            }
         }
 
         private void OnButton1() {
