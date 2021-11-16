@@ -17,6 +17,7 @@ namespace RPG.Control {
         [SerializeField] float _playerSpeed = 10; 
         [SerializeField] Image[] itemSlots;  
         [SerializeField] WeaponSO[] weapons; 
+        [SerializeField] bool canAttack = false;
         private BoxCollider2D boxCollider;
         private Rigidbody2D _playerRigidbody;
         private Vector2 _playerVelocity;
@@ -26,7 +27,6 @@ namespace RPG.Control {
         private Color _originalSlotColor;
         private Color _selectedSlotColor = Color.white;
         private Vector3 playerDirection;   
-        private bool canAttack;
         private bool canControl;
         private LastMovementState lastMovementState;
         private int lastSceneIndex;
@@ -48,8 +48,7 @@ namespace RPG.Control {
             boxCollider = GetComponent<BoxCollider2D>();
             Image panel = itemSlots[_selectedWeaponIndex];
             _originalSlotColor = panel.color;
-            panel.color = _selectedSlotColor;  
-            canAttack = true;
+            panel.color = _selectedSlotColor;   
             canControl = true;
             lastSceneIndex = SceneManager.GetActiveScene().buildIndex;
             oldPos = transform.position; 
@@ -89,22 +88,27 @@ namespace RPG.Control {
             if (moving) {
                 _playerAnimator.SetBool("isIdle", false); 
                 _playerAnimator.SetBool("isIdleDown", false);
+                _playerAnimator.SetBool("isIdleUp", false);
                 if (isLeft) {
+                _playerAnimator.SetBool("isWalkingUp", false);
                     _playerAnimator.SetBool("isWalkingDown", false);  
                     _playerAnimator.SetBool("isWalking", true); 
                     transform.localScale = new Vector3(-1, 1, 1);
                     lastMovementState = LastMovementState.LEFT;
                 } else if (isRight) {
+                _playerAnimator.SetBool("isWalkingUp", false);
                     _playerAnimator.SetBool("isWalkingDown", false);  
                     _playerAnimator.SetBool("isWalking", true); 
                     transform.localScale = new Vector3(1, 1, 1); 
                     lastMovementState = LastMovementState.RIGHT;
                 } else if (isUp) {  
                     _playerAnimator.SetBool("isWalkingDown", false); 
-                    _playerAnimator.SetBool("isWalking", true); 
+                    _playerAnimator.SetBool("isWalking", false); 
+                    _playerAnimator.SetBool("isWalkingUp", true);
                     transform.localScale = new Vector3(1, 1, 1);
                     lastMovementState = LastMovementState.UP;
                 } else if (isDown) { 
+                _playerAnimator.SetBool("isWalkingUp", false);
                     _playerAnimator.SetBool("isWalking", false);  
                     _playerAnimator.SetBool("isWalkingDown", true); 
                     transform.localScale = new Vector3(1, 1, 1);
@@ -113,9 +117,10 @@ namespace RPG.Control {
             } else {
                 _playerAnimator.SetBool("isWalking", false);  
                 _playerAnimator.SetBool("isWalkingDown", false); 
+                _playerAnimator.SetBool("isWalkingUp", false); 
                 switch (lastMovementState) {
                     case LastMovementState.UP:
-                        _playerAnimator.SetBool("isIdle", true); 
+                        _playerAnimator.SetBool("isIdleUp", true); 
                         break;
                     case LastMovementState.DOWN:
                         _playerAnimator.SetBool("isIdleDown", true);
@@ -132,30 +137,46 @@ namespace RPG.Control {
             playerDirection = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()) - transform.position;  
             if (_playerVelocity.x > 0 || _playerVelocity.y > 0 || _playerVelocity.x < 0 || _playerVelocity.y < 0) { 
                 _playerAnimator.SetBool("isIdleDown", false);   
-            if (playerDirection.y < 0 && playerDirection.y < Mathf.Abs(playerDirection.x) && playerDirection.y < -Mathf.Abs(playerDirection.x)) {  
+                if (playerDirection.y < 0 && playerDirection.y < Mathf.Abs(playerDirection.x) && playerDirection.y < -Mathf.Abs(playerDirection.x)) {  
                     transform.localScale = new Vector3(1, 1, 1);
                     _playerAnimator.SetBool("isWalking", false);
+                    _playerAnimator.SetBool("isWalkingUp", false);
                     _playerAnimator.SetBool("isWalkingDown", true);
+                } else if (playerDirection.y > 0 && playerDirection.y > Mathf.Abs(playerDirection.x) && playerDirection.y > -Mathf.Abs(playerDirection.x)) {  
+                    transform.localScale = new Vector3(1, 1, 1);
+                    _playerAnimator.SetBool("isWalking", false);
+                    _playerAnimator.SetBool("isWalkingDown", false);
+                    _playerAnimator.SetBool("isWalkingUp", true);
                 } else if (playerDirection.x < 0) {  
                     transform.localScale = new Vector3(-1, 1, 1);
                     _playerAnimator.SetBool("isWalkingDown", false);
+                    _playerAnimator.SetBool("isWalkingUp", false);
                     _playerAnimator.SetBool("isWalking", true);  
                 } else if (playerDirection.x >= 0) { 
                     transform.localScale = new Vector3(1, 1, 1);
                     _playerAnimator.SetBool("isWalkingDown", false);
+                    _playerAnimator.SetBool("isWalkingUp", false);
                     _playerAnimator.SetBool("isWalking", true);   
                 }
             }  else {
                 _playerAnimator.SetBool("isWalkingDown", false);
                 _playerAnimator.SetBool("isWalking", false);   
+                _playerAnimator.SetBool("isWalkingUp", false);
                 if (playerDirection.y < 0 && playerDirection.y < Mathf.Abs(playerDirection.x) && playerDirection.y < -Mathf.Abs(playerDirection.x)) { 
                     _playerAnimator.SetBool("isIdleDown", true);
+                    _playerAnimator.SetBool("isIdleUp", false);
                     transform.localScale = new Vector3(1, 1, 1); 
-                } else if (playerDirection.x < 0) { 
+                } else if (playerDirection.y > 0 && playerDirection.y > Mathf.Abs(playerDirection.x) && playerDirection.y > -Mathf.Abs(playerDirection.x)) { 
                     _playerAnimator.SetBool("isIdleDown", false);
+                    _playerAnimator.SetBool("isIdle", false);   
+                    _playerAnimator.SetBool("isIdleUp", true);
+                }  else if (playerDirection.x < 0) { 
+                    _playerAnimator.SetBool("isIdleDown", false); 
+                    _playerAnimator.SetBool("isIdleUp", false);
                     transform.localScale = new Vector3(-1, 1, 1);
                 } else if (playerDirection.x >= 0) { 
                     _playerAnimator.SetBool("isIdleDown", false);
+                    _playerAnimator.SetBool("isIdleUp", false);
                     transform.localScale = new Vector3(1, 1, 1);
                 }
             } 
@@ -208,5 +229,4 @@ namespace RPG.Control {
             return inputAxis * _playerSpeed;
         }
     }
-
 }

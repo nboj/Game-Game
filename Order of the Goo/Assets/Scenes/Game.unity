@@ -15547,6 +15547,7 @@ MonoBehaviour:
   weapons:
   - {fileID: 11400000, guid: dbb54d331a71bda4abdac4ed6860a196, type: 2}
   - {fileID: 11400000, guid: 7f148759af8044b4e82f7d7e0c541f9b, type: 2}
+  canAttack: 0
 --- !u!61 &275422109
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32419,7 +32420,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7771811, y: 1}
+    m_SensorSize: {x: 1.7785016, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
