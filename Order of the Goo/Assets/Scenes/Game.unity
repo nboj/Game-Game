@@ -32420,7 +32420,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7783333, y: 1}
+    m_SensorSize: {x: 1.7783784, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -73999,6 +73999,7 @@ GameObject:
   - component: {fileID: 1818003760}
   - component: {fileID: 1818003759}
   - component: {fileID: 1818003758}
+  - component: {fileID: 1818003763}
   - component: {fileID: 1818003762}
   - component: {fileID: 1818003761}
   m_Layer: 0
@@ -74021,6 +74022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 11400000, guid: 69a17aacb6ab75f44b1c3db1abbaf3ad, type: 2}
+  willStopOnAttack: 1
 --- !u!212 &1818003759
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -74135,6 +74137,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1818003763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818003757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d45fad9737f8b0b4c998c5f1334506cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapons:
+  - {fileID: 11400000, guid: 7f148759af8044b4e82f7d7e0c541f9b, type: 2}
 --- !u!1 &1909643679
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Axe
   m_EditorClassIdentifier: 
   _projectile: {fileID: 4765591563806856710, guid: 566a0b6c243c6234cb0bcd195580c651, type: 3}
-  _reloadTime: 0.2
+  _reloadTime: 1
