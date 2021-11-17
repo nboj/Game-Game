@@ -74114,7 +74114,6 @@ GameObject:
   - component: {fileID: 1818003765}
   - component: {fileID: 1818003764}
   - component: {fileID: 1818003759}
-  - component: {fileID: 1818003762}
   - component: {fileID: 1818003761}
   m_Layer: 6
   m_Name: Enemy
@@ -74137,7 +74136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 11400000, guid: 69a17aacb6ab75f44b1c3db1abbaf3ad, type: 2}
   willStopOnAttack: 1
-  nextWaypointDistance: 3
+  nextWaypointDistance: 2
 --- !u!212 &1818003759
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -74218,7 +74217,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.49376512}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -74229,29 +74228,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 1, y: 1.0124698}
   m_EdgeRadius: 0
---- !u!50 &1818003762
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1818003757}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &1818003763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74378,7 +74356,7 @@ MonoBehaviour:
   orientation: 1
   enableRotation: 1
   autoRepath:
-    mode: 1
+    mode: 2
     interval: 0.5
     sensitivity: 10
     maximumInterval: 2
@@ -74391,7 +74369,7 @@ MonoBehaviour:
   endReachedDistance: 0.2
   alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 1
-  whenCloseToDestination: 0
+  whenCloseToDestination: 1
   constrainInsideGraph: 0
 --- !u!1 &1909643679
 GameObject:
