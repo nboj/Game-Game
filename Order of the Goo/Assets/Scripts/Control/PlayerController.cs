@@ -13,8 +13,7 @@ namespace RPG.Control {
             DOWN,
             LEFT,
             RIGHT
-        } 
-        [SerializeField] float _playerSpeed = 10; 
+        }  
         [SerializeField] Image[] itemSlots;   
         [SerializeField] bool canAttack = false;
         private BoxCollider2D boxCollider;
@@ -32,6 +31,7 @@ namespace RPG.Control {
         private Vector2 oldPos; 
         private bool canTeleport = false;
         private UISlotsController uISlotsController;
+        private Mover mover;
         public bool CanTeleport { get => canTeleport; set => canTeleport = value; } 
         public int SelectedIndex { get => _selectedWeaponIndex; }
         public bool CanAttack { get => canAttack; set => canAttack = value; }
@@ -44,6 +44,7 @@ namespace RPG.Control {
             _playerAnimator = GetComponent<Animator>(); 
             _playerFighter = GetComponent<Fighter>(); 
             boxCollider = GetComponent<BoxCollider2D>();
+            mover = GetComponent<Mover>();
             Image panel = itemSlots[_selectedWeaponIndex];
             _originalSlotColor = panel.color;
             panel.color = _selectedSlotColor;   
@@ -75,7 +76,7 @@ namespace RPG.Control {
         }
 
         private void MovePlayer() {  
-            _playerRigidbody.velocity = _playerVelocity;
+            mover.SetDirection(_playerVelocity);
         }
 
         private void MoveNormal() { 
@@ -183,7 +184,7 @@ namespace RPG.Control {
         }
 
         private void OnMove(InputValue value) { 
-            _playerVelocity = GetPlayerVelocity(value);
+            _playerVelocity = value.Get<Vector2>();
         }
 
         private void OnFire() {
@@ -223,12 +224,6 @@ namespace RPG.Control {
             if(_selectedWeaponIndex == slotIndex) return;  
             _selectedWeaponIndex = slotIndex;  
             uISlotsController.SetLeftSelectedSlot(slotIndex);   
-        }
-
-        private Vector2 GetPlayerVelocity(InputValue value) {
-            Vector2 inputAxis = value.Get<Vector2>();    
-            
-            return inputAxis * _playerSpeed;
-        }
+        } 
     }
 }

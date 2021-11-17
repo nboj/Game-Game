@@ -15367,6 +15367,7 @@ GameObject:
   - component: {fileID: 275422103}
   - component: {fileID: 275422108}
   - component: {fileID: 275422107}
+  - component: {fileID: 275422110}
   - component: {fileID: 275422102}
   - component: {fileID: 275422101}
   - component: {fileID: 275422106}
@@ -15544,7 +15545,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a2b7537d5b7a1428948faa2f01c89a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerSpeed: 9
   itemSlots:
   - {fileID: 759647350}
   canAttack: 0
@@ -15574,6 +15574,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7055962, y: 0.20610285}
   m_EdgeRadius: 0
+--- !u!114 &275422110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275422100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97489f283b04dac47938a2903c745dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 9
 --- !u!1 &346130067
 GameObject:
   m_ObjectHideFlags: 0
@@ -73999,6 +74012,8 @@ GameObject:
   - component: {fileID: 1818003760}
   - component: {fileID: 1818003758}
   - component: {fileID: 1818003763}
+  - component: {fileID: 1818003765}
+  - component: {fileID: 1818003764}
   - component: {fileID: 1818003759}
   - component: {fileID: 1818003762}
   - component: {fileID: 1818003761}
@@ -74151,6 +74166,59 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapons:
   - {fileID: 11400000, guid: 7f148759af8044b4e82f7d7e0c541f9b, type: 2}
+--- !u!114 &1818003764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818003757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d7b55c7ecdb49a4a89fa5e6f9022861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startWhenEnabled: 1
+  asynchronousLoad: 0
+  pauseWhenDisabled: 0
+  restartWhenComplete: 1
+  logTaskChanges: 0
+  group: 0
+  resetValuesOnRestart: 0
+  externalBehavior: {fileID: 0}
+  mBehaviorSource:
+    behaviorName: Enemy Behavior
+    behaviorDescription: 
+    mTaskData:
+      types: []
+      parentIndex: 
+      startIndex: 
+      variableStartIndex: 
+      JSONSerialization: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(384.5,30)"},"ID":0,"Name":"Entry","Instant":true}}'
+      fieldSerializationData:
+        typeName: []
+        fieldNameHash: 
+        startIndex: 
+        dataPosition: 
+        unityObjects: []
+        byteData: 
+        byteDataArray: 
+      Version: 1.7.1
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
+--- !u!114 &1818003765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818003757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97489f283b04dac47938a2903c745dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 8
 --- !u!1 &1909643679
 GameObject:
   m_ObjectHideFlags: 0

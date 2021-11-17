@@ -10,27 +10,42 @@ namespace RPG.Core {
         private Fighter fighter;
         private new Rigidbody2D rigidbody;
         private PlayerController player;
+        EnemyState activeState; 
+        public EnemyState ActiveState { get => activeState; set => activeState = value; }
+        public int SelectedIndex { get => selectedWeaponIndex; }
+        public PlayerController Player { get => player; }   
+        public enum EnemyState {
+            CHASE,
+            ATTACK,
+            RUN,
+            IDLE
+        } 
 
         private void Start() {
             player = FindObjectOfType<PlayerController>();
             rigidbody = GetComponent<Rigidbody2D>();
             fighter = GetComponent<Fighter>();
             selectedWeaponIndex = 0;
+            activeState = EnemyState.IDLE;  
         }
 
         private void Update() {
             float playerDistance = Vector2.Distance(player.transform.position, transform.position);
             if (playerDistance <= enemy.ChaseDistance && playerDistance > enemy.AttackDistance) { 
-                MoveToward(player.transform.position);
+                //MoveToward(player.transform.position);
+                activeState = EnemyState.CHASE;
             } else if (playerDistance <= enemy.AttackDistance && playerDistance > enemy.RepelDistance) {
-                if (willStopOnAttack) {
-                    StopMoving();
-                } 
-                fighter.FireWeapon(player.transform.position, selectedWeaponIndex);
+                activeState = EnemyState.ATTACK;
+                // if (willStopOnAttack) {
+                //     StopMoving();
+                // } 
+                // fighter.FireWeapon(player.transform.position, selectedWeaponIndex);
             } else if (playerDistance <= enemy.RepelDistance) {
-                MoveAway(player.transform.position);
+                activeState = EnemyState.RUN;
+                // MoveAway(player.transform.position);
             } else {
-                StopMoving();
+                activeState = EnemyState.IDLE;
+                // StopMoving();
             }
         }
 
