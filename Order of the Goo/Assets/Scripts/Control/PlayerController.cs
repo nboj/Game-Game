@@ -13,7 +13,7 @@ namespace RPG.Control {
             DOWN,
             LEFT,
             RIGHT
-        }  
+        }
         [SerializeField] Image[] itemSlots;   
         [SerializeField] bool canAttack = false;
         private BoxCollider2D boxCollider;

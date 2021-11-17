@@ -6,16 +6,17 @@ using UnityEngine;
 public class ShouldAttack : Conditional {
     public SharedGameObject player;
     private AIController ai;
+    private Mover mover;
 
     public override void OnStart() {
-        ai = GetComponent<AIController>();   
+        ai = GetComponent<AIController>();
+        mover = GetComponent<Mover>();
     }
 
     public override TaskStatus OnUpdate()
-    {  
-        if (ai.ActiveState == AIController.EnemyState.ATTACK)
-            return TaskStatus.Success;
-        else 
-            return TaskStatus.Failure;
+    {
+        if (ai.ActiveState == AIController.EnemyState.ATTACK) 
+            return TaskStatus.Success; 
+        return TaskStatus.Failure;
     }
 }

@@ -5,18 +5,15 @@ using RPG.Core;
 
 public class Attack : Action {
     private Fighter fighter;
-    private AIController ai;
-    private Mover mover;
+    private AIController ai; 
     public override void OnStart() {
         fighter = GetComponent<Fighter>();
-        ai = GetComponent<AIController>();
-        mover = GetComponent<Mover>();
+        ai = GetComponent<AIController>(); 
     }
 
     public override TaskStatus OnUpdate()
     { 
-        fighter.FireWeapon(ai.Player.transform.position, ai.SelectedIndex);
-        mover.StopMoving();
+        fighter.FireWeapon(ai.Player.transform.position, ai.SelectedIndex); 
         if (ai.ActiveState != AIController.EnemyState.ATTACK)
             return TaskStatus.Success;
         else

@@ -16,8 +16,11 @@ public class MoveTo : Action {
     public override TaskStatus OnUpdate() {
         mover.SetDirection(player.Value.transform.position - mover.transform.position);
         if (ai.ActiveState != AIController.EnemyState.CHASE)
+        {
+            mover.StopMoving();
             return TaskStatus.Success;
-        else { 
+        }
+        else {  
             return TaskStatus.Running;
         }
     }
