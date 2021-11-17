@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaseDistance: 13.13
   attackDistance: 9
-  enemySpeed: 3000
+  enemySpeed: 183.7
   repelDistance: 2.77
   enemySprite: {fileID: -960961372, guid: 2f982f58ccc2ea04f8fceaf40595c564, type: 3}
