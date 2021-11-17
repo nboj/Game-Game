@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 15442327}
   - component: {fileID: 15442326}
   - component: {fileID: 15442325}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15601,7 +15601,7 @@ GameObject:
   - component: {fileID: 346130073}
   - component: {fileID: 346130072}
   - component: {fileID: 346130071}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30951,7 +30951,7 @@ GameObject:
   - component: {fileID: 373778485}
   - component: {fileID: 373778484}
   - component: {fileID: 373778483}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32433,7 +32433,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7771811, y: 1}
+    m_SensorSize: {x: 1.7787308, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -68624,7 +68624,7 @@ GameObject:
   - component: {fileID: 1128911833}
   - component: {fileID: 1128911835}
   - component: {fileID: 1128911834}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mountains
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70601,7 +70601,7 @@ GameObject:
   - component: {fileID: 1244356468}
   - component: {fileID: 1244356467}
   - component: {fileID: 1244356466}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Foreground 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74017,7 +74017,7 @@ GameObject:
   - component: {fileID: 1818003759}
   - component: {fileID: 1818003762}
   - component: {fileID: 1818003761}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74266,7 +74266,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1978433181}
   - component: {fileID: 1978433180}
-  m_Layer: 0
+  - component: {fileID: 1978433182}
+  m_Layer: 16
   m_Name: Testing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74285,6 +74286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 194f0ce3a13e4841a9bda1fe7e3c3b0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gridSize: {x: 77, y: 53}
+  cellSize: 1
 --- !u!4 &1978433181
 Transform:
   m_ObjectHideFlags: 0
@@ -74293,13 +74296,39 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978433179}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -32, y: -26.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1978433182
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978433179}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 38.27964, y: 26.277374}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 76.55928, y: 52.55475}
+  m_EdgeRadius: 0
 --- !u!4 &1980631145 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6750797866480197807, guid: 0fbc8ede32b4dda49a4deb63314bcf65, type: 3}
