@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 555f93997c8eb7b4ea86c824f204e74c, type: 3}
-  m_Name: Axe
+  m_Script: {fileID: 11500000, guid: 61414b6455539c14ea94bab15cfe5418, type: 3}
+  m_Name: Door Enemy
   m_EditorClassIdentifier: 
-  _projectile: {fileID: 4765591563806856710, guid: 566a0b6c243c6234cb0bcd195580c651, type: 3}
-  _reloadTime: 1
+  chaseDistance: 13.13
+  attackDistance: 9
+  enemySpeed: 3000
+  repelDistance: 2.77
+  enemySprite: {fileID: -960961372, guid: 2f982f58ccc2ea04f8fceaf40595c564, type: 3}
