@@ -13,7 +13,7 @@ public class Attack : Action {
 
     public override TaskStatus OnUpdate()
     { 
-        fighter.FireWeapon(ai.Player.transform.position, ai.SelectedIndex); 
+        fighter.FireWeapon(ai.Player.transform.position); 
         if (ai.ActiveState != AIController.EnemyState.ATTACK)
             return TaskStatus.Success;
         else

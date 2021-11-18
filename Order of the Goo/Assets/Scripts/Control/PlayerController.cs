@@ -16,8 +16,7 @@ namespace RPG.Control {
         }
         [SerializeField] Image[] itemSlots;   
         [SerializeField] bool canAttack = false;
-        private BoxCollider2D boxCollider;
-        private Rigidbody2D _playerRigidbody;
+        private BoxCollider2D boxCollider; 
         private Vector2 _playerVelocity;
         private Animator _playerAnimator; 
         private int _selectedWeaponIndex;
@@ -39,8 +38,7 @@ namespace RPG.Control {
         public int LastScene { get => lastSceneIndex; } 
         public Vector2 OldPos { get => oldPos; set => oldPos = value; }
         
-        private void Start() {
-            _playerRigidbody = GetComponent<Rigidbody2D>();
+        private void Start() { 
             _playerAnimator = GetComponent<Animator>(); 
             _playerFighter = GetComponent<Fighter>(); 
             boxCollider = GetComponent<BoxCollider2D>();
@@ -190,7 +188,7 @@ namespace RPG.Control {
         private void OnFire() {
             if (canAttack) { 
                 Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-                _playerFighter.FireWeapon(mousePos, _selectedWeaponIndex);
+                _playerFighter.FireWeapon(mousePos);
             }
         }
 
@@ -220,7 +218,8 @@ namespace RPG.Control {
             transform.position = oldPos;  
         }
     
-        private void SetSelectedSlot(int slotIndex) {  
+        private void SetSelectedSlot(int slotIndex) {
+            _playerFighter.SelectedWeaponIndex = slotIndex;
             if(_selectedWeaponIndex == slotIndex) return;  
             _selectedWeaponIndex = slotIndex;  
             uISlotsController.SetLeftSelectedSlot(slotIndex);   
