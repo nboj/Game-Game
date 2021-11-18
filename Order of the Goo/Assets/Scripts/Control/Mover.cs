@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour {
     [SerializeField] float moveSpeed;
+    [SerializeField] private MoverState currentState = MoverState.NORMAL;
     private Rigidbody2D rb;
     private Vector2 velocity;
-    private MoverState currentState;
     private AIPath path;
     private float startTime;
     private bool shouldRepeatPath;
@@ -22,14 +22,9 @@ public class Mover : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         path = GetComponent<AIPath>();
         shouldRepeatPath = false;
-        if (rb == null) {
-            currentState = MoverState.ASTAR;
-            startTime = Time.time;
-
-        } else {
-            currentState = MoverState.NORMAL;
-            StopMoving();
-        } 
+        startTime = Time.time; 
+        if (path != null)
+            StopMoving(); 
     }
 
     private void Update() {
@@ -71,7 +66,6 @@ public class Mover : MonoBehaviour {
     private void UpdatePath() {
         bool delayFulfilled = Time.time - startTime >= delay;
         if (delayFulfilled) {
-            Debug.Log(destinationObject.transform.position);
             MoveUsingAStar(destinationObject.transform.position);
             startTime = Time.time;
         }
