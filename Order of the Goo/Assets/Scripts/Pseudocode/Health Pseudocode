@@ -1,0 +1,84 @@
+This class will be used to display vfx for an objects health 
+and control anything that has to do with health. The object will 
+set a health amount at the start, and other classes will be able
+to access and deduct the health amount until it reaches zero.
+
+
+START
+    [SerializeField] a number called totalHealth
+    [SerializeField] make a UI Slider for the health display
+    [SerializeField] float fadeOutDelay
+    Animator called animator
+    boolean called shouldDisplay
+    number called maxHealth
+    DisplayState called currentState
+    number called startTime
+    boolean called isDead
+    
+    ENUM DisplayState
+        FADED,
+        SHOWN,
+        IDLE,
+        NONE
+    ENDENUM
+    
+    VOID Start()
+        find component for animator
+        initialize maxHealth to totalHealth
+        initialize isDead to false
+        initialize startTime to the current time
+        IF shouldDisplay is false 
+            currentState = NONE
+        ENDIF
+    END
+    
+    VOID Update()
+        IF DEAD
+            return;
+        ENDIF 
+        call HandleDisplay() method
+    END
+    
+    VOID HandleDisplay()
+        IF currentState = SHOWN
+            call ShowDisplay() method
+            startTime = the current time
+            currentState = IDLE
+        ELSEIF currentState = IDLE
+            IF the current time - startTime is greater than or equal to the fadeOutDelay
+                call HideDisplay() method
+                currentState = FADED
+            ENDIF
+        ENDIF
+    END
+    
+    VOID ShowDisplay()  
+        play fade in animation
+    END
+    
+    VOID HideDisplay() 
+        play fade out animation
+    END
+    
+    VOID TakeDamage(num amount)
+        Subtract amount from totalHealth
+        IF totalHealth is below zero
+            call HandleDeath(); 
+        ENDIF
+        IF currentState != NONE
+            set currentState = SHOWN
+        ENDIF
+    END 
+    
+    VOID Heal(num amount)
+        Add amount to totalHealth;
+        IF totalHealth is greater than maxHealth
+            set totalHealth equal to maxHealth
+        ENDIF
+    END 
+    
+    VOID HandleDeath() 
+        isDead = true
+        delete the canvas UI
+    END
+END

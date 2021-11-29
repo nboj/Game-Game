@@ -1,49 +1,37 @@
-using System.Collections; 
+using RPG.Combat; 
 using UnityEngine; 
-using RPG.Core; 
 
-namespace RPG.Combat {
-    public class Fighter : MonoBehaviour {
-        [SerializeField] WeaponSO[] weapons;
-        private int selectedWeaponIndex;
-
-        public WeaponSO[] Weapons {
-            get => weapons;
-            set => weapons = value;
-        }
-
-        public int SelectedWeaponIndex {
-            get => selectedWeaponIndex;
-            set => selectedWeaponIndex = value;
-        }
-
-        private bool[] canFire;
-
-        private void Start() {
-            selectedWeaponIndex = 0;
-            canFire = new bool[weapons.Length];
-            for (int i = 0; i < weapons.Length; i++) {
-                canFire[i] = true;
-            }
-        }
-
-        public void FireWeapon(Vector2 target) {
-            if (canFire[SelectedWeaponIndex]) {
-                StartCoroutine(WaitToFire(weapons[SelectedWeaponIndex], target));
-            }
-        }
-
-        private IEnumerator WaitToFire(WeaponSO weapon, Vector2 target) {
-            var index = selectedWeaponIndex;
-            canFire[index] = false;
-            var projectileDirection = (target - new Vector2(transform.position.x, transform.position.y)).normalized;
-            var projectileObject = Instantiate(weapon.Projectile, transform.position, Quaternion.identity);
-            var projectile = projectileObject.GetComponent<Projectile>();
-            var secondsToWait = weapon.ReloadTime;
-            projectile.SetRotation(projectileDirection);
-            projectile.ProjectileDirection = projectileDirection;
-            yield return new WaitForSeconds(secondsToWait);
-            canFire[index] = true;
-        }
+public class Fighter : MonoBehaviour {
+    public void FireRanged(Vector2 target, RangedWeapon_SO weapon) {
+        var projectileObject = Instantiate(weapon.Projectile, transform.position, weapon.Projectile.transform.rotation);
+        var projectile = projectileObject.GetComponent<Projectile>();
+        SetupProjectile(projectile, weapon, target);
+        Debug.Log("Fired Ranged");
     }
-}
+    
+    public void FireMagic(Vector2 target, MagicWeapon_SO weapon) {
+        if (weapon.RangedMagic) {
+            var projectileObject = Instantiate(weapon.MagicProjectile, transform.position, weapon.MagicProjectile.transform.rotation);
+            var projectile = projectileObject.GetComponent<MagicProjectile>();
+            projectile.MagicWeapon = weapon;
+            SetupProjectile(projectile, weapon, target);
+            projectile.SetupTracking();
+        }
+        Debug.Log("Fired Magic");
+    }
+    
+    public void FireMelee(Vector2 target, MeleeWeapon_SO weapon) {
+        Debug.Log("Fired Melee");
+    } 
+    
+    private float GetDamage(Vector2 damageRange) {
+        return Random.Range(damageRange.x, damageRange.y);
+    }
+
+    private void SetupProjectile(Projectile projectile, RangedWeapon_SO weapon, Vector2 target) { 
+        projectile.Parent = gameObject;
+        projectile.CalculateDamage = ()=>GetDamage(weapon.DamageRange);
+        projectile.RangedWeapon = weapon; 
+        projectile.SetRotation(target);
+    }
+} 

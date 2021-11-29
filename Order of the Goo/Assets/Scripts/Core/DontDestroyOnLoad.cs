@@ -1,5 +1,4 @@
-using UnityEngine;
-using RPG.Control;
+using UnityEngine; 
 
 public class DontDestroyOnLoad : MonoBehaviour {
     private void Awake() {

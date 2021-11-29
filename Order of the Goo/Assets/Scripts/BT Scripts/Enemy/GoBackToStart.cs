@@ -1,25 +1,22 @@
 using BehaviorDesigner.Runtime.Tasks;
-using BehaviorDesigner.Runtime;
-using RPG.Core;
+using BehaviorDesigner.Runtime; 
 using UnityEngine;
 
 public class GoBackToStart : Action {
-    [SerializeField] private SharedGameObject player;
-    private Mover mover;
-    private AIController ai;
+    private AStarMovement aStarMovement;
+    private Enemy enemy;
     public override void OnStart() {
-        mover = GetComponent<Mover>();
-        ai = GetComponent<AIController>();
-        mover.StartAStar();
+        enemy = GetComponent<Enemy>();
+        aStarMovement = enemy.ASMovement;
+        aStarMovement.StartAStar();
     }
 
     public override TaskStatus OnUpdate() {
-        if (ai.ActiveState == AIController.EnemyState.IDLE) {
-            mover.MoveUsingAStar(ai.StartPosition);
+        if (enemy.CurrentState == Enemy.EnemyState.RETURN) {
+            aStarMovement.MoveUsingAStar(enemy.StartPos);
             return TaskStatus.Running;
-        } else {
-            mover.StopAStar();
-            return TaskStatus.Success;
         }
+        aStarMovement.StopAStar();
+        return TaskStatus.Failure; 
     }
 }

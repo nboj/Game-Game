@@ -1,7 +1,6 @@
 using UnityEngine; 
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
-using RPG.Control;
+using UnityEngine.SceneManagement; 
 
 public class Door : MonoBehaviour {
     [SerializeField] string sceneToLoad;
@@ -9,11 +8,11 @@ public class Door : MonoBehaviour {
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private bool canTravel;
-    private PlayerController player; 
+    private Player player; 
 
     private void Awake() { 
         spriteRenderer =  GetComponent<SpriteRenderer>();
-        player = FindObjectOfType<PlayerController>();
+        player = FindObjectOfType<Player>();
         canTravel = false;
         if (sendBack) {
             player.transform.position = transform.position;
@@ -36,10 +35,10 @@ public class Door : MonoBehaviour {
     public void Travel() {
         if ((sceneToLoad.Length > 0 || sendBack) && canTravel) {  
             if (sendBack) {
-                SceneManager.LoadScene(player.LastScene);
-                player.CanTeleport = true;
+                // SceneManager.LoadScene(player.LastScene);
+                // player.CanTeleport = true;
             } else { 
-                player.OldPos = player.transform.position;
+                // player.OldPos = player.transform.position;
                 SceneManager.LoadScene(sceneToLoad);  
             }
         } else {

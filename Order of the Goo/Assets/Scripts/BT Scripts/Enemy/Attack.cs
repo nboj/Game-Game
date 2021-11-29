@@ -1,22 +1,21 @@
-using BehaviorDesigner.Runtime.Tasks; 
-using RPG.Combat;
-using UnityEngine;
-using RPG.Core;
+using BehaviorDesigner.Runtime;
+using BehaviorDesigner.Runtime.Tasks;
 
 public class Attack : Action {
+    public SharedGameObject player;
+
     private Fighter fighter;
-    private AIController ai; 
+    private Enemy enemy;
+
     public override void OnStart() {
         fighter = GetComponent<Fighter>();
-        ai = GetComponent<AIController>(); 
+        enemy = GetComponent<Enemy>();
     }
 
-    public override TaskStatus OnUpdate()
-    { 
-        fighter.FireWeapon(ai.Player.transform.position); 
-        if (ai.ActiveState != AIController.EnemyState.ATTACK)
-            return TaskStatus.Success;
-        else
-            return TaskStatus.Running;
+    public override TaskStatus OnUpdate() {
+        if (enemy.CurrentState != Enemy.EnemyState.ATTACK)
+            return TaskStatus.Failure;
+        enemy.Fire(player.Value.transform.position);
+        return TaskStatus.Running;
     }
 }
