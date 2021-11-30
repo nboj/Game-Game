@@ -14,7 +14,7 @@ public class AggressiveCreature : Creature {
         base.Start(); 
         fighter = GetComponent<Fighter>(); 
         UpdateReloadTimes();
-    }
+    } 
 
     protected internal void UpdateReloadTimes() {
         reloadDelays.Clear();

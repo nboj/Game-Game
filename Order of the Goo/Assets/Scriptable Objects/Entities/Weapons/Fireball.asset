@@ -22,11 +22,12 @@ MonoBehaviour:
   weaponRange: 0
   hasSplashDamage: 0
   fireRate: 2
+  splashRadius: 3
   projectile: {fileID: 8680156474138054269, guid: eb301ff53f2d4624298e893bc4837926, type: 3}
   projectileSpeed: 21.08
   hasRotation: 0
   rotationSpeed: 23.26
-  deathParticles: {fileID: 8046980770682324509, guid: 66e9a6aa585f44d478e077de503159ad, type: 3}
+  deathParticles: {fileID: 3413711713588093412, guid: 945dd49996c212249a1bdd86a8201bf1, type: 3}
   rangedMagic: 1
   magicProjectile: {fileID: 8680156474138054269, guid: eb301ff53f2d4624298e893bc4837926, type: 3}
   trackTarget: 1

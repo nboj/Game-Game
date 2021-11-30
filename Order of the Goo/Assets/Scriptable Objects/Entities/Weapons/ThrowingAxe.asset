@@ -22,8 +22,9 @@ MonoBehaviour:
   weaponRange: 0
   hasSplashDamage: 0
   fireRate: 0.2
+  splashRadius: 0
   projectile: {fileID: 4765591563806856710, guid: 566a0b6c243c6234cb0bcd195580c651, type: 3}
-  projectileSpeed: 1.6
-  hasRotation: 0
-  rotationSpeed: 49.64
+  projectileSpeed: 14.57
+  hasRotation: 1
+  rotationSpeed: -3.6
   deathParticles: {fileID: 0}

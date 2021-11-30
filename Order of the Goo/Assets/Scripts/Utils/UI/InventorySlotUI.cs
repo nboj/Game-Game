@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ItemSlot : MonoBehaviour, IDropHandler {
+public class InventorySlotUI : MonoBehaviour, IDropHandler {
     public void OnDrop(PointerEventData eventData) {
         var dataObj = eventData.pointerDrag.gameObject;
         var dataObjItem = dataObj.GetComponent<Item>();

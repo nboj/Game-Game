@@ -51,7 +51,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "FButton",
+                    "name": "F",
                     "type": "Button",
                     "id": "f41b3fc4-64d0-465a-acc8-1fde580ff983",
                     "expectedControlType": "Button",
@@ -337,7 +337,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "FButton",
+                    "action": "F",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

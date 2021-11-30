@@ -88,6 +88,14 @@ public class Player : AggressiveCreature {
             Fire(target); 
         }
     }
+
+    private void OnF() {
+        var hit = Physics2D.OverlapPoint(transform.position, LayerMask.GetMask("Portal"));
+        if (hit != null) {
+            var portal = hit.GetComponent<Portal>();
+            portal.Teleport();
+        }
+    }
     #endregion
 
     private new void SetSelectedIndex(int index) { 
