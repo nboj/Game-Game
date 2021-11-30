@@ -35330,7 +35330,7 @@ MonoBehaviour:
   sliderPrefab: {fileID: 947116971}
   totalHealth: 100
   fadeOutDelay: 3
-  yOffset: 0
+  yOffset: 1.62
   displayHealthBorder: 0
   useCustomSlider: 1
 --- !u!114 &633014493
@@ -81097,6 +81097,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1274333453}
     m_Modifications:
+    - target: {fileID: 8934044209366748334, guid: 2f95ad4994f17734faee2b889cc5c042, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8934044209366748334, guid: 2f95ad4994f17734faee2b889cc5c042, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.44
+      objectReference: {fileID: 0}
     - target: {fileID: 8934044209768380134, guid: 2f95ad4994f17734faee2b889cc5c042, type: 3}
       propertyPath: m_RootOrder
       value: 0
