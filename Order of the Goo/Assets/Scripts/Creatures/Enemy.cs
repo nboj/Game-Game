@@ -3,7 +3,7 @@ using Pathfinding;
 using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D), typeof(AIPath))]
 public class Enemy : AggressiveCreature {
-    [SerializeField] private EnemySO enemy;
+    [SerializeField] private Enemy_SO enemy;
     private EnemyState currentState;
     private Player player;
     private Vector2 startPos;
