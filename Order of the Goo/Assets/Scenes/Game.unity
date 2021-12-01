@@ -35281,6 +35281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creatureSpeed: 9
+  creature_SO: {fileID: 11400000, guid: 2f447f7f84f4a2a4fa5516fba972db72, type: 2}
   weapons:
   - {fileID: 11400000, guid: 13ab669d829cc9c4791b5653b019bd4a, type: 2}
   - {fileID: 11400000, guid: f2e814b017d0d0045b70207251bf3ae6, type: 2}
@@ -73281,9 +73282,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creatureSpeed: 5
+  creature_SO: {fileID: 0}
   weapons:
   - {fileID: 11400000, guid: 13ab669d829cc9c4791b5653b019bd4a, type: 2}
-  enemy: {fileID: 11400000, guid: 69a17aacb6ab75f44b1c3db1abbaf3ad, type: 2}
+  enemy: {fileID: 11400000, guid: ffc3a3f89fac92b47b2de7b2144c4dd5, type: 2}
 --- !u!95 &1023669979
 Animator:
   serializedVersion: 4

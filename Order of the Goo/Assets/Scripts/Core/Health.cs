@@ -10,7 +10,6 @@ public class Health : MonoBehaviour {
 
     public event DeathAction OnDeath;
     [SerializeField] private GameObject sliderPrefab;
-    [SerializeField] private float totalHealth = 100f;
     [Header("Healthbar Settings")] 
     [SerializeField] private float fadeOutDelay = 3;
     [SerializeField] private float yOffset;
@@ -26,6 +25,7 @@ public class Health : MonoBehaviour {
     private bool isDead;
     private GameObject sliderObject;
     private Slider slider;
+    private float totalHealth;
 
     public bool IsDead {
         get => isDead; 
@@ -38,7 +38,17 @@ public class Health : MonoBehaviour {
         CUSTOM
     }
 
-    private void Start() {
+    private void Start() { 
+        var creature = GetComponent<Creature>();
+        var diceType = creature.CreatureSO.DiceType;
+        var rawModifier = creature.CreatureSO.Constitution - 10;
+        var modifier = rawModifier != 0 ? rawModifier / 2: 0;
+        var levels = creature.CreatureSO.Level;
+        for (int i = 0; i < levels; i++) {
+            totalHealth += creature.GetDiceValue(diceType);
+        }
+        totalHealth += modifier;
+        Debug.Log(totalHealth);
         maxHealth = totalHealth;
         isDead = false;
         startTime = 0;

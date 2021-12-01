@@ -13,6 +13,7 @@ public class Enemy : AggressiveCreature {
 
     public override void Start() {
         base.Start();
+        CreatureSO = enemy;
         player = FindObjectOfType<Player>();
         currentState = EnemyState.IDLE;
         startPos = transform.position;

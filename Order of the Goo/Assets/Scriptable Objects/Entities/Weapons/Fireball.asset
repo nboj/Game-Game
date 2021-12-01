@@ -18,9 +18,8 @@ MonoBehaviour:
   pickupRadius: 0
   description: 
   weaponSprite: {fileID: 21300000, guid: 71395e5bceb56fa46a3d4e75705446d8, type: 3}
-  damageRange: {x: 24.09, y: 34.55}
   weaponRange: 0
-  hasSplashDamage: 0
+  hasSplashDamage: 1
   fireRate: 2
   splashRadius: 3
   projectile: {fileID: 8680156474138054269, guid: eb301ff53f2d4624298e893bc4837926, type: 3}

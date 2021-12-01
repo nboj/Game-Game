@@ -7,12 +7,17 @@ namespace RPG.Combat {
         private RangedWeapon_SO rangedWeapon;
         private Vector2 projectileDirection;
         private Vector2 target;
-        private Rigidbody2D rb;
-        private Func<float> calculateDamage;
+        private Rigidbody2D rb; 
         private float startRotation;
+        private event OnHit onHit;
 
         public virtual void Start() { 
             rb = GetComponent<Rigidbody2D>();
+        }
+
+        public OnHit OnHit {
+            get => onHit;
+            set => onHit = value;
         }
 
         protected Rigidbody2D RB => rb;
@@ -20,11 +25,7 @@ namespace RPG.Combat {
         public Vector2 Target {
             get => target;
             set => target = value;
-        }   
-
-        public Func<float> CalculateDamage {
-            set => calculateDamage = value;
-        }
+        }    
 
         public Vector2 ProjectileDirection {
             get => projectileDirection;
@@ -77,13 +78,13 @@ namespace RPG.Combat {
                 for (int i = 0; i < hit.Length; i++) {
                     var health = hit[i].GetComponent<Health>();
                     if (health != null && health.gameObject != parent) {
-                        health.TakeDamage(calculateDamage());
+                        onHit(hit[i].gameObject);
                     }
                 } 
             } else {
                 Health health = collider.gameObject.GetComponent<Health>();
                 if (health != null) {
-                    health.TakeDamage(calculateDamage());
+                    onHit(health.gameObject);
                 }
             }
             PlayDeath();
