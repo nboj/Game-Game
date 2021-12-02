@@ -6,6 +6,8 @@ public class ItemSlot : MonoBehaviour, IDragContainer<DragItem>, IDropHandler {
     private int index;
     private Inventory inventory;
 
+    public int Index => index;
+
     public void AddItem(DragItem item) {
         item.transform.SetParent(transform);
         item.transform.position = transform.position;
@@ -13,18 +15,17 @@ public class ItemSlot : MonoBehaviour, IDragContainer<DragItem>, IDropHandler {
     }
 
     public void RemoveItem() { 
+        inventory.RemoveItem(index);
     }
 
-    public void Setup(Inventory inventory, int index, Item item, Canvas canvas) {
+    public void Setup(Inventory inventory, int index, Item itemPrefab, Canvas canvas) {
         this.inventory = inventory;
         this.index = index;
         var entity = inventory.GetEntity(index);
-        if (entity != null) {
-            Debug.Log(entity as Weapon_SO);
-            var itemOb = Instantiate(item, transform);
+        if (entity != null) { 
+            var itemOb = Instantiate(itemPrefab, transform); 
             itemOb.Entity = entity;
-            itemOb.GetComponent<Image>().sprite = item.Entity.Sprite;
-            Debug.Log(item.Entity.Sprite);
+            itemOb.GetComponent<Image>().sprite = itemOb.Entity.Sprite; 
             itemOb.ParentCanvas = canvas;
         }
     }
@@ -41,9 +42,10 @@ public class ItemSlot : MonoBehaviour, IDragContainer<DragItem>, IDropHandler {
         AddItem(otherItem.GetComponent<Item>());
         if (currentItem != null) {  
             destination.AddItem(currentItem.GetComponent<Item>());
+            inventory.SwapItems(index, destination.Index, destination.inventory);
             // Call swap items
         } else {
-            inventory.RemoveItem(destination.index);
+            destination.RemoveItem(); 
             inventory.AddItem(otherItem.GetComponent<Item>().Entity , index);
             // Call set item
         }

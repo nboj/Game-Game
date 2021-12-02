@@ -11,13 +11,13 @@ public class AggressiveCreature : Creature {
 
     public override void Awake() {
         base.Awake();
-    }
-
-    public override void Start() {
         reloadDelays = new List<float>();
         base.Start(); 
         fighter = GetComponent<Fighter>(); 
         UpdateReloadTimes();
+    }
+
+    public override void Start() {
     } 
 
     protected internal void UpdateReloadTimes() {

@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(PlayerInput), typeof(Rigidbody2D), typeof(Collider2D))]
+[RequireComponent(typeof(PlayerInput), typeof(Rigidbody2D), typeof(Collider2D)), RequireComponent(typeof(Inventory), typeof(LeftSlotsInventory))]
 public class Player : AggressiveCreature {
     [Header("Player Controls")] [SerializeField]
     private Canvas playerInventoryUI;
@@ -11,15 +11,31 @@ public class Player : AggressiveCreature {
     [SerializeField] private Slider selectedReloadSlider; 
     [SerializeField] private Weapon_SO defaultWeapon;
     private Inventory inventory;
+    private LeftSlotsInventory leftSlotsInventory;
 
     public Inventory Inventory => inventory;
+    public LeftSlotsInventory LeftSlotsInventory => leftSlotsInventory;
     public override void Awake() {
         base.Awake();
         inventory = GetComponent<Inventory>();
+        leftSlotsInventory = GetComponent<LeftSlotsInventory>();
+    }
+
+    public void UpdateWeapons() {
+        Weapons.Clear(); 
+        Weapons.AddRange(leftSlotsInventory.Entities as Weapon_SO[]);
+
+        UpdateUI();
     }
 
     public override void Start() { 
         base.Start();
+        //leftSlotsInventory.OnWeaponSlotsUpdated += UpdateWeapons;
+        UpdateUI();
+    }
+
+    public void UpdateUI() {
+        SetSelectedIndex(0);
         var maxIndex = UIController.LeftMaxIndex;
         // Adds the extra slots if they are empty
         #region Adds any extra slots if they were empty
@@ -29,7 +45,7 @@ public class Player : AggressiveCreature {
             }
         }
         #endregion
-        
+
         // Initializes each weapon slot with a sprite
         #region Initialise each equipped slot with a sprite
         for (int i = 0; i <= maxIndex; i++) {
@@ -39,7 +55,7 @@ public class Player : AggressiveCreature {
                 UIController.SetLeftSlot(i, defaultWeapon.Sprite);
         }
         #endregion
-        
+
         // Sets max values for all of the reload sliders
         #region Loop through reload sliders
         for (int i = 0; i < Weapons.Count; i++) {
@@ -51,7 +67,7 @@ public class Player : AggressiveCreature {
         var max = Weapons[SelectedIndex].FireRate;
         if (max == 0)
             max = 0.01f;
-        selectedReloadSlider.maxValue = max;
+        selectedReloadSlider.maxValue = max; 
         #endregion
         UpdateReloadTimes();
     }

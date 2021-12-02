@@ -1,17 +1,17 @@
 ﻿using UnityEngine;
 
 public class InventoryUI : MonoBehaviour {
-    [SerializeField] private Canvas parentCanvas;
-    [SerializeField] private ItemSlot inventorySlotPrefab;
-    [SerializeField] private Item inventoryItemPrefab;
-    private Inventory inventory; 
-    private void Start() { 
+    [SerializeField] protected Canvas parentCanvas;
+    [SerializeField] protected ItemSlot inventorySlotPrefab;
+    [SerializeField] protected Item inventoryItemPrefab;
+    protected Inventory inventory; 
+    protected virtual void Start() { 
         inventory = Inventory.Instance;  
         inventory.OnInventoryUpdated += Redraw;
         Redraw(); 
     }
 
-    private void Redraw() {
+    protected virtual void Redraw() {
         Debug.Log("Redrawing");
         foreach (Transform child in transform) {
             Destroy(child.gameObject);

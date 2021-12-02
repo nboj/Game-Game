@@ -2,47 +2,42 @@
 
 public delegate void InventoryUpdated();
 public class Inventory : MonoBehaviour {
-    [SerializeField] int inventorySize = 32;
-    private Entity[] entities;
+    [SerializeField] int inventorySize = 32; 
+    protected Entity[] entities; 
     public Entity[] Entities => entities;
     public event InventoryUpdated OnInventoryUpdated;
-    public static Inventory Instance => GameObject.FindWithTag("Player").GetComponent<Player>().Inventory;
-    // Add item
-    // Swap item--------- In add item, check if null and use that to determine swap
-    // Update UI
-    private void Awake() {
-        entities = new Entity[inventorySize];
-        var player = FindObjectOfType<Player>();
-        for (var i = 0; i < player.Weapons.Count; i++) {
-            entities[i] = player.Weapons[i]; 
-        }
+    public static Inventory Instance => GameObject.FindWithTag("Player").GetComponent<Player>().Inventory; 
+    protected virtual void Awake() {
+        entities = new Entity[inventorySize]; 
     }
 
     private void Start() {
+        var player = FindObjectOfType<Player>(); 
         UpdateUI();
     }
 
-    public void AddItem(Entity entity, int index) {
+    public virtual void AddItem(Entity entity, int index) {
         entities[index] = entity;
     } 
 
-    public void RemoveItem(int index) {
+    public virtual void RemoveItem(int index) {
         entities[index] = null;
     }
 
-    public Entity GetEntity(int index) {
+    public virtual Entity GetEntity(int index) { 
         return entities[index];
     }
 
-    public void SwapItems(int index1, int index2) {
-        var tempEntity = entities[index1];
-        entities[index1] = entities[index2];
-        entities[index2] = tempEntity;
+    public virtual void SwapItems(int calledIndex, int otherIndex, Inventory otherInventory) {
+        var otherEntity = otherInventory.entities[otherIndex];
+        var calledEntity = entities[calledIndex];
+        otherInventory.entities[otherIndex] = calledEntity;
+        entities[calledIndex] = otherEntity;
     }
 
     public void UpdateUI() {
         if (OnInventoryUpdated != null) {
             OnInventoryUpdated(); 
         }
-    }
+    } 
 }
