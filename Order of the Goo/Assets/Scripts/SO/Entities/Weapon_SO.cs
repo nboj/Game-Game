@@ -2,8 +2,7 @@ using UnityEngine;
 
 [CreateAssetMenu(menuName="Weapon_SO", fileName="New Weapon")]
 public class Weapon_SO : Entity {
-    [Header("Weapon Properties")]
-    [SerializeField] private Sprite weaponSprite; 
+    [Header("Weapon Properties")] 
     [SerializeField] private float weaponRange;
     [SerializeField] private bool hasSplashDamage;
     [SerializeField] private float fireRate;
@@ -18,9 +17,5 @@ public class Weapon_SO : Entity {
 
     public float FireRate {
         get => fireRate;
-    }
-
-    public Sprite WeaponSprite {
-        get => weaponSprite;
-    }
+    } 
 }

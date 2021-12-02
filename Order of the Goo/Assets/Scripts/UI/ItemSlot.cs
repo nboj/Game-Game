@@ -15,7 +15,7 @@ public class ItemSlot : MonoBehaviour, IDragContainer<DragItem>, IDropHandler {
     public void RemoveItem() { 
     }
 
-    public void Setup(Inventory inventory, int index, Item item) {
+    public void Setup(Inventory inventory, int index, Item item, Canvas canvas) {
         this.inventory = inventory;
         this.index = index;
         var entity = inventory.GetEntity(index);
@@ -24,6 +24,8 @@ public class ItemSlot : MonoBehaviour, IDragContainer<DragItem>, IDropHandler {
             var itemOb = Instantiate(item, transform);
             itemOb.Entity = entity;
             itemOb.GetComponent<Image>().sprite = item.Entity.Sprite;
+            Debug.Log(item.Entity.Sprite);
+            itemOb.ParentCanvas = canvas;
         }
     }
 

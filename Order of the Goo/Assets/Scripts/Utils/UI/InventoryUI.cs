@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-public class InventoryUI : MonoBehaviour { 
+public class InventoryUI : MonoBehaviour {
+    [SerializeField] private Canvas parentCanvas;
     [SerializeField] private ItemSlot inventorySlotPrefab;
     [SerializeField] private Item inventoryItemPrefab;
     private Inventory inventory; 
@@ -18,7 +19,7 @@ public class InventoryUI : MonoBehaviour {
 
         for (var i = 0; i < inventory.Entities.Length; i++) { 
             var slot = Instantiate(inventorySlotPrefab, transform);
-            slot.Setup(inventory, i, inventoryItemPrefab);   
+            slot.Setup(inventory, i, inventoryItemPrefab, parentCanvas);   
         }
     }
 }

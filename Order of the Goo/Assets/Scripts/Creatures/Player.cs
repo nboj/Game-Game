@@ -34,9 +34,9 @@ public class Player : AggressiveCreature {
         #region Initialise each equipped slot with a sprite
         for (int i = 0; i <= maxIndex; i++) {
             if (Weapons[i] != null)
-                UIController.SetLeftSlot(i, Weapons[i].WeaponSprite);
+                UIController.SetLeftSlot(i, Weapons[i].Sprite);
             else
-                UIController.SetLeftSlot(i, defaultWeapon.WeaponSprite);
+                UIController.SetLeftSlot(i, defaultWeapon.Sprite);
         }
         #endregion
         

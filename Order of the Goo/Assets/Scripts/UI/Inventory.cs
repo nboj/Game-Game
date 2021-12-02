@@ -34,6 +34,12 @@ public class Inventory : MonoBehaviour {
         return entities[index];
     }
 
+    public void SwapItems(int index1, int index2) {
+        var tempEntity = entities[index1];
+        entities[index1] = entities[index2];
+        entities[index2] = tempEntity;
+    }
+
     public void UpdateUI() {
         if (OnInventoryUpdated != null) {
             OnInventoryUpdated(); 
