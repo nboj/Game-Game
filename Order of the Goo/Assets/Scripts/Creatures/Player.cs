@@ -10,6 +10,13 @@ public class Player : AggressiveCreature {
     [SerializeField] private Slider[] reloadSliders;
     [SerializeField] private Slider selectedReloadSlider; 
     [SerializeField] private Weapon_SO defaultWeapon;
+    private Inventory inventory;
+
+    public Inventory Inventory => inventory;
+    public override void Awake() {
+        base.Awake();
+        inventory = GetComponent<Inventory>();
+    }
 
     public override void Start() { 
         base.Start();

@@ -7,6 +7,9 @@ public class Entity : ScriptableObject, ISerializationCallbackReceiver {
     [SerializeField] private float pickupRadius;
     [SerializeField] private string description;
     [SerializeField] private float weight;
+    [SerializeField] private Sprite sprite;
+
+    public Sprite Sprite => sprite;
 
     public string ID {
         get => id;

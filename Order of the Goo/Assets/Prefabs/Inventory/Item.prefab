@@ -103,3 +103,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentCanvas: {fileID: 0}
+  entity: {fileID: 11400000, guid: 13ab669d829cc9c4791b5653b019bd4a, type: 2}

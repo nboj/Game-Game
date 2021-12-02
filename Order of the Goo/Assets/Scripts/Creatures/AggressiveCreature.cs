@@ -9,6 +9,10 @@ public class AggressiveCreature : Creature {
     private bool canAttack = true;
     private Fighter fighter;
 
+    public override void Awake() {
+        base.Awake();
+    }
+
     public override void Start() {
         reloadDelays = new List<float>();
         base.Start(); 

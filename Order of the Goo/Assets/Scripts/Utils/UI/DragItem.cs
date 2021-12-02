@@ -2,9 +2,15 @@
 using UnityEngine.EventSystems;
 
 public class DragItem : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler {
-    [SerializeField] Canvas parentCanvas; 
+    [SerializeField] Canvas parentCanvas;
+    [SerializeField] Entity entity;
     private Transform originalParent;
     private CanvasGroup canvasGroup; 
+
+    public Entity Entity {
+        get => entity;
+        set => entity = value;
+    }
 
     public Transform OriginalParent {
         get => originalParent;

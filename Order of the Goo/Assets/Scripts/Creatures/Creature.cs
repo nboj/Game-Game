@@ -11,11 +11,18 @@ public class Creature : MonoBehaviour {
     private RigidbodyMovement rigidbodyMovement;
     private AStarMovement aStarMovement;
 
+    public virtual void Awake() { 
+        health = GetComponent<Health>();
+        animator = GetComponent<Animator>();
+        canControl = true;
+    }
+
     public virtual void Start() { 
         AIPath path = GetComponent<AIPath>(); 
         aStarMovement = new AStarMovement(creatureSpeed, path); 
         rigidbodyMovement = new RigidbodyMovement(CreatureSpeed, GetComponent<Rigidbody2D>()); 
     }
+
 
     public virtual void Update() {
     }
@@ -66,11 +73,5 @@ public class Creature : MonoBehaviour {
         health.enabled = value; 
     }
 
-    protected internal float CreatureSpeed => creatureSpeed;
-
-    private void Awake() {
-        health = GetComponent<Health>();
-        animator = GetComponent<Animator>();
-        canControl = true;
-    }
+    protected internal float CreatureSpeed => creatureSpeed; 
 }
