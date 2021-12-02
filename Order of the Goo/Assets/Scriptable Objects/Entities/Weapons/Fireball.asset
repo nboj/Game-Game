@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f41d215ec9684456a78e8c24199ef02e, type: 3}
   m_Name: Fireball
   m_EditorClassIdentifier: 
-  id: 0
+  id: 230dd1d6-0180-4426-9b20-ba3af9531f7f
   canPickup: 0
   canDrop: 0
   pickupRadius: 0
   description: 
+  weight: 0
   weaponSprite: {fileID: 21300000, guid: 71395e5bceb56fa46a3d4e75705446d8, type: 3}
   weaponRange: 0
   hasSplashDamage: 1
@@ -31,3 +32,4 @@ MonoBehaviour:
   magicProjectile: {fileID: 8680156474138054269, guid: eb301ff53f2d4624298e893bc4837926, type: 3}
   trackTarget: 1
   trackingSensitivity: 3.65
+  intelligence: 10

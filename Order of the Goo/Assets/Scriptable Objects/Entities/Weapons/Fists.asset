@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a357aa2b615f41b7a074e7184db8db1b, type: 3}
   m_Name: Fists
   m_EditorClassIdentifier: 
-  id: 0
+  id: 91eb56a1-2d30-4a52-9874-85ca276a9de1
   canPickup: 0
   canDrop: 0
   pickupRadius: 0
   description: 
+  weight: 0
   weaponSprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
-  damageRange: {x: 0, y: 0}
   weaponRange: 0
   hasSplashDamage: 0
   fireRate: 0
   weaponWidth: 0
+  dexterity: 10
+  strength: 10

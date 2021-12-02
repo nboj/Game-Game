@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a357aa2b615f41b7a074e7184db8db1b, type: 3}
   m_Name: BattleAxe
   m_EditorClassIdentifier: 
-  id: 0
+  id: 
   canPickup: 0
   canDrop: 0
   pickupRadius: 0
   description: 
+  weight: 0
   weaponSprite: {fileID: 684637448, guid: 2f982f58ccc2ea04f8fceaf40595c564, type: 3}
-  damageRange: {x: 0, y: 0}
   weaponRange: 0
   hasSplashDamage: 1
   fireRate: 0
   weaponWidth: 0
+  dexterity: 10
+  strength: 10

@@ -1,27 +1,19 @@
 ﻿using UnityEngine;
 
-public enum CreatureClass { 
-    ARTIFICER,   
-    BARBARIAN,  
-    BARD,    
-    CLERIC, 
-    DRUID,  
-    FIGHTER, 
-    MONK,   
-    PALADIN, 
-    RANGER,  
-    ROGUE,   
-    SORCERER,    
-    WARLOCK, 
-    WIZARD  
+public enum CreatureClass {  
+    FIGHTER, // Heavy Melee 
+    RANGER, // Ranged
+    ROGUE, // Light Melee
+    WIZARD  // Magic
 }
 
-public enum DiceType {
+public enum DiceType { 
     d4,
     d6,
     d8,
     d10,
-    d12
+    d12,
+    d20
 }
 
 [CreateAssetMenu(menuName = "Creature", fileName = "New Creature")]
@@ -42,29 +34,13 @@ public class Creature_SO : ScriptableObject {
         get {
             switch (creatureClass) {
                 case CreatureClass.WIZARD:
-                    return DiceType.d6;
-                case CreatureClass.WARLOCK:
-                    return DiceType.d8;
-                case CreatureClass.SORCERER:
-                    return DiceType.d6;
+                    return DiceType.d6;  
                 case CreatureClass.ROGUE:
                     return DiceType.d8;
                 case CreatureClass.RANGER:
-                    return DiceType.d10;
-                case CreatureClass.PALADIN:
-                    return DiceType.d10;
-                case CreatureClass.MONK:
-                    return DiceType.d8;
+                    return DiceType.d10; 
                 case CreatureClass.FIGHTER:
-                    return DiceType.d10;
-                case CreatureClass.DRUID:
-                    return DiceType.d8;
-                case CreatureClass.CLERIC:
-                    return DiceType.d8;
-                case CreatureClass.BARD:
-                    return DiceType.d8;
-                case CreatureClass.BARBARIAN:
-                    return DiceType.d12;
+                    return DiceType.d10; 
                 default:
                     return DiceType.d8; 
             } 

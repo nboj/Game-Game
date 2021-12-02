@@ -48,6 +48,7 @@ public class Health : MonoBehaviour {
             totalHealth += creature.GetDiceValue(diceType);
         }
         totalHealth += modifier;
+        totalHealth *= 5;
         Debug.Log(totalHealth);
         maxHealth = totalHealth;
         isDead = false;

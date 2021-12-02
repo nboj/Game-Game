@@ -8,9 +8,11 @@ public class MagicWeapon_SO : RangedWeapon_SO {
     [SerializeField] private bool trackTarget;
     [Range(0f, 10f)]
     [SerializeField] private float trackingSensitivity;
+    [SerializeField] private float intelligence = 10f;
 
     public bool RangedMagic => rangedMagic;
     public GameObject MagicProjectile => magicProjectile;  
     public bool TrackTarget => trackTarget; 
-    public float TrackingSensitivity => trackingSensitivity;    
+    public float TrackingSensitivity => trackingSensitivity;
+    public float Intelligence => intelligence;
 }

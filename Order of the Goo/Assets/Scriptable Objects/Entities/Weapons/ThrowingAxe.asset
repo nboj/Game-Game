@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29986b924d6b43639e03126a5265c598, type: 3}
   m_Name: ThrowingAxe
   m_EditorClassIdentifier: 
-  id: 0
+  id: 02b7d99a-d889-4d67-981f-7bc231b28b71
   canPickup: 0
   canDrop: 0
   pickupRadius: 0
   description: 
+  weight: 0
   weaponSprite: {fileID: 21300000, guid: 5f1661c8129f8fb4fb77c3696be1a9a7, type: 3}
-  damageRange: {x: 12.01, y: 14.55}
   weaponRange: 0
   hasSplashDamage: 0
   fireRate: 0.2

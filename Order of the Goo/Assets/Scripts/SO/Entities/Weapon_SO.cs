@@ -6,7 +6,7 @@ public class Weapon_SO : Entity {
     [SerializeField] private Sprite weaponSprite; 
     [SerializeField] private float weaponRange;
     [SerializeField] private bool hasSplashDamage;
-    [SerializeField] private float fireRate;  
+    [SerializeField] private float fireRate;
 
     public float WeaponRange {
         get => weaponRange;

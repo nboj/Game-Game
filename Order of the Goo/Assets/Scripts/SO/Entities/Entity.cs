@@ -1,13 +1,14 @@
 using UnityEngine;
 
-public class Entity : ScriptableObject {
-    [SerializeField] private int id;
+public class Entity : ScriptableObject, ISerializationCallbackReceiver {
+    [SerializeField] private string id;
     [SerializeField] private bool canPickup;
     [SerializeField] private bool canDrop;
     [SerializeField] private float pickupRadius;
     [SerializeField] private string description;
+    [SerializeField] private float weight;
 
-    public int ID {
+    public string ID {
         get => id;
     }
 
@@ -25,5 +26,16 @@ public class Entity : ScriptableObject {
 
     public string Description {
         get => description;
+    }
+
+    public float Weight => weight;
+
+    void ISerializationCallbackReceiver.OnAfterDeserialize() {
+    }
+
+    void ISerializationCallbackReceiver.OnBeforeSerialize() {
+        if (string.IsNullOrEmpty(ID)) {
+            id = System.Guid.NewGuid().ToString();
+        }
     }
 }
