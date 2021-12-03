@@ -16,5 +16,5 @@ public class RangedWeapon_SO : Weapon_SO {
     public bool HasRotation => hasRotation;
     public float RotationSpeed => rotationSpeed;
     public ParticleSystem DeathParticles => deathParticles;
-    public float SplashRadius => splashRadius;
+    public float SplashRadius => splashRadius; 
 }

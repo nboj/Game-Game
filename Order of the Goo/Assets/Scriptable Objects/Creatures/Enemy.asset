@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61414b6455539c14ea94bab15cfe5418, type: 3}
   m_Name: Enemy
   m_EditorClassIdentifier: 
-  creatureClass: 0
-  strength: 10
+  creatureClass: 3
+  strength: 8.65
   dexterity: 10
   intelligence: 10
   wisdom: 10
   charisma: 10
-  constitution: 10
+  constitution: 0.94
   ac: 0
   level: 1
   chaseDistance: 10.39

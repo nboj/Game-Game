@@ -10,6 +10,7 @@ namespace RPG.Combat {
         private Rigidbody2D rb; 
         private float startRotation;
         private event OnHit onHit;
+        protected bool canControl = true;
 
         public virtual void Start() { 
             rb = GetComponent<Rigidbody2D>();
@@ -43,6 +44,8 @@ namespace RPG.Combat {
         }
 
         public virtual void Update() {
+            if (!canControl)
+                return;
             UpdatePosition();
             RotateProjectile();
         }
@@ -70,23 +73,24 @@ namespace RPG.Combat {
         }
 
         private void OnTriggerEnter2D(Collider2D collider) {
-            if (collider.gameObject == parent)
+            if (collider.CompareTag(parent.tag))
                 return;
 
             if (rangedWeapon.SplashRadius > 0) {
                 Collider2D[] hit = Physics2D.OverlapCircleAll(transform.position, rangedWeapon.SplashRadius);
                 for (int i = 0; i < hit.Length; i++) {
                     var health = hit[i].GetComponent<Health>();
-                    if (health != null && health.gameObject != parent) {
+                    if (health != null && !health.CompareTag(parent.tag)) {
                         onHit(hit[i].gameObject);
                     }
                 } 
             } else {
                 Health health = collider.gameObject.GetComponent<Health>();
-                if (health != null) {
+                if (health != null) { 
                     onHit(health.gameObject);
                 }
-            }
+            } 
+            canControl = false;
             PlayDeath();
         }
 

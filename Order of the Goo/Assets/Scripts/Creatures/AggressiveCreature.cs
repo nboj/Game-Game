@@ -72,4 +72,10 @@ public class AggressiveCreature : Creature {
         var selectedWeapon = GetSelectedWeapon();
         return Time.time - currentWeaponTime >= selectedWeapon.FireRate;
     }
+
+    private void OnDrawGizmos() {
+        Gizmos.color = Color.magenta;
+        var RangedWeapon = GetSelectedWeapon() as RangedWeapon_SO;
+        Gizmos.DrawWireSphere(transform.position,  RangedWeapon.SplashRadius);
+    }
 } 

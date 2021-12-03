@@ -31,8 +31,7 @@ public class Player : AggressiveCreature {
     public void UpdateWeapons() {
         var entities = leftSlotsInventory.Entities;
         Weapons.Clear();
-        foreach (Entity entity in entities) {
-            Debug.Log((Weapon_SO)entity);
+        foreach (Entity entity in entities) { 
             if (entity == null)
                 Weapons.Add(defaultWeapon);
             else

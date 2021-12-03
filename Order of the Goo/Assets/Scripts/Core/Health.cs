@@ -90,12 +90,12 @@ public class Health : MonoBehaviour {
         }
     }
 
-    private void ShowDisplay() {
+    public void ShowDisplay() {
         animator.SetBool("FadeOut", false);
         animator.SetBool("FadeIn", true); 
     }
 
-    private void HideDisplay() {
+    public void HideDisplay() {
         animator.SetBool("FadeIn", false);
         animator.SetBool("FadeOut", true);
     }

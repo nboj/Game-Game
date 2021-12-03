@@ -19,15 +19,19 @@ public class MagicProjectile : Projectile {
 
     public override void Update() { 
         base.Update();
+        if (!canControl)
+            return;
         if (magicWeapon.TrackTarget)
             UpdateDirection();
     }
 
     private void UpdateDirection() {
-        if (targetCreature != null) { 
+        if (targetCreature != null && targetCreature.enabled) {
             var targetDirection = (Vector2)(targetCreature.transform.position - transform.position).normalized;
             ProjectileDirection = Vector3.Lerp(ProjectileDirection, targetDirection, magicWeapon.TrackingSensitivity / DIVIDER_AMOUNT);
             SetObjectRotation(ProjectileDirection);
+        } else if (targetCreature == null) {
+            return;
         } else {
             SetupTracking();
         }
@@ -40,14 +44,16 @@ public class MagicProjectile : Projectile {
         for (int i = 0; i < creatures.Length; i++) {
             var distance = Vector2.Distance(creatures[i].transform.position, transform.position);
             var creature = creatures[i];
-            if (distance < shortestDistance && Parent != creature.gameObject) {
+            if (distance < shortestDistance && !creature.CompareTag(Parent.tag)) {
                 shortestDistance = distance;    
                 targetCreature = creature;
             }
         }
-        foundCreatures = creatures; 
-        if (targetCreature != null) {
+        foundCreatures = creatures;
+        if (targetCreature.enabled && targetCreature != null) {
             this.targetCreature = targetCreature;
+        } else if (targetCreature == null) {
+            return;
         }
     }
 

@@ -1,4 +1,5 @@
 using System;
+using BehaviorDesigner.Runtime;
 using Pathfinding;
 using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D), typeof(AIPath))]
@@ -17,6 +18,7 @@ public class Enemy : AggressiveCreature {
         player = FindObjectOfType<Player>();
         currentState = EnemyState.IDLE;
         startPos = transform.position;
+        Health.OnDeath += HandleDeath;
     }
 
     public enum EnemyState {
@@ -45,5 +47,15 @@ public class Enemy : AggressiveCreature {
         Gizmos.DrawWireSphere(position, enemy.ChaseDistance);
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(position, enemy.AttackDistance);
+    }
+
+    public void HandleDeath() {
+        Health.HideDisplay();
+        Animator.enabled = false;
+        Health.enabled = false;
+        GetComponent<Enemy>().enabled = false;
+        GetComponent<BehaviorTree>().enabled = false;
+        GetComponent<SpriteRenderer>().color = Color.black;
+        GetComponent<Rigidbody2D>().simulated = false;
     }
 } 
