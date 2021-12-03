@@ -32,6 +32,7 @@ public class AggressiveCreature : Creature {
 
     protected internal List<Weapon_SO> Weapons {
         get => weapons;
+        set => weapons = value;
     }
 
     protected internal int SelectedIndex {

@@ -21,21 +21,27 @@ public class Player : AggressiveCreature {
         leftSlotsInventory = GetComponent<LeftSlotsInventory>();
     }
 
-    public void UpdateWeapons() {
-        Weapons.Clear(); 
-        Weapons.AddRange(leftSlotsInventory.Entities as Weapon_SO[]);
-
-        UpdateUI();
-    }
 
     public override void Start() { 
         base.Start();
-        //leftSlotsInventory.OnWeaponSlotsUpdated += UpdateWeapons;
+        leftSlotsInventory.OnWeaponSlotsUpdated += UpdateWeapons;
+        UpdateUI();
+    }
+    
+    public void UpdateWeapons() {
+        var entities = leftSlotsInventory.Entities;
+        Weapons.Clear();
+        foreach (Entity entity in entities) {
+            Debug.Log((Weapon_SO)entity);
+            if (entity == null)
+                Weapons.Add(defaultWeapon);
+            else
+                Weapons.Add((Weapon_SO)entity);
+        }
         UpdateUI();
     }
 
-    public void UpdateUI() {
-        SetSelectedIndex(0);
+    public void UpdateUI() { 
         var maxIndex = UIController.LeftMaxIndex;
         // Adds the extra slots if they are empty
         #region Adds any extra slots if they were empty

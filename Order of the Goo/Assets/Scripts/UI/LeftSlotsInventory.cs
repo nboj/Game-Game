@@ -15,7 +15,7 @@ public class LeftSlotsInventory : Inventory {
         while (index < entities.Length && index < player.Weapons.Count) { 
             entities[index] = player.Weapons[index];
             index++;
-        }
+        } 
     }
 
     public override void AddItem(Entity entity, int index) {
@@ -40,7 +40,6 @@ public class LeftSlotsInventory : Inventory {
     }
 
     private void UpdateSlots() {
-        Debug.Log(Entities.Length);
         if (OnWeaponSlotsUpdated != null) {
             OnWeaponSlotsUpdated();
         }
