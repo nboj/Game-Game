@@ -7,7 +7,10 @@ public class Portal : MonoBehaviour {
     [SerializeField] private PortalID portalID;
     [SerializeField] private Transform spawnpoint;
 
-    public PortalID PID => portalID;
+    public PortalID PID {
+        get => portalID;
+        set => portalID = value;
+    }
     public Transform Spawnpoint => spawnpoint;
 
     public enum PortalID {

@@ -22,6 +22,7 @@ MonoBehaviour:
   weaponRange: 0
   hasSplashDamage: 1
   fireRate: 2
+  damageRollType: 2
   splashRadius: 3.27
   projectile: {fileID: 8680156474138054269, guid: eb301ff53f2d4624298e893bc4837926, type: 3}
   projectileSpeed: 21.08

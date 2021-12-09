@@ -296,11 +296,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8934044209768380128, guid: 2f95ad4994f17734faee2b889cc5c042, type: 3}
       propertyPath: portalID
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8934044209768380128, guid: 2f95ad4994f17734faee2b889cc5c042, type: 3}
       propertyPath: sceneToLoad
-      value: Game
+      value: First Scene
       objectReference: {fileID: 0}
     - target: {fileID: 8934044209768380134, guid: 2f95ad4994f17734faee2b889cc5c042, type: 3}
       propertyPath: m_RootOrder

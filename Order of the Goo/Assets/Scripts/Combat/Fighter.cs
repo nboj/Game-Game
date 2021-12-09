@@ -1,9 +1,12 @@
 using RPG.Combat; 
 using UnityEngine;
+using TMPro;
+using System.Collections;
 
 public delegate void OnHit(GameObject go);
 
 public class Fighter : MonoBehaviour {
+    [SerializeField] private GameObject damageText;
     public event OnHit OnHit;
 
     private void Start() {
@@ -40,31 +43,54 @@ public class Fighter : MonoBehaviour {
     }
 
     private void HitController(GameObject other) {
-        var enemy = other.GetComponent<Creature>();
-        var creature = GetComponent<Creature>();
-        var enemyAC = enemy.CreatureSO.AC;
-        if (creature != null) {
-            var maxValue = creature.GetDiceValue(creature.CreatureSO.DiceType); 
-            var totalDamage = 0f;
-            for (int i = 0; i < creature.CreatureSO.Level; i++) {
-                totalDamage += creature.RollDie(maxValue);
+        var enemy = other.GetComponent<AggressiveCreature>();
+        var creature = GetComponent<AggressiveCreature>();
+        var enemyAC = enemy.CreatureSO.AC; 
+        float GetDamageFromDice(DiceType diceType, float multiplier) {
+            var max = creature.GetDiceValue(diceType);
+            var damage = 0f;
+            for (var i = 0; i < multiplier; i++) {
+                damage += creature.RollDie(max);
             }
+            return damage;
+        }
+        if (creature != null) { 
+            var totalDamage = 0f;
+            totalDamage += GetDamageFromDice(creature.Weapons[creature.SelectedIndex].DamageRollType, creature.CreatureSO.Level);
             var rawModifier = creature.CreatureSO.Strength - 10;
-            var modifier = rawModifier / 2;
-            totalDamage += rawModifier != 0 ? modifier : 0; 
+            var modifier = (int)(rawModifier / 2);
+            totalDamage += rawModifier != 0 ? modifier : 0;
+            var totalHitRoll = 0f;
             var hitRoll = creature.RollDie(20);
-            if (hitRoll == 1) {
+            totalHitRoll += hitRoll;
+            if (totalHitRoll == 1) {// Separate the checking when casting the shot
                 // hurt self
-                GetComponent<Health>().TakeDamage(totalDamage);
-            } else if (hitRoll >= enemyAC && hitRoll < 20) {
+                other.GetComponent<Health>().TakeDamage(totalDamage / 2);
+            } else if (totalHitRoll > enemyAC && hitRoll != 20) {
                 // hurt enemy
                 other.GetComponent<Health>().TakeDamage(totalDamage);
-            } else if (hitRoll >= 20) {
+            } else if (hitRoll == 20) {
                 // crit enemy
+                // check another hit and if hit then double it + original damage amount
                 other.GetComponent<Health>().TakeDamage(totalDamage * 2);
             }
-            // else missed 
+
+            // 
+            // else missed
+            StartCoroutine(PlayHit(totalDamage, other));
             Debug.Log(totalDamage);
         }
+    }
+
+    private IEnumerator PlayHit(float totalDamage, GameObject go) { 
+        var textOb = Instantiate(damageText, go.transform.position, Quaternion.identity); 
+        var text = textOb.GetComponent<TextMeshPro>();
+        var anim = textOb.GetComponent<Animator>();
+        text.text = totalDamage.ToString();
+        anim.SetTrigger("Hit");
+        var duration = anim.GetCurrentAnimatorStateInfo(0).length; 
+        yield return new WaitForSeconds(duration);
+        Destroy(textOb);
+        
     }
 } 

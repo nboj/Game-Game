@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: Enemy
   m_EditorClassIdentifier: 
   creatureClass: 3
-  strength: 8.65
+  strength: 7.4
   dexterity: 10
   intelligence: 10
   wisdom: 10
   charisma: 10
-  constitution: 0.94
+  constitution: 4
   ac: 0
   level: 1
+  resistanceAmount: 0
   chaseDistance: 10.39
   attackDistance: 6.85
   enemySpeed: 2000

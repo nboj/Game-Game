@@ -55,7 +55,7 @@ public class Enemy : AggressiveCreature {
         Health.enabled = false;
         GetComponent<Enemy>().enabled = false;
         GetComponent<BehaviorTree>().enabled = false;
-        GetComponent<SpriteRenderer>().color = Color.black;
+        GetComponentInChildren<SpriteRenderer>().color = Color.black;
         GetComponent<Rigidbody2D>().simulated = false;
     }
 } 

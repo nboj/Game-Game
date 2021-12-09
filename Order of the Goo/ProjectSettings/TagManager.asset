@@ -42,11 +42,11 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Ground
-    uniqueID: 2424201903
-    locked: 0
   - name: Water
     uniqueID: 1368889323
+    locked: 0
+  - name: Ground
+    uniqueID: 2424201903
     locked: 0
   - name: Foreground
     uniqueID: 1790003041
@@ -54,17 +54,29 @@ TagManager:
   - name: Mountains
     uniqueID: 2898038263
     locked: 0
-  - name: Buildings
-    uniqueID: 3059925111
-    locked: 0
   - name: Foreground 2
     uniqueID: 1218995577
+    locked: 0
+  - name: Foreground 3
+    uniqueID: 4105757055
+    locked: 0
+  - name: Buildings
+    uniqueID: 3059925111
     locked: 0
   - name: Player
     uniqueID: 2063604925
     locked: 0
+  - name: Foreground 4
+    uniqueID: 269910941
+    locked: 0
+  - name: Foreground 5
+    uniqueID: 1015173939
+    locked: 0
   - name: Projectile
     uniqueID: 3137903123
+    locked: 0
+  - name: Castle
+    uniqueID: 1723921453
     locked: 0
   - name: Collider
     uniqueID: 4146147895

@@ -1,7 +1,7 @@
 using Pathfinding;
 using UnityEngine;
 
-[RequireComponent(typeof(Health), typeof(Animator), typeof(SpriteRenderer))]
+[RequireComponent(typeof(Health))]
 public class Creature : MonoBehaviour {
     [SerializeField] private float creatureSpeed;
     [SerializeField] private Creature_SO creature_SO;
@@ -13,14 +13,14 @@ public class Creature : MonoBehaviour {
 
     public virtual void Awake() { 
         health = GetComponent<Health>();
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         canControl = true;
+        AIPath path = GetComponent<AIPath>(); 
+        aStarMovement = new AStarMovement(creatureSpeed, path, animator, this); 
+        rigidbodyMovement = new RigidbodyMovement(CreatureSpeed, GetComponent<Rigidbody2D>(), animator); 
     }
 
     public virtual void Start() { 
-        AIPath path = GetComponent<AIPath>(); 
-        aStarMovement = new AStarMovement(creatureSpeed, path); 
-        rigidbodyMovement = new RigidbodyMovement(CreatureSpeed, GetComponent<Rigidbody2D>()); 
     }
 
 

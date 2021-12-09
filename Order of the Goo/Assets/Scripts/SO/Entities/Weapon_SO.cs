@@ -6,6 +6,10 @@ public class Weapon_SO : Entity {
     [SerializeField] private float weaponRange;
     [SerializeField] private bool hasSplashDamage;
     [SerializeField] private float fireRate;
+    [SerializeField] private DiceType damageRollType = DiceType.d6;
+    [SerializeField] private CreatureClass weaponClass;
+    [SerializeField] private float rollModifier;
+    [SerializeField] private float damageModifier;
 
     public float WeaponRange {
         get => weaponRange;
@@ -18,4 +22,8 @@ public class Weapon_SO : Entity {
     public float FireRate {
         get => fireRate;
     } 
+
+    public DiceType DamageRollType {
+        get => damageRollType;
+    }
 }

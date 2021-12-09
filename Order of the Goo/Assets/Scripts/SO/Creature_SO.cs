@@ -4,7 +4,7 @@ public enum CreatureClass {
     FIGHTER, // Heavy Melee 
     RANGER, // Ranged
     ROGUE, // Light Melee
-    WIZARD  // Magic
+    WIZARD,  // Magic
 }
 
 public enum DiceType { 
@@ -28,6 +28,7 @@ public class Creature_SO : ScriptableObject {
     [SerializeField] private float constitution = 10f;
     [SerializeField] private float ac = 0f;
     [SerializeField] private float level = 1f;
+    [SerializeField] private float resistanceAmount = 0f;
 
     public CreatureClass CreatureClass => creatureClass;
     public DiceType DiceType {

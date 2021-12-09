@@ -15961,6 +15961,111 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: outside_754
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 296
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32642631da386544189dc0e813bfd2d6
+      internalID: -1611940170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: outside_755
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 296
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70fd0d86399004347b7d5f1bed6de39f
+      internalID: -374467891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: outside_756
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54d583bbfd6f11e4cbc227d48d4990ef
+      internalID: -1829515926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: outside_757
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 296
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a850158e80ae4044a88907dbda4f5b4
+      internalID: 2114871780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: outside_758
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce45ee2c244e08418904f4f5fab9957
+      internalID: 31605761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -16017,16 +16122,16 @@ TextureImporter:
       outside_520: -1378467380
       outside_118: 293521848
       outside_125: -619963787
-      outside_462: -1968377195
-      outside_524: 809514956
-      outside_302: -1487028756
       outside_694: 1539852913
+      outside_302: -1487028756
+      outside_494: 1564828668
+      outside_462: -1968377195
       outside_217: 450243502
       outside_4: -140263202
       outside_326: 816826600
-      outside_494: 1564828668
       outside_367: -212505411
       outside_276: -2055077457
+      outside_524: 809514956
       outside_353: -934162156
       outside_347: 389337833
       outside_736: 1687953939
@@ -16066,8 +16171,8 @@ TextureImporter:
       outside_67: -242686033
       outside_99: -479758672
       outside_597: 670799789
-      outside_550: -266347060
       outside_244: -1953308739
+      outside_550: -266347060
       outside_691: -2008433485
       outside_622: 229323031
       outside_537: 592884237
@@ -16197,6 +16302,7 @@ TextureImporter:
       outside_749: -1500216617
       outside_599: -148046418
       outside_750: 1036666025
+      outside_755: -374467891
       outside_469: -1307781306
       outside_201: 1725657263
       outside_402: 1794949455
@@ -16216,6 +16322,7 @@ TextureImporter:
       outside_655: -68246366
       outside_45: 1695045974
       outside_5: 984264873
+      outside_759: 839694569
       outside_615: 749379415
       outside_333: 382783838
       outside_86: 1193361896
@@ -16276,6 +16383,7 @@ TextureImporter:
       outside_358: -1295863790
       outside_742: -328767745
       outside_101: 314521119
+      outside_756: -1829515926
       outside_44: -2023623110
       outside_580: 2028559416
       outside_199: -478383164
@@ -16404,6 +16512,7 @@ TextureImporter:
       outside_445: 531732637
       outside_522: -1339273386
       outside_632: 559145955
+      outside_757: 2114871780
       outside_318: 1623148971
       outside_425: 508908132
       outside_351: -2059478325
@@ -16465,6 +16574,7 @@ TextureImporter:
       outside_20: 356526623
       outside_247: -791359692
       outside_723: -492609966
+      outside_758: 31605761
       outside_536: 1928311132
       outside_90: -1531685614
       outside_234: 2058170030
@@ -16591,6 +16701,7 @@ TextureImporter:
       outside_25: 1303183777
       outside_515: -709435533
       outside_699: -1926864825
+      outside_754: -1611940170
       outside_487: 47705302
       outside_38: 520795893
       outside_250: -989801258
