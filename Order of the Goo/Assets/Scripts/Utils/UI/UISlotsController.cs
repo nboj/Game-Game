@@ -58,4 +58,8 @@ public class UISlotsController : MonoBehaviour {
             rightSelectedSlot.sprite = rightSlots[index].sprite;
         }
     }
+
+    public void CanvasEnabled(bool value) {
+        GetComponent<Canvas>().enabled = value;
+    }
 }

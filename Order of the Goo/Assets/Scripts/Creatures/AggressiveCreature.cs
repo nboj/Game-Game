@@ -1,12 +1,16 @@
 using System.Collections.Generic; 
-using UnityEngine;
+using UnityEngine; 
  
 [RequireComponent(typeof(Fighter))]
 public class AggressiveCreature : Creature {
     [SerializeField] private List<Weapon_SO> weapons;
+    [SerializeField] private bool canAttack = true; 
     private List<float> reloadDelays;
     private int selectedIndex = 0;
-    private bool canAttack = true;
+    public virtual bool CanAttack {
+        get => canAttack;
+        set => canAttack = value;
+    }
     private Fighter fighter;
 
     public override void Awake() {
@@ -27,8 +31,7 @@ public class AggressiveCreature : Creature {
         }
     }
 
-    public List<float> ReloadDelays => reloadDelays;
-    public bool CanAttack => canAttack; 
+    public List<float> ReloadDelays => reloadDelays; 
 
     protected internal List<Weapon_SO> Weapons {
         get => weapons;

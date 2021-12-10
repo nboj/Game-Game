@@ -37,6 +37,10 @@ namespace RPG.Dialogue {
             node.Text = "New dialogue text...";
             if (parent != null) {
                 parent.Children.Add(node.name);
+                var newRect = parent.Rect;
+                var newPos = new Vector2(parent.Rect.position.x + parent.Rect.size.x, parent.Rect.position.y);
+                newRect.position = newPos;
+                node.Rect = newRect;
             }
             if (!string.IsNullOrEmpty(AssetDatabase.GetAssetPath(this))) {
                 Undo.RecordObject(this, "Created new DialogueNode");
@@ -72,7 +76,7 @@ namespace RPG.Dialogue {
                         AssetDatabase.AddObjectToAsset(node, this);
                     }
                 }
-            }
+             }
         }
 
         public void OnAfterDeserialize() {  

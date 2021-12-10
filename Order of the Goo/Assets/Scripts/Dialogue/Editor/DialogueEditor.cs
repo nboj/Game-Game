@@ -10,6 +10,8 @@ namespace RPG.Dialogue.Editor {
         [NonSerialized]
         private GUIStyle nodeStyle;
         [NonSerialized]
+        private GUIStyle otherNodeStyle;
+        [NonSerialized]
         private DialogueNode draggingNode;
         [NonSerialized]
         private Vector2 dragOffset;
@@ -33,9 +35,15 @@ namespace RPG.Dialogue.Editor {
             Selection.selectionChanged += OnSelectionChanged;
             nodeStyle = new GUIStyle();
             nodeStyle.normal.background = EditorGUIUtility.Load("node0") as Texture2D;
-            nodeStyle.padding = new RectOffset(10,10,10,10);
+            nodeStyle.padding = new RectOffset(10, 10, 10, 10);
             nodeStyle.border = new RectOffset(12, 12, 12, 12);
             nodeStyle.normal.textColor = Color.white;
+
+            otherNodeStyle = new GUIStyle();
+            otherNodeStyle.normal.background = EditorGUIUtility.Load("node0") as Texture2D;
+            otherNodeStyle.padding = new RectOffset(10, 10, 10, 10);
+            otherNodeStyle.border = new RectOffset(12, 12, 12, 12);
+            otherNodeStyle.normal.textColor = Color.white;
         }
 
         [MenuItem("Window/Dialogue Editor")]
@@ -144,7 +152,11 @@ namespace RPG.Dialogue.Editor {
         } 
 
         private void DrawNode(DialogueNode node) {
-            GUILayout.BeginArea(node.Rect, nodeStyle); 
+            var style = nodeStyle;
+            if (node.CurrentSpeaker == DialogueNode.Speaker.PLAYER) {
+                style = otherNodeStyle;
+            }
+            GUILayout.BeginArea(node.Rect, style); 
             EditorGUI.BeginChangeCheck(); 
             var text = EditorGUILayout.TextField(node.Text);
             if (EditorGUI.EndChangeCheck()) { 

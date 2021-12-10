@@ -9,13 +9,24 @@ public class Player : AggressiveCreature {
     [SerializeField] private UISlotsController UIController;
     [SerializeField] private Slider[] reloadSliders;
     [SerializeField] private Slider selectedReloadSlider; 
-    [SerializeField] private Weapon_SO defaultWeapon;
+    [SerializeField] private Weapon_SO defaultWeapon; 
     private Inventory inventory;
-    private LeftSlotsInventory leftSlotsInventory;
-
+    private LeftSlotsInventory leftSlotsInventory; 
     public Inventory Inventory => inventory;
     public LeftSlotsInventory LeftSlotsInventory => leftSlotsInventory;
+    public override bool CanAttack {
+        get => base.CanAttack;
+        set {
+            if (value) {
+                UIController.CanvasEnabled(true);
+            } else {
+                UIController.CanvasEnabled(false); 
+            }
+            base.CanAttack = value;
+        }
+    }
     public override void Awake() {
+        CanAttack = CanAttack;// remove this
         base.Awake();
         inventory = GetComponent<Inventory>();
         leftSlotsInventory = GetComponent<LeftSlotsInventory>();

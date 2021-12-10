@@ -1,0 +1,153 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8471427230583886698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: 1b348856-87a8-4ed4-b326-5cd174a6f1b9
+  m_EditorClassIdentifier: 
+  text: Jerry
+  children:
+  - be49e796-6e46-4418-b9ac-6a53eadc27c2
+  rect:
+    serializedVersion: 2
+    x: 757
+    y: 179
+    width: 200
+    height: 100
+  currentSpeaker: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ad301a1a5676f74fa9e595776186f00, type: 3}
+  m_Name: Hello
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 6825459088582610144}
+  - {fileID: 2442950978968021588}
+  - {fileID: -8471427230583886698}
+  - {fileID: 7070113465540133143}
+  - {fileID: 5194768615508239216}
+  - {fileID: 6322748210577544733}
+--- !u!114 &2442950978968021588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: 8acf136d-4571-4b51-8f3d-d53ae4cd8279
+  m_EditorClassIdentifier: 
+  text: My name
+  children:
+  - 1b348856-87a8-4ed4-b326-5cd174a6f1b9
+  - 4ddb09f6-84a5-43f0-8cce-84ed67b8d02a
+  - c4b1c37e-02b4-42ff-b1b7-96900a70dd0d
+  rect:
+    serializedVersion: 2
+    x: 240
+    y: 196
+    width: 200
+    height: 100
+  currentSpeaker: 0
+--- !u!114 &5194768615508239216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: 4ddb09f6-84a5-43f0-8cce-84ed67b8d02a
+  m_EditorClassIdentifier: 
+  text: Is not
+  children:
+  - 1b348856-87a8-4ed4-b326-5cd174a6f1b9
+  rect:
+    serializedVersion: 2
+    x: 535
+    y: 105
+    width: 200
+    height: 100
+  currentSpeaker: 0
+--- !u!114 &6322748210577544733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: c4b1c37e-02b4-42ff-b1b7-96900a70dd0d
+  m_EditorClassIdentifier: 
+  text: Fuck you Im not telling you my name!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 618
+    y: 382
+    width: 200
+    height: 100
+  currentSpeaker: 0
+--- !u!114 &6825459088582610144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: f3389f38-4bcb-4f42-87c0-5a13c05ec17e
+  m_EditorClassIdentifier: 
+  text: Hello
+  children:
+  - 8acf136d-4571-4b51-8f3d-d53ae4cd8279
+  rect:
+    serializedVersion: 2
+    x: -154
+    y: 187
+    width: 200
+    height: 100
+  currentSpeaker: 0
+--- !u!114 &7070113465540133143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: be49e796-6e46-4418-b9ac-6a53eadc27c2
+  m_EditorClassIdentifier: 
+  text: New dialogue text...
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 984
+    y: 104
+    width: 200
+    height: 100
+  currentSpeaker: 0
