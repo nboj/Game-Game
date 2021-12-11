@@ -3,12 +3,17 @@ using UnityEngine;
 
 namespace RPG.Dialogue {
     public class DialogueConversant : MonoBehaviour {
-        [SerializeField] private Dialogue currentDialogue;
-        [SerializeField] private Canvas dialogueCanvas;
+        private Dialogue currentDialogue; 
         private DialogueNode currentNode;
+        private DialogueNode.Speaker currentSpeaker;
 
-        private void Awake() {
-            currentNode = currentDialogue.Nodes[0];
+        public DialogueNode.Speaker CurrentSpeaker {
+            get => currentSpeaker;
+        }
+
+        public Dialogue CurrentDialogue {
+            get => currentDialogue;
+            set => currentDialogue = value;
         }
 
         public string GetText() {
@@ -18,15 +23,31 @@ namespace RPG.Dialogue {
             return currentNode.Text;
         } 
 
-        public string Next() {
-            var children = currentDialogue.GetAllChildren(currentNode).ToArray();
-            var randomIndex = Random.Range(0, children.Length);
-            currentNode = children[randomIndex];
+        public string Next(int index) {
+            var children = currentDialogue.GetAllChildren(currentNode).ToArray(); 
+            currentNode = children[index];
+            currentSpeaker = currentNode.CurrentSpeaker;
             return currentNode.Text;
         }
 
-        public bool HasNext() {
-            return false;
+        public bool HasNext() { 
+            if (currentNode.Children.Count <= 0) { 
+                return false;
+            }
+            return true;
+        } 
+
+        public string[] GetChildren() {
+            var children = currentDialogue.GetAllChildren(currentNode).ToArray();
+            var childrenToStrings = new string[children.Length];
+            for (var i = 0; i < children.Length; i++) {
+                childrenToStrings[i] = children[i].Text;
+            }
+            return childrenToStrings;
+        } 
+
+        public void Setup() {
+            currentNode = currentDialogue.GetRootNode();
         }
     }
 }

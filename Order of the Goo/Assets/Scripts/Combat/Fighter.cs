@@ -8,8 +8,10 @@ public delegate void OnHit(GameObject go);
 public class Fighter : MonoBehaviour {
     [SerializeField] private GameObject damageText;
     public event OnHit OnHit;
+    private Player player;
 
     private void Start() {
+        player = GameObject.FindWithTag("Player").GetComponent<Player>();
         OnHit += HitController;
     }
 

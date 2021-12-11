@@ -5,6 +5,20 @@ public class Movement {
     private Vector2 direction;
     private Animator animator;
     private MovementState currentMovementState;
+    protected bool canControl = true; 
+
+    public bool CanControl {
+        get => canControl;
+        set {
+            Direction = Vector2.zero;
+            if (!value) {
+                animator.enabled = false;
+            } else {
+                animator.enabled = true;
+            }
+            canControl = value;
+        }
+    }
 
     public float MovementSpeed => movementSpeed;
 
@@ -32,6 +46,9 @@ public class Movement {
     } 
 
     public void SetAnimator(Vector2 direction) {
+        if (!canControl) { 
+            return;
+        }
         ResetAnimator();
         if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y)) {
             if (direction.x > 0) {

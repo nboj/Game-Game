@@ -40,7 +40,7 @@ namespace RPG.Dialogue.Editor {
             nodeStyle.normal.textColor = Color.white;
 
             otherNodeStyle = new GUIStyle();
-            otherNodeStyle.normal.background = EditorGUIUtility.Load("node0") as Texture2D;
+            otherNodeStyle.normal.background = EditorGUIUtility.Load("node1") as Texture2D;
             otherNodeStyle.padding = new RectOffset(10, 10, 10, 10);
             otherNodeStyle.border = new RectOffset(12, 12, 12, 12);
             otherNodeStyle.normal.textColor = Color.white;

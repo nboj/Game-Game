@@ -58,7 +58,10 @@ public class Creature : MonoBehaviour {
 
     public AStarMovement ASMovement => aStarMovement;
     
-    public bool CanControl => canControl;
+    public bool CanControl {
+        get => canControl;
+        set => canControl = value;
+    }
 
     protected internal Health Health {
         get => health; 

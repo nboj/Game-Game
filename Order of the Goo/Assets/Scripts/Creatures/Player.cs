@@ -1,6 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using RPG.UI;
+using RPG.Dialogue;
+
+public interface IFHandler {
+    public void Fire();
+}
 
 [RequireComponent(typeof(PlayerInput), typeof(Rigidbody2D), typeof(Collider2D)), RequireComponent(typeof(Inventory), typeof(LeftSlotsInventory))]
 public class Player : AggressiveCreature {
@@ -9,11 +15,13 @@ public class Player : AggressiveCreature {
     [SerializeField] private UISlotsController UIController;
     [SerializeField] private Slider[] reloadSliders;
     [SerializeField] private Slider selectedReloadSlider; 
-    [SerializeField] private Weapon_SO defaultWeapon; 
+    [SerializeField] private Weapon_SO defaultWeapon;
+    [SerializeField] DialogueUI dialogueUI;
     private Inventory inventory;
     private LeftSlotsInventory leftSlotsInventory; 
     public Inventory Inventory => inventory;
     public LeftSlotsInventory LeftSlotsInventory => leftSlotsInventory;
+    private DialogueConversant dialogueConversant;
     public override bool CanAttack {
         get => base.CanAttack;
         set {
@@ -30,6 +38,7 @@ public class Player : AggressiveCreature {
         base.Awake();
         inventory = GetComponent<Inventory>();
         leftSlotsInventory = GetComponent<LeftSlotsInventory>();
+        dialogueConversant = GetComponent<DialogueConversant>();
     }
 
 
@@ -37,6 +46,10 @@ public class Player : AggressiveCreature {
         base.Start();
         leftSlotsInventory.OnWeaponSlotsUpdated += UpdateWeapons;
         UpdateUI();
+    }
+
+    public DialogueConversant DialogueConversant {
+        get => dialogueConversant;
     }
     
     public void UpdateWeapons() {
@@ -89,7 +102,10 @@ public class Player : AggressiveCreature {
     }
 
     public override void Update() {
-        PointToMouse();
+        if (CanAttack)
+            PointToMouse();
+        else
+            RigidbodyMovement.SetAnimator(RigidbodyMovement.Direction);
     }
 
     public override void FixedUpdate() {
@@ -129,10 +145,18 @@ public class Player : AggressiveCreature {
     }
 
     private void OnF() {
-        var hit = Physics2D.OverlapPoint(transform.position, LayerMask.GetMask("Portal"));
+        var hit = Physics2D.OverlapPoint(transform.position, LayerMask.GetMask("FTrigger"));
         if (hit != null) {
-            var portal = hit.GetComponent<Portal>();
-            portal.Teleport();
+            hit.gameObject.GetComponent<IFHandler>().Fire(); 
+        }
+    }
+
+    private void OnSpace() {  
+        if (!dialogueConversant.HasNext()) {
+            Enable();
+        }
+        if (dialogueUI.isActiveAndEnabled) {
+            dialogueUI.Next(); 
         }
     }
     #endregion
@@ -152,6 +176,19 @@ public class Player : AggressiveCreature {
             reloadSliders[i].value = setAmount;
         }
         selectedReloadSlider.value = Time.time - ReloadDelays[SelectedIndex];
+    }
+
+    public void Disable() {
+        CanControl = false;
+        CanAttack = false;
+        RigidbodyMovement.CanControl = false;
+    }
+
+    public void Enable() {
+        CanControl = true;
+        CanAttack = true;
+        RigidbodyMovement.CanControl = true;
+
     }
 
     private void PointToMouse() {

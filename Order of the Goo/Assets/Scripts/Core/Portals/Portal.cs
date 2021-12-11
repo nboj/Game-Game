@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Portal : MonoBehaviour {
+public class Portal : MonoBehaviour, IFHandler {
     [SerializeField] private string sceneToLoad;
     [SerializeField] private PortalID portalID;
     [SerializeField] private Transform spawnpoint;
@@ -55,5 +55,9 @@ public class Portal : MonoBehaviour {
     public void Teleport() {
         transform.parent = null;
         StartCoroutine(Transition());
+    }
+
+    public void Fire() {
+        Teleport();
     }
 }

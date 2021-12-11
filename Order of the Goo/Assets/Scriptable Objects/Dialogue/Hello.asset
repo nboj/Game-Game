@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8471427230583886698
+--- !u!114 &-4727814715939421373
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,18 +10,65 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
-  m_Name: 1b348856-87a8-4ed4-b326-5cd174a6f1b9
+  m_Name: 483e6a48-7ef2-41cf-9114-6d1a3b849147
   m_EditorClassIdentifier: 
-  text: Jerry
+  text: Oh well don't worry, only one slap across the face will do you some good.
   children:
-  - be49e796-6e46-4418-b9ac-6a53eadc27c2
+  - 381b462e-1c39-43ba-9fe7-172ff35a78b0
+  - e1c03373-5fdf-4ae4-8862-0b2f3078de53
+  - 42280860-fb68-40bb-bef6-dc927241e289
   rect:
     serializedVersion: 2
-    x: 757
-    y: 179
+    x: 509
+    y: 344
     width: 200
     height: 100
   currentSpeaker: 0
+--- !u!114 &-3469100690532222076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: 4c5fb329-f7ae-4e7f-98bb-9811fc97f2df
+  m_EditorClassIdentifier: 
+  text: I feel like a sad, little depressed man who has nothing left to live for.
+    I feelifth as though I was one who has been reborn into anew. I feel chilled
+    by the wind thrashing across my face as I plumeted down from the clifftop.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 501
+    y: 47
+    width: 200
+    height: 100
+  currentSpeaker: 1
+--- !u!114 &-1723911993743327963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: 1ec4564a-3503-4230-87ed-1b4906d01320
+  m_EditorClassIdentifier: 
+  text: Ehh.. Ok I guess...
+  children:
+  - 5c80bde4-6524-4a5b-a3b4-5b1c6ba1ad05
+  rect:
+    serializedVersion: 2
+    x: 263
+    y: 193
+    width: 200
+    height: 100
+  currentSpeaker: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36,12 +83,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 6825459088582610144}
-  - {fileID: 2442950978968021588}
-  - {fileID: -8471427230583886698}
-  - {fileID: 7070113465540133143}
-  - {fileID: 5194768615508239216}
-  - {fileID: 6322748210577544733}
---- !u!114 &2442950978968021588
+  - {fileID: 9158396335423707374}
+  - {fileID: 6353972750529977578}
+  - {fileID: -1723911993743327963}
+  - {fileID: 3621415427482087356}
+  - {fileID: -4727814715939421373}
+  - {fileID: 4018374269004785494}
+  - {fileID: 8429640043842024203}
+  - {fileID: 6889169921196340840}
+  - {fileID: 990578748871601074}
+  - {fileID: -3469100690532222076}
+--- !u!114 &990578748871601074
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -51,63 +103,82 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
-  m_Name: 8acf136d-4571-4b51-8f3d-d53ae4cd8279
+  m_Name: 42280860-fb68-40bb-bef6-dc927241e289
   m_EditorClassIdentifier: 
-  text: My name
-  children:
-  - 1b348856-87a8-4ed4-b326-5cd174a6f1b9
-  - 4ddb09f6-84a5-43f0-8cce-84ed67b8d02a
-  - c4b1c37e-02b4-42ff-b1b7-96900a70dd0d
-  rect:
-    serializedVersion: 2
-    x: 279
-    y: 192
-    width: 200
-    height: 100
-  currentSpeaker: 0
---- !u!114 &5194768615508239216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
-  m_Name: 4ddb09f6-84a5-43f0-8cce-84ed67b8d02a
-  m_EditorClassIdentifier: 
-  text: Is not
-  children:
-  - 1b348856-87a8-4ed4-b326-5cd174a6f1b9
-  rect:
-    serializedVersion: 2
-    x: 510
-    y: 86
-    width: 200
-    height: 100
-  currentSpeaker: 0
---- !u!114 &6322748210577544733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
-  m_Name: c4b1c37e-02b4-42ff-b1b7-96900a70dd0d
-  m_EditorClassIdentifier: 
-  text: Fuck you Im not telling you my name!
+  text: WTF WTF WTF WTF WTF???
   children: []
   rect:
     serializedVersion: 2
-    x: 618
-    y: 382
+    x: 978
+    y: 344
     width: 200
     height: 100
-  currentSpeaker: 0
+  currentSpeaker: 1
+--- !u!114 &3621415427482087356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: 10fa5e5b-0359-4728-b0b2-16fe53ce2ffa
+  m_EditorClassIdentifier: 
+  text: Thanks same to you.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 759
+    y: 192
+    width: 200
+    height: 100
+  currentSpeaker: 1
+--- !u!114 &4018374269004785494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: 5c80bde4-6524-4a5b-a3b4-5b1c6ba1ad05
+  m_EditorClassIdentifier: 
+  text: Oh I'm sorry to hear that. I hope your day gets better my young child.
+  children:
+  - 10fa5e5b-0359-4728-b0b2-16fe53ce2ffa
+  rect:
+    serializedVersion: 2
+    x: 501
+    y: 193
+    width: 200
+    height: 100
+  currentSpeaker: 1
+--- !u!114 &6353972750529977578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: 1b4d323f-6a23-435e-89d3-25d16a5d3e2c
+  m_EditorClassIdentifier: 
+  text: Not Good. :(
+  children:
+  - 483e6a48-7ef2-41cf-9114-6d1a3b849147
+  rect:
+    serializedVersion: 2
+    x: 263
+    y: 345
+    width: 200
+    height: 100
+  currentSpeaker: 1
 --- !u!114 &6825459088582610144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,9 +191,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
   m_Name: f3389f38-4bcb-4f42-87c0-5a13c05ec17e
   m_EditorClassIdentifier: 
-  text: Hello
+  text: How are you doing today?
   children:
-  - 8acf136d-4571-4b51-8f3d-d53ae4cd8279
+  - 68d23cda-74e2-43d9-bbe3-6a4dbde55aba
+  - 1b4d323f-6a23-435e-89d3-25d16a5d3e2c
+  - 1ec4564a-3503-4230-87ed-1b4906d01320
   rect:
     serializedVersion: 2
     x: 39
@@ -130,7 +203,7 @@ MonoBehaviour:
     width: 200
     height: 100
   currentSpeaker: 0
---- !u!114 &7070113465540133143
+--- !u!114 &6889169921196340840
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,14 +213,57 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
-  m_Name: be49e796-6e46-4418-b9ac-6a53eadc27c2
+  m_Name: e1c03373-5fdf-4ae4-8862-0b2f3078de53
   m_EditorClassIdentifier: 
-  text: New dialogue text...
+  text: WTF WTF???
   children: []
   rect:
     serializedVersion: 2
-    x: 984
-    y: 104
+    x: 761
+    y: 397
     width: 200
     height: 100
-  currentSpeaker: 0
+  currentSpeaker: 1
+--- !u!114 &8429640043842024203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: 381b462e-1c39-43ba-9fe7-172ff35a78b0
+  m_EditorClassIdentifier: 
+  text: WTF????
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 761
+    y: 292
+    width: 200
+    height: 100
+  currentSpeaker: 1
+--- !u!114 &9158396335423707374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: 68d23cda-74e2-43d9-bbe3-6a4dbde55aba
+  m_EditorClassIdentifier: 
+  text: Good! How are you?
+  children:
+  - 4c5fb329-f7ae-4e7f-98bb-9811fc97f2df
+  rect:
+    serializedVersion: 2
+    x: 262
+    y: 47
+    width: 200
+    height: 100
+  currentSpeaker: 1

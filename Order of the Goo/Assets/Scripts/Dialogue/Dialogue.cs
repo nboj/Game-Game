@@ -23,6 +23,10 @@ namespace RPG.Dialogue {
             }
         } 
 
+        public DialogueNode GetRootNode() {
+            return Nodes[0];
+        }
+
         public IEnumerable<DialogueNode> GetAllChildren(DialogueNode parent) {
             if (parent.Children != null) { 
                 foreach (var child in parent.Children) { 

@@ -14,7 +14,7 @@ namespace RPG.Dialogue {
         [SerializeField] private string text;
         [SerializeField] private List<string> children;
         [SerializeField] private Rect rect = new Rect(0, 0, 200, 100);
-        [SerializeField] private Speaker currentSpeaker;
+        [SerializeField] private Speaker currentSpeaker = Speaker.AI;
 
         public Speaker CurrentSpeaker {
             get => currentSpeaker;

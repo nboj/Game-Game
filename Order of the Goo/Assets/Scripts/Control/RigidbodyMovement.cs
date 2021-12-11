@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class RigidbodyMovement : Movement {
-    private Rigidbody2D rigidbody; 
+    private Rigidbody2D rigidbody;
 
     public RigidbodyMovement(float speed, Rigidbody2D rigidbody, Animator animator) : base(speed, animator) {
         this.rigidbody = rigidbody;
@@ -9,6 +9,10 @@ public class RigidbodyMovement : Movement {
     } 
 
     public void FixedUpdate() {
-        rigidbody.velocity = Direction * MovementSpeed;
+        if (canControl)
+            rigidbody.velocity = Direction * MovementSpeed;
+        else {
+            rigidbody.velocity = Vector2.zero;
+        }
     }
 }
