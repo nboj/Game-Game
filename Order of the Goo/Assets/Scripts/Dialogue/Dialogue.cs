@@ -7,8 +7,8 @@ namespace RPG.Dialogue {
 
     [CreateAssetMenu(menuName = "Dialogue", fileName = "New Dialogue")]
     public class Dialogue : ScriptableObject, ISerializationCallbackReceiver {
-        [SerializeField] private List<DialogueNode> nodes = new List<DialogueNode>();
-        private Dictionary<string, DialogueNode> nodeLookup = new Dictionary<string, DialogueNode>();
+        [SerializeField] private List<DialogueNode> nodes = new List<DialogueNode>(); 
+        private Dictionary<string, DialogueNode> nodeLookup = new Dictionary<string, DialogueNode>(); 
 
         public List<DialogueNode> Nodes {
             get => nodes;
@@ -16,6 +16,7 @@ namespace RPG.Dialogue {
                 nodes = value;
             }
         }
+         
         public void OnValidate() { 
             nodeLookup.Clear();
             foreach (var node in nodes) {

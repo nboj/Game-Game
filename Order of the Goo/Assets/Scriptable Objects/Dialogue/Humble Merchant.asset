@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
   m_Name: 3d13fd91-b1b6-4db4-9b3b-aa7619e15a67
   m_EditorClassIdentifier: 
-  text: THIS!!
+  text: I'LL SEND MY PET AFTER YOU!!
   children: []
   rect:
     serializedVersion: 2
-    x: 1084
-    y: 524
+    x: 1098
+    y: 527
     width: 200
     height: 240
   currentSpeaker: 1
@@ -25,6 +25,32 @@ MonoBehaviour:
   avatarName: Angry Merchant
   onEnterTrigger: 
   onExitTrigger: hi
+--- !u!114 &-7491788341373464141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: f1834319-6699-49de-b567-932099850bdf
+  m_EditorClassIdentifier: 
+  text: '*Blurp*'
+  children:
+  - 51c29bf5-4300-41f7-a9c4-9b231dc90c47
+  rect:
+    serializedVersion: 2
+    x: 750
+    y: 42
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: 2f445a8b8bb22f647ad42e4439b77325, type: 3}
+  avatarName: Blob the goo
+  onEnterTrigger: 
+  onExitTrigger: 
 --- !u!114 &-4727814715939421373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,10 +90,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
   m_Name: 4c5fb329-f7ae-4e7f-98bb-9811fc97f2df
   m_EditorClassIdentifier: 
-  text: I feel like a sad, little depressed man who has nothing left to live for.
+  text: I feel like a sad, little depressed lady who has nothing left to live for.
     I feelifth as though I was one who has been reborn into anew. I feel chilled
     by the wind thrashing across my face as I plumeted down from the clifftop.
-  children: []
+  children:
+  - f1834319-6699-49de-b567-932099850bdf
   rect:
     serializedVersion: 2
     x: 501
@@ -130,6 +157,31 @@ MonoBehaviour:
   avatarName: You
   onEnterTrigger: 
   onExitTrigger: 
+--- !u!114 &-674255914217770286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: 51c29bf5-4300-41f7-a9c4-9b231dc90c47
+  m_EditorClassIdentifier: 
+  text: Oh.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 986
+    y: 43
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: bb7853286f6573f469b5a559d9ae0f5b, type: 3}
+  avatarName: You
+  onEnterTrigger: 
+  onExitTrigger: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,6 +206,8 @@ MonoBehaviour:
   - {fileID: 3726879882373678113}
   - {fileID: -2081700351809945820}
   - {fileID: -8804942138012608288}
+  - {fileID: -7491788341373464141}
+  - {fileID: -674255914217770286}
 --- !u!114 &3621415427482087356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,8 +224,8 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 749
-    y: 127
+    x: 792
+    y: 282
     width: 200
     height: 240
   currentSpeaker: 1

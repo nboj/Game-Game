@@ -18717,6 +18717,7 @@ GameObject:
   m_Component:
   - component: {fileID: 213676260}
   - component: {fileID: 213676261}
+  - component: {fileID: 213676262}
   m_Layer: 31
   m_Name: root
   m_TagString: Untagged
@@ -18791,6 +18792,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!95 &213676262
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213676259}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: de86cbbcfdec4ef409cf34e928a65913, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &249790387 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8934044209768380134, guid: 2f95ad4994f17734faee2b889cc5c042, type: 3}
@@ -45495,6 +45516,10 @@ PrefabInstance:
       propertyPath: portalID
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8934044209768380128, guid: 2f95ad4994f17734faee2b889cc5c042, type: 3}
+      propertyPath: sceneToLoad
+      value: House 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8934044209768380134, guid: 2f95ad4994f17734faee2b889cc5c042, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -45554,7 +45579,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8934044209768380128, guid: 2f95ad4994f17734faee2b889cc5c042, type: 3}
       propertyPath: portalID
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8934044209768380134, guid: 2f95ad4994f17734faee2b889cc5c042, type: 3}
       propertyPath: m_RootOrder

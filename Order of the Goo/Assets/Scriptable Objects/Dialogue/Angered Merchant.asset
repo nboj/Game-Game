@@ -39,3 +39,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: -3695950998073484625}
+  willRepeat: 1
+  firstTime: 1

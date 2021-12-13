@@ -66,7 +66,7 @@ namespace RPG.Dialogue {
 
         public bool HasNext() { 
             if (currentNode == null || currentNode.Children.Count <= 0) { 
-                FireOnExitTriggers();
+                FireOnExitTriggers(); 
                 return false;
             }
             return true;
@@ -82,7 +82,8 @@ namespace RPG.Dialogue {
         } 
 
         public void Setup() {
-            currentNode = currentDialogue.GetRootNode();
+            var rootNode = currentDialogue.GetRootNode(); 
+            currentNode = rootNode;  
             FireOnEnterTriggers();
         }
     }
