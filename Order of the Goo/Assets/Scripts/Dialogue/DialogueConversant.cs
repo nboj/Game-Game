@@ -34,7 +34,7 @@ namespace RPG.Dialogue {
         }
 
         public string GetName() {
-            return currentNode.Name;
+            return currentNode.AvatarName;
         }
 
         public string Next(int index) {

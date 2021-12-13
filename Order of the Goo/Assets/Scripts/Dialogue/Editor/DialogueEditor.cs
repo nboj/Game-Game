@@ -193,7 +193,7 @@ namespace RPG.Dialogue.Editor {
                 }
             }
 
-            node.Name = EditorGUILayout.TextField(node.Name);
+            node.AvatarName = EditorGUILayout.TextField(node.AvatarName);
 
             node.AvatarImage = (Texture2D)EditorGUILayout.ObjectField(node.AvatarImage, typeof(Texture2D), true);
 

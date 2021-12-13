@@ -33,7 +33,7 @@ namespace RPG.Dialogue {
             set => avatarImage = value;
         }
 
-        public string Name {
+        public string AvatarName {
             get => avatarName;
             set => avatarName = value;
         }
