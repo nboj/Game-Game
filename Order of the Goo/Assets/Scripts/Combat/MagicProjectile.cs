@@ -50,7 +50,7 @@ public class MagicProjectile : Projectile {
             }
         }
         foundCreatures = creatures;
-        if (targetCreature.enabled && targetCreature != null) {
+        if (targetCreature != null && targetCreature.enabled) {
             this.targetCreature = targetCreature;
         } else if (targetCreature == null) {
             return;

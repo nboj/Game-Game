@@ -14,7 +14,7 @@ public class Health : MonoBehaviour {
     [SerializeField] private float fadeOutDelay = 3;
     [SerializeField] private float yOffset;
     [SerializeField] private bool displayHealthBorder;
-
+    [SerializeField] private bool startHidden = false;
     [Header("Custom Healthbar")] [SerializeField]
     private bool useCustomSlider;
 
@@ -52,17 +52,20 @@ public class Health : MonoBehaviour {
         Debug.Log(totalHealth);
         maxHealth = totalHealth;
         isDead = false;
-        startTime = 0;
+        startTime = Time.time;
         sliderObject = Instantiate(sliderPrefab, new Vector2(transform.position.x, transform.position.y + yOffset), Quaternion.identity);
         sliderObject.transform.SetParent(transform);
         if (useCustomSlider) {
             currentState = DisplayState.CUSTOM;
             slider = sliderPrefab.GetComponent<Slider>();
         } else {
-            currentState = DisplayState.FADED;
+            currentState = DisplayState.IDLE;
             animator = sliderObject.GetComponent<Animator>();
-            slider = sliderObject.GetComponent<Slider>();
-            HideDisplay();
+            slider = sliderObject.GetComponent<Slider>(); 
+            HideDisplay(); 
+        }
+        if (startHidden) {
+            SetHidden(true);
         }
         slider.maxValue = maxHealth;
         slider.value = slider.maxValue;
@@ -72,6 +75,10 @@ public class Health : MonoBehaviour {
         if (isDead)
             return;
         HandleDisplay();
+    }
+
+    public void SetHidden(bool hidden) {
+        animator.SetBool("Hidden", hidden);
     }
 
     private void HandleDisplay() {

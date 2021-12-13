@@ -97,19 +97,25 @@ namespace RPG.Dialogue.Editor {
                 foreach (var node in selectedDialogue.Nodes) { 
                     DrawConnections(node);
                 }
-                if (creatingNode != null) { 
+                if (creatingNode != null) {
+                    Undo.RecordObject(this, "Created Node");
                     selectedDialogue.CreateNewNode(creatingNode);
                     creatingNode = null;
+                    EditorUtility.SetDirty(this);
                 } 
                 if (deletingNode != null) {
+                    Undo.RecordObject(this, "Removed Node");
                     selectedDialogue.RemoveNode(deletingNode);
                     GUI.changed = true;
                     deletingNode = null;
+                    EditorUtility.SetDirty(this);
                 }
                 if (linkingChild != null && linkingParent != null) {
+                    Undo.RecordObject(this, "Linked Child");
                     selectedDialogue.ChildNode(linkingParent, linkingChild);
                     linkingChild = null;
                     linkingParent = null;
+                    EditorUtility.SetDirty(this);
                 }
                 EditorGUILayout.EndScrollView();
             }
@@ -129,7 +135,7 @@ namespace RPG.Dialogue.Editor {
             var mousePos = Event.current.mousePosition; 
             DialogueNode foundNode = null;
             foreach (var node in selectedDialogue.Nodes) {
-                if (node.Rect.Contains(mousePos)) {
+                if (node.Rect.Contains(mousePos + scrollPos)) {
                     foundNode = node;
                 }
             } 
@@ -155,8 +161,8 @@ namespace RPG.Dialogue.Editor {
             var style = nodeStyle;
             if (node.CurrentSpeaker == DialogueNode.Speaker.PLAYER) {
                 style = otherNodeStyle;
-            }
-            GUILayout.BeginArea(node.Rect, style); 
+            } 
+            GUILayout.BeginArea(node.Rect, style);
             EditorGUI.BeginChangeCheck(); 
             var text = EditorGUILayout.TextField(node.Text);
             if (EditorGUI.EndChangeCheck()) { 
@@ -185,6 +191,15 @@ namespace RPG.Dialogue.Editor {
                 if (GUILayout.Button("Child")) {
                     linkingChild = node;
                 }
+            }
+
+            node.Name = EditorGUILayout.TextField(node.Name);
+
+            node.AvatarImage = (Texture2D)EditorGUILayout.ObjectField(node.AvatarImage, typeof(Texture2D), true);
+
+            if (node.AvatarImage != null) {
+                var avatarRect = new Rect(50, 130, 100, 100);
+                EditorGUI.DrawPreviewTexture(avatarRect, node.AvatarImage);
             }
             GUILayout.EndArea();
         }

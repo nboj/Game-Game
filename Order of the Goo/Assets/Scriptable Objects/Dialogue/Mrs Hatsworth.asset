@@ -1,0 +1,258 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9088332737491929014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: 47cd61fc-9659-406b-94b0-1460f52781ef
+  m_EditorClassIdentifier: 
+  text: A goblin
+  children:
+  - 0a2b0d99-4505-488f-bbc0-e6cde07e97cf
+  rect:
+    serializedVersion: 2
+    x: 242
+    y: 317
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: bb7853286f6573f469b5a559d9ae0f5b, type: 3}
+  avatarName: You
+  onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &-8980977051367166047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: 93d71d36-a6f4-44fd-8d70-3ff7ec702c63
+  m_EditorClassIdentifier: 
+  text: GOHhhhwwsh...!!!!!
+  children:
+  - cf8de934-d696-4b52-a5f6-fad3201c5e11
+  rect:
+    serializedVersion: 2
+    x: 952
+    y: 528
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: c299f31b117684449b2f95a924485e57, type: 3}
+  avatarName: Mrs. Hatsworth
+  onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &-6552165203955864971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: a1612ee5-8bbe-4380-b5ff-fdfc64f70f91
+  m_EditorClassIdentifier: 
+  text: A demon dog.
+  children:
+  - 0a2b0d99-4505-488f-bbc0-e6cde07e97cf
+  rect:
+    serializedVersion: 2
+    x: 239
+    y: 74
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: bb7853286f6573f469b5a559d9ae0f5b, type: 3}
+  avatarName: You
+  onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &-6287770635959034591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: 42176556-5ce4-410f-9eb9-695fbff667b6
+  m_EditorClassIdentifier: 
+  text: Hi... What... are you??
+  children:
+  - a1612ee5-8bbe-4380-b5ff-fdfc64f70f91
+  - 47cd61fc-9659-406b-94b0-1460f52781ef
+  - a9b1fd6d-829a-48c4-9461-85125d47d56c
+  rect:
+    serializedVersion: 2
+    x: 3
+    y: 304
+    width: 200
+    height: 240
+  currentSpeaker: 0
+  avatarImage: {fileID: 2800000, guid: c299f31b117684449b2f95a924485e57, type: 3}
+  avatarName: Mrs. Hatsworth
+  onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &-328505583814248183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: f5b3d82c-8058-487c-ab35-a0d1c98ca53e
+  m_EditorClassIdentifier: 
+  text: MY...
+  children:
+  - 93d71d36-a6f4-44fd-8d70-3ff7ec702c63
+  rect:
+    serializedVersion: 2
+    x: 725
+    y: 524
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: c299f31b117684449b2f95a924485e57, type: 3}
+  avatarName: Mrs. Hatsworth
+  onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ad301a1a5676f74fa9e595776186f00, type: 3}
+  m_Name: Mrs Hatsworth
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -6287770635959034591}
+  - {fileID: -6552165203955864971}
+  - {fileID: -9088332737491929014}
+  - {fileID: 8997826194251824270}
+  - {fileID: 4961182001749269391}
+  - {fileID: 3120380696905504494}
+  - {fileID: -328505583814248183}
+  - {fileID: -8980977051367166047}
+  - {fileID: 2359333844630804757}
+--- !u!114 &2359333844630804757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: cf8de934-d696-4b52-a5f6-fad3201c5e11
+  m_EditorClassIdentifier: 
+  text: That is th CUTTEST thing I have EVER heard!!!!!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1162
+    y: 525
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: c299f31b117684449b2f95a924485e57, type: 3}
+  avatarName: Mrs. Hatsworth
+  onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &3120380696905504494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: e158dec2-323f-4a09-8f7b-775dcc42ac06
+  m_EditorClassIdentifier: 
+  text: OH...
+  children:
+  - f5b3d82c-8058-487c-ab35-a0d1c98ca53e
+  rect:
+    serializedVersion: 2
+    x: 481
+    y: 522
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: c299f31b117684449b2f95a924485e57, type: 3}
+  avatarName: Mrs. Hatsworth
+  onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &4961182001749269391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: 0a2b0d99-4505-488f-bbc0-e6cde07e97cf
+  m_EditorClassIdentifier: 
+  text: Oh neat!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 538
+    y: 179
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: c299f31b117684449b2f95a924485e57, type: 3}
+  avatarName: Mrs. Hatsworth
+  onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &8997826194251824270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: a9b1fd6d-829a-48c4-9461-85125d47d56c
+  m_EditorClassIdentifier: 
+  text: A pink unicorn
+  children:
+  - e158dec2-323f-4a09-8f7b-775dcc42ac06
+  rect:
+    serializedVersion: 2
+    x: 244
+    y: 559
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: bb7853286f6573f469b5a559d9ae0f5b, type: 3}
+  avatarName: You
+  onEnterTrigger: 
+  onExitTrigger: 

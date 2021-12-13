@@ -16,7 +16,8 @@ public class Player : AggressiveCreature {
     [SerializeField] private Slider[] reloadSliders;
     [SerializeField] private Slider selectedReloadSlider; 
     [SerializeField] private Weapon_SO defaultWeapon;
-    [SerializeField] DialogueUI dialogueUI;
+    [SerializeField] private DialogueUI dialogueUI;
+    [SerializeField] private BoxCollider2D feetCollider;
     private Inventory inventory;
     private LeftSlotsInventory leftSlotsInventory; 
     public Inventory Inventory => inventory;
@@ -144,8 +145,8 @@ public class Player : AggressiveCreature {
         }
     }
 
-    private void OnF() {
-        var hit = Physics2D.OverlapPoint(transform.position, LayerMask.GetMask("FTrigger"));
+    private void OnF() { 
+        var hit = Physics2D.OverlapBox((Vector2)feetCollider.transform.position + feetCollider.offset, feetCollider.size, 0, LayerMask.GetMask("FTrigger"));
         if (hit != null) {
             hit.gameObject.GetComponent<IFHandler>().Fire(); 
         }
@@ -155,7 +156,7 @@ public class Player : AggressiveCreature {
         if (!dialogueConversant.HasNext()) {
             Enable();
         }
-        if (dialogueUI.isActiveAndEnabled) {
+        if (dialogueUI.Canvas.enabled) {
             dialogueUI.Next(); 
         }
     }
@@ -244,5 +245,5 @@ public class Player : AggressiveCreature {
                 transform.localScale = new Vector3(1, 1, 1);
             }
         }
-    }
+    } 
 }

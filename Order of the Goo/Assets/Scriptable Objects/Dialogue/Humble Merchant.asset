@@ -1,5 +1,30 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8804942138012608288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: 3d13fd91-b1b6-4db4-9b3b-aa7619e15a67
+  m_EditorClassIdentifier: 
+  text: THIS!!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1084
+    y: 524
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: 74b13f9ed9e163f4bad7431646929bc4, type: 3}
+  avatarName: Angry Merchant
+  onEnterTrigger: 
+  onExitTrigger: hi
 --- !u!114 &-4727814715939421373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14,16 +39,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Oh well don't worry, only one slap across the face will do you some good.
   children:
-  - 381b462e-1c39-43ba-9fe7-172ff35a78b0
-  - e1c03373-5fdf-4ae4-8862-0b2f3078de53
-  - 42280860-fb68-40bb-bef6-dc927241e289
+  - b978b873-f964-4ada-80b1-550ed9200a71
+  - 49f5a6ed-d561-4d84-931a-d01f46777693
   rect:
     serializedVersion: 2
-    x: 509
-    y: 344
+    x: 514
+    y: 531
     width: 200
-    height: 100
+    height: 240
   currentSpeaker: 0
+  avatarImage: {fileID: 2800000, guid: 74b13f9ed9e163f4bad7431646929bc4, type: 3}
+  avatarName: Humble Merchant
+  onEnterTrigger: 
+  onExitTrigger: 
 --- !u!114 &-3469100690532222076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45,8 +73,37 @@ MonoBehaviour:
     x: 501
     y: 47
     width: 200
-    height: 100
+    height: 240
   currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: 74b13f9ed9e163f4bad7431646929bc4, type: 3}
+  avatarName: Humble Merchant
+  onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &-2081700351809945820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: 49f5a6ed-d561-4d84-931a-d01f46777693
+  m_EditorClassIdentifier: 
+  text: WTF?
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 825
+    y: 760
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: bb7853286f6573f469b5a559d9ae0f5b, type: 3}
+  avatarName: You
+  onEnterTrigger: 
+  onExitTrigger: 
 --- !u!114 &-1723911993743327963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,11 +121,15 @@ MonoBehaviour:
   - 5c80bde4-6524-4a5b-a3b4-5b1c6ba1ad05
   rect:
     serializedVersion: 2
-    x: 263
-    y: 193
+    x: 257
+    y: 294
     width: 200
-    height: 100
+    height: 240
   currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: bb7853286f6573f469b5a559d9ae0f5b, type: 3}
+  avatarName: You
+  onEnterTrigger: 
+  onExitTrigger: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,7 +140,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ad301a1a5676f74fa9e595776186f00, type: 3}
-  m_Name: Hello
+  m_Name: Humble Merchant
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 6825459088582610144}
@@ -89,31 +150,10 @@ MonoBehaviour:
   - {fileID: 3621415427482087356}
   - {fileID: -4727814715939421373}
   - {fileID: 4018374269004785494}
-  - {fileID: 8429640043842024203}
-  - {fileID: 6889169921196340840}
-  - {fileID: 990578748871601074}
   - {fileID: -3469100690532222076}
---- !u!114 &990578748871601074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
-  m_Name: 42280860-fb68-40bb-bef6-dc927241e289
-  m_EditorClassIdentifier: 
-  text: WTF WTF WTF WTF WTF???
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 978
-    y: 344
-    width: 200
-    height: 100
-  currentSpeaker: 1
+  - {fileID: 3726879882373678113}
+  - {fileID: -2081700351809945820}
+  - {fileID: -8804942138012608288}
 --- !u!114 &3621415427482087356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,11 +170,41 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 759
-    y: 192
+    x: 749
+    y: 127
     width: 200
-    height: 100
+    height: 240
   currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: bb7853286f6573f469b5a559d9ae0f5b, type: 3}
+  avatarName: You
+  onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &3726879882373678113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: b978b873-f964-4ada-80b1-550ed9200a71
+  m_EditorClassIdentifier: 
+  text: Shut up what are you gonna do????
+  children:
+  - 3d13fd91-b1b6-4db4-9b3b-aa7619e15a67
+  rect:
+    serializedVersion: 2
+    x: 828
+    y: 523
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: bb7853286f6573f469b5a559d9ae0f5b, type: 3}
+  avatarName: You
+  onEnterTrigger: 
+  onExitTrigger: 
 --- !u!114 &4018374269004785494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,11 +222,15 @@ MonoBehaviour:
   - 10fa5e5b-0359-4728-b0b2-16fe53ce2ffa
   rect:
     serializedVersion: 2
-    x: 501
-    y: 193
+    x: 509
+    y: 283
     width: 200
-    height: 100
+    height: 240
   currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: 74b13f9ed9e163f4bad7431646929bc4, type: 3}
+  avatarName: Humble Merchant
+  onEnterTrigger: 
+  onExitTrigger: 
 --- !u!114 &6353972750529977578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,11 +248,15 @@ MonoBehaviour:
   - 483e6a48-7ef2-41cf-9114-6d1a3b849147
   rect:
     serializedVersion: 2
-    x: 263
-    y: 345
+    x: 262
+    y: 528
     width: 200
-    height: 100
+    height: 240
   currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: bb7853286f6573f469b5a559d9ae0f5b, type: 3}
+  avatarName: You
+  onEnterTrigger: 
+  onExitTrigger: 
 --- !u!114 &6825459088582610144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,50 +279,12 @@ MonoBehaviour:
     x: 39
     y: 193
     width: 200
-    height: 100
+    height: 240
   currentSpeaker: 0
---- !u!114 &6889169921196340840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
-  m_Name: e1c03373-5fdf-4ae4-8862-0b2f3078de53
-  m_EditorClassIdentifier: 
-  text: WTF WTF???
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 761
-    y: 397
-    width: 200
-    height: 100
-  currentSpeaker: 1
---- !u!114 &8429640043842024203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
-  m_Name: 381b462e-1c39-43ba-9fe7-172ff35a78b0
-  m_EditorClassIdentifier: 
-  text: WTF????
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 761
-    y: 292
-    width: 200
-    height: 100
-  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: 74b13f9ed9e163f4bad7431646929bc4, type: 3}
+  avatarName: Humble Merchant
+  onEnterTrigger: 
+  onExitTrigger: 
 --- !u!114 &9158396335423707374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,5 +305,9 @@ MonoBehaviour:
     x: 262
     y: 47
     width: 200
-    height: 100
+    height: 240
   currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: bb7853286f6573f469b5a559d9ae0f5b, type: 3}
+  avatarName: You
+  onEnterTrigger: 
+  onExitTrigger: 

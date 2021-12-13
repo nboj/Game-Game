@@ -7,11 +7,9 @@ public delegate void OnHit(GameObject go);
 
 public class Fighter : MonoBehaviour {
     [SerializeField] private GameObject damageText;
-    public event OnHit OnHit;
-    private Player player;
+    public event OnHit OnHit; 
 
-    private void Start() {
-        player = GameObject.FindWithTag("Player").GetComponent<Player>();
+    private void Start() { 
         OnHit += HitController;
     }
 
@@ -38,7 +36,8 @@ public class Fighter : MonoBehaviour {
     }
 
     private void SetupProjectile(Projectile projectile, RangedWeapon_SO weapon, Vector2 target) { 
-        projectile.Parent = gameObject; 
+        projectile.Parent = gameObject;
+        projectile.transform.position += new Vector3(0, 1f, 0);
         projectile.RangedWeapon = weapon; 
         projectile.OnHit = OnHit; 
         projectile.SetRotation(target);

@@ -13,8 +13,30 @@ namespace RPG.Dialogue {
         }
         [SerializeField] private string text;
         [SerializeField] private List<string> children;
-        [SerializeField] private Rect rect = new Rect(0, 0, 200, 100);
+        [SerializeField] private Rect rect = new Rect(0, 0, 200, 240);
         [SerializeField] private Speaker currentSpeaker = Speaker.AI;
+        [SerializeField] private Texture2D avatarImage;
+        [SerializeField] private string avatarName;
+        [SerializeField] private string onEnterTrigger;
+        [SerializeField] private string onExitTrigger;
+
+        public string OnEnterTrigger {
+            get => onEnterTrigger;
+        }
+
+        public string OnExitTrigger {
+            get => onExitTrigger;
+        }
+
+        public Texture2D AvatarImage {
+            get => avatarImage;
+            set => avatarImage = value;
+        }
+
+        public string Name {
+            get => avatarName;
+            set => avatarName = value;
+        }
 
         public Speaker CurrentSpeaker {
             get => currentSpeaker;

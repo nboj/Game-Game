@@ -73,8 +73,9 @@ namespace RPG.Combat {
         }
 
         private void OnTriggerEnter2D(Collider2D collider) {
-            if (collider.CompareTag(parent.tag))
+            if (collider.CompareTag(parent.tag)) {
                 return;
+            }
 
             if (rangedWeapon.SplashRadius > 0) {
                 Collider2D[] hit = Physics2D.OverlapCircleAll(transform.position, rangedWeapon.SplashRadius);
