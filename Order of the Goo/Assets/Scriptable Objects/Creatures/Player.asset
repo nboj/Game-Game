@@ -21,3 +21,4 @@ MonoBehaviour:
   constitution: 10
   ac: 0
   level: 1
+  resistancePercent: 100

@@ -30,28 +30,9 @@ public class Creature : MonoBehaviour {
     public virtual void FixedUpdate() {
     }
 
-    public int GetDiceValue(DiceType type) {
-        switch (type) {
-            case DiceType.d4:
-                return 4;
-            case DiceType.d6:
-                return 6;
-            case DiceType.d8:
-                return 8;
-            case DiceType.d10:
-                return 10;
-            case DiceType.d12:
-                return 12;
-        }
-        return -1;
-    }
-
     public Creature_SO CreatureSO {
         get => creature_SO;
         set => creature_SO = value;
-    }
-    public float RollDie(int max) {
-        return Random.Range(0, max) + 1;
     }
 
     public RigidbodyMovement RigidbodyMovement => rigidbodyMovement;

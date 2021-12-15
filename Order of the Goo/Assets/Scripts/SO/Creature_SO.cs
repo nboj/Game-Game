@@ -28,23 +28,14 @@ public class Creature_SO : ScriptableObject {
     [SerializeField] private float constitution = 10f;
     [SerializeField] private float ac = 0f;
     [SerializeField] private float level = 1f;
-    [SerializeField] private float resistanceAmount = 0f;
+    [Header("THE SMALLER THE RESISTANCE PERCENT IS,\n THE MORE RESISTANCE YOU GET...")]
+    [Range(0f, 200f)]
+    [SerializeField] private float resistancePercent = 100f;
 
     public CreatureClass CreatureClass => creatureClass;
     public DiceType DiceType {
         get {
-            switch (creatureClass) {
-                case CreatureClass.WIZARD:
-                    return DiceType.d6;  
-                case CreatureClass.ROGUE:
-                    return DiceType.d8;
-                case CreatureClass.RANGER:
-                    return DiceType.d10; 
-                case CreatureClass.FIGHTER:
-                    return DiceType.d10; 
-                default:
-                    return DiceType.d8; 
-            } 
+            return GameController.GetClassDie(CreatureClass);
         }
     }
     public float Strength => strength;
@@ -55,4 +46,5 @@ public class Creature_SO : ScriptableObject {
     public float Constitution => constitution;
     public float AC => ac;
     public float Level => level;
+    public float ResistancePercent => resistancePercent;
 } 

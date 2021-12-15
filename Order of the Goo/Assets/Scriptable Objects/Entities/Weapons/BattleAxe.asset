@@ -22,7 +22,12 @@ MonoBehaviour:
   weaponRange: 0
   hasSplashDamage: 1
   fireRate: 0
+  diceMultiplier: 1
   damageRollType: 1
+  damageClass: 0
+  damageClassMultiplier: 1
+  attackModifier: 0
+  damageModifier: 0
   weaponWidth: 0
   dexterity: 10
   strength: 10

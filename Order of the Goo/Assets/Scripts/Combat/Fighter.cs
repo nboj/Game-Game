@@ -1,7 +1,7 @@
-using RPG.Combat; 
-using UnityEngine;
-using TMPro;
+using RPG.Combat;
 using System.Collections;
+using TMPro;
+using UnityEngine;
 
 public delegate void OnHit(GameObject go);
 
@@ -33,7 +33,7 @@ public class Fighter : MonoBehaviour {
     } 
     
     private void GetDamage(Creature_SO creature) { 
-    }
+    } 
 
     private void SetupProjectile(Projectile projectile, RangedWeapon_SO weapon, Vector2 target) { 
         projectile.Parent = gameObject;
@@ -46,42 +46,36 @@ public class Fighter : MonoBehaviour {
     private void HitController(GameObject other) {
         var enemy = other.GetComponent<AggressiveCreature>();
         var creature = GetComponent<AggressiveCreature>();
-        var enemyAC = enemy.CreatureSO.AC; 
-        float GetDamageFromDice(DiceType diceType, float multiplier) {
-            var max = creature.GetDiceValue(diceType);
-            var damage = 0f;
-            for (var i = 0; i < multiplier; i++) {
-                damage += creature.RollDie(max);
-            }
-            return damage;
-        }
-        if (creature != null) { 
-            var totalDamage = 0f;
-            totalDamage += GetDamageFromDice(creature.Weapons[creature.SelectedIndex].DamageRollType, creature.CreatureSO.Level);
-            var rawModifier = creature.CreatureSO.Strength - 10;
-            var modifier = (int)(rawModifier / 2);
-            totalDamage += rawModifier != 0 ? modifier : 0;
+        var enemyAC = creature.CreatureSO.AC;  
+        if (creature != null) {
+            var weapon = creature.Weapons[creature.SelectedIndex];
+            var classModValue = GameController.GetModifierValue(weapon.DamageClass);
+            // get damage 
+            var totalDamage = GameController.RollDie(weapon.DiceMultiplier, GameController.GetDiceValue(weapon.DamageRollType)) + classModValue + weapon.DamageModifier + (classModValue * weapon.DamageClassMultiplier); 
+            // roll to hit
             var totalHitRoll = 0f;
-            var hitRoll = creature.RollDie(20);
-            totalHitRoll += hitRoll;
-            if (totalHitRoll == 1) {// Separate the checking when casting the shot
-                // hurt self
-                other.GetComponent<Health>().TakeDamage(totalDamage / 2);
-            } else if (totalHitRoll > enemyAC && hitRoll != 20) {
-                // hurt enemy
-                other.GetComponent<Health>().TakeDamage(totalDamage);
+            var hitRoll = GameController.RollDie(1, 20);
+            totalHitRoll += hitRoll + weapon.AttackModifier + classModValue;
+            var resistancePercent = enemy.CreatureSO.ResistancePercent;
+            if (totalHitRoll == 1) {
+                // hit with full resistance %  
+                totalDamage = (totalDamage * resistancePercent) / 100f; 
             } else if (hitRoll == 20) {
-                // crit enemy
-                // check another hit and if hit then double it + original damage amount
-                other.GetComponent<Health>().TakeDamage(totalDamage * 2);
+                // Hit without resistance % * 2
+                Debug.Log("Resistance: Crit");
+                totalDamage = ((totalDamage * resistancePercent) / 100f) * 2;  
+            } else { 
+                var resistanceReduction = Mathf.Clamp(totalHitRoll, 1, 100 - enemyAC - resistancePercent);// here
+                Debug.Log(resistanceReduction);
+                var damagePreCalculation = totalDamage * (resistancePercent + resistanceReduction); 
+                totalDamage = (damagePreCalculation) / 100f;
             }
-
-            // 
-            // else missed
+            totalDamage = Mathf.Ceil(totalDamage);
+            other.GetComponent<Health>().TakeDamage(totalDamage);
             StartCoroutine(PlayHit(totalDamage, other));
             Debug.Log(totalDamage);
         }
-    }
+    } 
 
     private IEnumerator PlayHit(float totalDamage, GameObject go) { 
         var textOb = Instantiate(damageText, go.transform.position, Quaternion.identity); 

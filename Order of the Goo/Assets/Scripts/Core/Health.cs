@@ -45,7 +45,7 @@ public class Health : MonoBehaviour {
         var modifier = rawModifier != 0 ? rawModifier / 2: 0;
         var levels = creature.CreatureSO.Level;
         for (int i = 0; i < levels; i++) {
-            totalHealth += creature.GetDiceValue(diceType);
+            totalHealth += GameController.GetDiceValue(diceType);
         }
         totalHealth += modifier;
         totalHealth *= 5;
