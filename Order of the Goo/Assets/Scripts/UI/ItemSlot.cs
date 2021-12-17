@@ -31,25 +31,32 @@ public class ItemSlot : MonoBehaviour, IDragContainer<DragItem>, IDropHandler {
     }
 
     public void OnDrop(PointerEventData eventData) { 
-        var otherItem = eventData.pointerDrag;
+        var otherItem = eventData.pointerDrag;  
         Transform currentItem = null;
+        Transform otherItemParent = null;
+        ItemSlot destination = null;
         try {
-            currentItem = transform.GetChild(0); 
-        } catch(UnityException) { 
+            currentItem = transform.GetChild(0);
+        } catch (UnityException) {
         }
-        var otherItemParent = otherItem.GetComponent<DragItem>().OriginalParent;
-        var destination = otherItemParent.GetComponent<ItemSlot>(); 
-        AddItem(otherItem.GetComponent<Item>());
-        if (currentItem != null) {  
-            destination.AddItem(currentItem.GetComponent<Item>());
-            inventory.SwapItems(index, destination.Index, destination.inventory);
-            // Call swap items
-        } else {
-            destination.RemoveItem(); 
-            inventory.AddItem(otherItem.GetComponent<Item>().Entity , index);
-            // Call set item
-        }
-        inventory.UpdateUI();
-        // Call UpdateUI in inventory
+        var temp = otherItem.GetComponent<DragItem>();
+        if (temp != null) { 
+            otherItemParent = temp.OriginalParent;
+            destination = otherItemParent.GetComponent<ItemSlot>(); 
+            if (otherItemParent != null) {
+                AddItem(otherItem.GetComponent<Item>());
+                if (currentItem != null) {
+                    destination.AddItem(currentItem.GetComponent<Item>());
+                    inventory.SwapItems(index, destination.Index, destination.inventory);
+                    // Call swap items
+                } else {
+                    destination.RemoveItem();
+                    inventory.AddItem(otherItem.GetComponent<Item>().Entity, index);
+                    // Call set item 
+                }
+            }
+        } 
+            inventory.UpdateUI();
+        // Call UpdateUI in inventory 
     }
 } 
