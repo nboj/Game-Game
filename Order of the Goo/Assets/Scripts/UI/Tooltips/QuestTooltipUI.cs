@@ -20,9 +20,7 @@ public class QuestTooltipUI : MonoBehaviour
             var currentObjectivePrefab = questStatus.IsObjectiveComplete(objective.Name) ? completeObjectivePrefab : incompleteObjectivePrefab;
             var objectiveInstance = Instantiate(currentObjectivePrefab, objectiveContainer);
             var title = objectiveInstance.GetComponentInChildren<TextMeshProUGUI>();
-            title.text = objective.Name;
-            var a = GameObject.FindWithTag("Progress1").GetComponent<TextMeshProUGUI>();
-            a.text = "HIODSFHJIOFH";
+            title.text = objective.Name; 
         }
     }
 }
