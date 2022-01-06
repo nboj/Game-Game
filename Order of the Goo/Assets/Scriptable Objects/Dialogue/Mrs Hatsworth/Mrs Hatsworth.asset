@@ -43,8 +43,8 @@ MonoBehaviour:
   - cf8de934-d696-4b52-a5f6-fad3201c5e11
   rect:
     serializedVersion: 2
-    x: 952
-    y: 528
+    x: 953
+    y: 524
     width: 200
     height: 240
   currentSpeaker: 1
@@ -98,13 +98,89 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 3
-    y: 304
+    y: 309
     width: 200
     height: 240
   currentSpeaker: 0
   avatarImage: {fileID: 2800000, guid: c299f31b117684449b2f95a924485e57, type: 3}
   avatarName: Mrs. Hatsworth
   onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &-3517236583856932967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: e4d1ffa0-418c-4836-9b49-6deb4d00f25e
+  m_EditorClassIdentifier: 
+  text: Sure!
+  children:
+  - ea198998-b53c-437a-8fdd-b163c1979cf0
+  rect:
+    serializedVersion: 2
+    x: 1642
+    y: 403
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: bb7853286f6573f469b5a559d9ae0f5b, type: 3}
+  avatarName: You
+  onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &-3033136590950318202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: c8da1918-0bcb-45f5-b621-05eb28caa98c
+  m_EditorClassIdentifier: 
+  text: Aww really? Okay. I respect your unicorn decision.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1891
+    y: 648
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: c299f31b117684449b2f95a924485e57, type: 3}
+  avatarName: Mrs. Hatsworth
+  onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &-2113783685242878794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: ea198998-b53c-437a-8fdd-b163c1979cf0
+  m_EditorClassIdentifier: 
+  text: Awesome! Come see me when your done!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1898
+    y: 398
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: c299f31b117684449b2f95a924485e57, type: 3}
+  avatarName: Mrs. Hatsworth
+  onEnterTrigger: GiveQuest
   onExitTrigger: 
 --- !u!114 &-328505583814248183
 MonoBehaviour:
@@ -154,6 +230,37 @@ MonoBehaviour:
   - {fileID: -328505583814248183}
   - {fileID: -8980977051367166047}
   - {fileID: 2359333844630804757}
+  - {fileID: 4142023104832657313}
+  - {fileID: -3517236583856932967}
+  - {fileID: 1089145149883988283}
+  - {fileID: -2113783685242878794}
+  - {fileID: -3033136590950318202}
+--- !u!114 &1089145149883988283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: d1f73a00-862f-470a-bf55-668807d5e089
+  m_EditorClassIdentifier: 
+  text: No I can't, sorry.
+  children:
+  - c8da1918-0bcb-45f5-b621-05eb28caa98c
+  rect:
+    serializedVersion: 2
+    x: 1646
+    y: 647
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: bb7853286f6573f469b5a559d9ae0f5b, type: 3}
+  avatarName: You
+  onEnterTrigger: 
+  onExitTrigger: 
 --- !u!114 &2359333844630804757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,7 +274,8 @@ MonoBehaviour:
   m_Name: cf8de934-d696-4b52-a5f6-fad3201c5e11
   m_EditorClassIdentifier: 
   text: That is th CUTTEST thing I have EVER heard!!!!!
-  children: []
+  children:
+  - a173bf3a-68ec-4d7e-ab8e-3f0f90f9b556
   rect:
     serializedVersion: 2
     x: 1162
@@ -201,6 +309,34 @@ MonoBehaviour:
     width: 200
     height: 240
   currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: c299f31b117684449b2f95a924485e57, type: 3}
+  avatarName: Mrs. Hatsworth
+  onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &4142023104832657313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: a173bf3a-68ec-4d7e-ab8e-3f0f90f9b556
+  m_EditorClassIdentifier: 
+  text: Could you kill a slime for me since your so powerful? Ill give you some money
+    for the trouble!
+  children:
+  - e4d1ffa0-418c-4836-9b49-6deb4d00f25e
+  - d1f73a00-862f-470a-bf55-668807d5e089
+  rect:
+    serializedVersion: 2
+    x: 1378
+    y: 525
+    width: 200
+    height: 240
+  currentSpeaker: 0
   avatarImage: {fileID: 2800000, guid: c299f31b117684449b2f95a924485e57, type: 3}
   avatarName: Mrs. Hatsworth
   onEnterTrigger: 

@@ -56,7 +56,7 @@ namespace RPG.Combat {
 
         private void RotateProjectile() {
             if (rangedWeapon.HasRotation) {
-                transform.Rotate(new Vector3(0, 0, rangedWeapon.RotationSpeed));
+                transform.Rotate(new Vector3(0, 0, rangedWeapon.RotationSpeed) * Time.deltaTime);
             }
         }
 

@@ -3,12 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 
-public class Health : MonoBehaviour {
-    public delegate void DeathAction();
-
-    public event DeathAction OnDeath;
+public class Health : MonoBehaviour { 
+    public UnityEvent OnDeath;
     [SerializeField] private GameObject sliderPrefab;
     [Header("Healthbar Settings")] 
     [SerializeField] private float fadeOutDelay = 3;
@@ -110,7 +109,7 @@ public class Health : MonoBehaviour {
     private void HandleDeath() {
         isDead = true;
         if (OnDeath != null)
-            OnDeath();
+            OnDeath.Invoke();
     }
 
     public void TakeDamage(float amount) {

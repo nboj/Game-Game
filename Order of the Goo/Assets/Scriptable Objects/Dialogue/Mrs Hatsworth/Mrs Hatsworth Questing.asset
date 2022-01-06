@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3162813124293820445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: b8d8c910-983a-40cc-b297-f57314c1eeda
+  m_EditorClassIdentifier: 
+  text: Come see me when your done sweetie.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 42
+    y: 251
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: c299f31b117684449b2f95a924485e57, type: 3}
+  avatarName: Mrs. Hatsworth
+  onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ad301a1a5676f74fa9e595776186f00, type: 3}
+  m_Name: Mrs Hatsworth Questing
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -3162813124293820445}

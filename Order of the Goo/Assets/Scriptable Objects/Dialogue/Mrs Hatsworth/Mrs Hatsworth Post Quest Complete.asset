@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4755054542790356467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: d6ec8dac-4675-4353-91e2-d00bb93c82ad
+  m_EditorClassIdentifier: 
+  text: Thanks again for the great help!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 63
+    y: 197
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: c299f31b117684449b2f95a924485e57, type: 3}
+  avatarName: Mrs. Hatsworth
+  onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ad301a1a5676f74fa9e595776186f00, type: 3}
+  m_Name: Mrs Hatsworth Post Quest Complete
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -4755054542790356467}

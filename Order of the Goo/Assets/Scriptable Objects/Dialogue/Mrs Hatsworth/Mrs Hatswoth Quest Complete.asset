@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5429265541253890075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: 65e9e49d-140d-4186-95c8-0aa59aab6af2
+  m_EditorClassIdentifier: 
+  text: Right...
+  children:
+  - 705cdbc4-20ca-4f53-9d2c-0807b2e55017
+  rect:
+    serializedVersion: 2
+    x: 350
+    y: 129
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: bb7853286f6573f469b5a559d9ae0f5b, type: 3}
+  avatarName: You
+  onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ad301a1a5676f74fa9e595776186f00, type: 3}
+  m_Name: Mrs Hatswoth Quest Complete
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 3817426899221492515}
+  - {fileID: -5429265541253890075}
+  - {fileID: 1452814331385093036}
+  - {fileID: 4440488535599584908}
+--- !u!114 &1452814331385093036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: b95c77be-1cf9-4a4f-947c-2765eab8e9a8
+  m_EditorClassIdentifier: 
+  text: Ok?
+  children:
+  - 705cdbc4-20ca-4f53-9d2c-0807b2e55017
+  rect:
+    serializedVersion: 2
+    x: 343
+    y: 367
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: bb7853286f6573f469b5a559d9ae0f5b, type: 3}
+  avatarName: You
+  onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &3817426899221492515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: 6419cee7-6d9f-4c58-af5c-1ea6f1c477b3
+  m_EditorClassIdentifier: 
+  text: Wow your amazing! I always new unicorns had amazing power!
+  children:
+  - 65e9e49d-140d-4186-95c8-0aa59aab6af2
+  - b95c77be-1cf9-4a4f-947c-2765eab8e9a8
+  rect:
+    serializedVersion: 2
+    x: 83
+    y: 246
+    width: 200
+    height: 240
+  currentSpeaker: 0
+  avatarImage: {fileID: 2800000, guid: c299f31b117684449b2f95a924485e57, type: 3}
+  avatarName: Mrs. Hatsworth
+  onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &4440488535599584908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: 705cdbc4-20ca-4f53-9d2c-0807b2e55017
+  m_EditorClassIdentifier: 
+  text: Oh my dear! I forgot about your prize! Heres your well earned reward!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 659
+    y: 249
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: c299f31b117684449b2f95a924485e57, type: 3}
+  avatarName: Mrs Hatsworth
+  onEnterTrigger: 
+  onExitTrigger: QuestCompleted

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using RPG.UI;
+using System.Collections;
 
 namespace RPG.Dialogue {
     public class DialogueActivator : MonoBehaviour, IFHandler {
@@ -34,7 +35,7 @@ namespace RPG.Dialogue {
             if (!dialogueUI.Canvas.enabled && !dialogueSelectionUI.Canvas.enabled) { 
                 player.Disable(); 
                 player.DialogueConversant.CurrentDialogue = dialogue;
-                player.DialogueConversant.CurrentConverser = gameObject;
+                player.DialogueConversant.CurrentConverser = gameObject; 
                 player.DialogueConversant.Setup();
                 if (dialogue.Nodes[0].CurrentSpeaker == DialogueNode.Speaker.PLAYER) {
                     dialogueSelectionUI.Canvas.enabled = true;
@@ -44,6 +45,6 @@ namespace RPG.Dialogue {
                     dialogueUI.Setup();
                 }
             } 
-        }
+        } 
     }
 }

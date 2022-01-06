@@ -37,5 +37,5 @@ MonoBehaviour:
   rangedMagic: 1
   magicProjectile: {fileID: 8680156474138054269, guid: eb301ff53f2d4624298e893bc4837926, type: 3}
   trackTarget: 1
-  trackingSensitivity: 3.65
+  trackingSensitivity: 2.68
   intelligence: 10

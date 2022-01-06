@@ -7,9 +7,10 @@ public class RangedWeapon_SO : Weapon_SO {
     [SerializeField] private float splashRadius;
     [SerializeField] private GameObject projectile;
     [SerializeField] private float projectileSpeed;
+    [SerializeField] private ParticleSystem deathParticles;
+    [Header("(Rotation in Degrees per second)")]
     [SerializeField] private bool hasRotation;
     [SerializeField] private float rotationSpeed;
-    [SerializeField] private ParticleSystem deathParticles;
     
     public GameObject Projectile => projectile;
     public float ProjectileSpeed => projectileSpeed;

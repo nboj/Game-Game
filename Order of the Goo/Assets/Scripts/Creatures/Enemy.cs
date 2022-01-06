@@ -18,7 +18,7 @@ public class Enemy : AggressiveCreature {
         player = FindObjectOfType<Player>();
         currentState = EnemyState.IDLE;
         startPos = transform.position;
-        Health.OnDeath += HandleDeath;
+        Health.OnDeath.AddListener(HandleDeath);
     }
 
     public enum EnemyState {
