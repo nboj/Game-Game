@@ -20,7 +20,13 @@ public class QuestTooltipUI : MonoBehaviour
             var currentObjectivePrefab = questStatus.IsObjectiveComplete(objective.Name) ? completeObjectivePrefab : incompleteObjectivePrefab;
             var objectiveInstance = Instantiate(currentObjectivePrefab, objectiveContainer);
             var title = objectiveInstance.GetComponentInChildren<TextMeshProUGUI>();
-            title.text = objective.Name; 
+            title.text = objective.Name;
+            var objectivesUI = objectiveInstance.GetComponentsInChildren<QuestObjective>();
+            foreach (QuestObjective objectiveUI in objectivesUI) { 
+                if (objectiveUI.ObjectiveName.text.Equals(objective.Name)) {
+                    objectiveUI.ObjectiveProgress.text = objective.CurrentAmount.ToString() + "/" + objective.RepeatAmount; 
+                } 
+            }
         }
     }
 }

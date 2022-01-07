@@ -17,7 +17,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 23
-    y: 221
+    y: 222
     width: 200
     height: 240
   currentSpeaker: 1
@@ -39,5 +39,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: -3695950998073484625}
-  willRepeat: 1
-  firstTime: 1

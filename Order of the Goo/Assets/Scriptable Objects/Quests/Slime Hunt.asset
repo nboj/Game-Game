@@ -16,4 +16,5 @@ MonoBehaviour:
   objectives:
   - objectiveName: Kill some slimes
     repeatAmount: 2
-    currentAmount: 0
+  - objectiveName: Talk to some person
+    repeatAmount: 1

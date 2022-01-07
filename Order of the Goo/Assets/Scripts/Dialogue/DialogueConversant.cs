@@ -50,7 +50,7 @@ namespace RPG.Dialogue {
             foreach (var dialogueTrigger in currentConverser.GetComponents<DialogueTrigger>()) {
                 var triggerName = currentNode.OnEnterTrigger;
                 if (!string.IsNullOrEmpty(triggerName) && dialogueTrigger.Action.Equals(triggerName)) {
-                    dialogueTrigger.Trigger();
+                    dialogueTrigger.Trigger(); 
                 }
             }
         }

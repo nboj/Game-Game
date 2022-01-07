@@ -17,7 +17,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 1098
-    y: 527
+    y: 529
     width: 200
     height: 240
   currentSpeaker: 1
@@ -251,7 +251,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 828
-    y: 523
+    y: 522
     width: 200
     height: 240
   currentSpeaker: 1
@@ -302,8 +302,8 @@ MonoBehaviour:
   - 483e6a48-7ef2-41cf-9114-6d1a3b849147
   rect:
     serializedVersion: 2
-    x: 262
-    y: 528
+    x: 268
+    y: 545
     width: 200
     height: 240
   currentSpeaker: 1
@@ -337,7 +337,7 @@ MonoBehaviour:
   currentSpeaker: 0
   avatarImage: {fileID: 2800000, guid: 74b13f9ed9e163f4bad7431646929bc4, type: 3}
   avatarName: Humble Merchant
-  onEnterTrigger: 
+  onEnterTrigger: Complete Talk
   onExitTrigger: 
 --- !u!114 &9158396335423707374
 MonoBehaviour:

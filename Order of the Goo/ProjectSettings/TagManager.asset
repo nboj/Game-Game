@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - DialogueUI
   - DialogueSelectionUI
+  - TooltipProgress
   layers:
   - Default
   - TransparentFX

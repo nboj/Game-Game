@@ -45,6 +45,6 @@ public class Quest : ScriptableObject {
     }
 
     public void AddCurrentAmount(int index) {
-        objectives[index].CurrentAmount++;
+        objectives[index].CurrentAmount++; 
     }
 }

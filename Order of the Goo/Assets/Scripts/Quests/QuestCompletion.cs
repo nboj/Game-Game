@@ -3,18 +3,14 @@ using UnityEngine.Events;
 
 public class QuestCompletion : MonoBehaviour {
     [SerializeField] private Quest quest;
-    [SerializeField] private string objective;
-    [SerializeField] private UnityEvent OnQuestComplete;
+    [SerializeField] private string[] objectives;
     private QuestList playerQuestList;
 
     private void Start() {
         playerQuestList = GameObject.FindWithTag("Player").GetComponent<QuestList>();
     }
 
-    public void CompleteObjective() {
-        bool completedQuest = playerQuestList.CompleteQuestObjective(quest, objective);
-        if (completedQuest) {
-            OnQuestComplete.Invoke();
-        }
+    public void CompleteObjective(int objectiveIndex) {
+        playerQuestList.CompleteQuestObjective(quest, objectives[objectiveIndex]); 
     }
 }

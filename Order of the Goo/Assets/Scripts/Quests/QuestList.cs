@@ -2,12 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 
-public delegate void OnUpdateQuestListUI(); 
+public delegate void OnUpdateQuestListUI();
+public delegate void OnQuestComplete(Quest quest);
 public class QuestList : MonoBehaviour {
     [SerializeField] private List<QuestStatus> statuses;
-    public static event OnUpdateQuestListUI UpdateQuestListUI; 
+    public static event OnUpdateQuestListUI UpdateQuestListUI;
+    private event OnQuestComplete completeQuest;
+
+    public OnQuestComplete OnQuestComplete {
+        get => completeQuest;
+        set => completeQuest = value;
+    }
 
     public List<QuestStatus> Statuses {
         get => statuses;
@@ -25,6 +33,7 @@ public class QuestList : MonoBehaviour {
     public bool HasQuest(Quest quest) {
         foreach (QuestStatus status in statuses) { 
             if (status.Quest == quest) {
+                completeQuest(quest);
                 return true;
             }  
         }
@@ -34,6 +43,7 @@ public class QuestList : MonoBehaviour {
     public bool QuestCompleted(Quest quest) {
         foreach(QuestStatus status in statuses) {
             if (status.CompletedObjectives.Count == quest.ObjectiveCount) {
+                completeQuest(quest);
                 return true;
             }
         }
@@ -43,13 +53,18 @@ public class QuestList : MonoBehaviour {
     public bool CompleteQuestObjective(Quest quest, string objective) { 
         for (int i = 0; i < statuses.Count; i++) {
             if (statuses[i].Quest == quest) {
-                quest.AddCurrentAmount(i);
-                if (quest.Objectives[i].RepeatAmount <= quest.Objectives[i].CurrentAmount) {
-                    statuses[i].CompleteObjective(objective);
-                    UpdateQuestListUI(); 
-                    return true;
-                } else {
-                    return false;
+                for (var j = 0; j < quest.ObjectiveCount; j++) {
+                    if (objective.Equals(quest.Objectives[j].Name)) {
+                        quest.AddCurrentAmount(j);
+                        if (quest.Objectives[j].RepeatAmount <= quest.Objectives[j].CurrentAmount) {
+                            statuses[i].CompleteObjective(objective);
+                            QuestCompleted(quest);
+                            UpdateQuestListUI(); 
+                            return true;
+                        } else {
+                            return false;
+                        } 
+                    }
                 }
             }
         }
