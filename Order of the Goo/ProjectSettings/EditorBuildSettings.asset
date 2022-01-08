@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Houses/House 2.unity
     guid: 1a924aaeecffbac49af422c13129022d
+  - enabled: 1
+    path: Assets/Scenes/Second Area.unity
+    guid: 08774f5eb05cb84428c6b6a45b9b5b39
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: fa04a458572d9144988bc95c9c733c9f, type: 2}
