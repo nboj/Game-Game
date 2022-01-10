@@ -1,7 +1,10 @@
 ﻿using UnityEngine; 
 using System.Collections.Generic;
+using UnityEngine.Events;
 
 public class Path : MonoBehaviour {
+    [SerializeField] private bool repeat = true;
+    [SerializeField] private UnityEvent onReachedEnd;
     List<Transform> waypoints;
     int index;
     public void Awake() {
@@ -14,7 +17,12 @@ public class Path : MonoBehaviour {
 
     public Transform GetNextWaypoint() {
         if (index >= waypoints.Count) {
-            index = 0;
+            if (repeat) { 
+                index = 0;
+            } else {
+                index--;
+                onReachedEnd.Invoke();
+            }
         }
         return waypoints[index++];
     }

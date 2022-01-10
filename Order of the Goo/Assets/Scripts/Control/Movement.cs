@@ -1,11 +1,11 @@
 using UnityEngine;
  
 public class Movement {
+    protected bool canControl = true; 
     private float movementSpeed;
     private Vector2 direction;
     private Animator animator;
     private MovementState currentMovementState;
-    protected bool canControl = true; 
 
     public bool CanControl {
         get => canControl;
@@ -67,6 +67,23 @@ public class Movement {
                 currentMovementState = MovementState.DOWN;
             } 
         }
+        if (direction == Vector2.zero) {
+            ResetAnimator();
+            switch (currentMovementState) {
+                case MovementState.DOWN:
+                    animator.SetBool("Idle Down", true);
+                    break;
+                case MovementState.LEFT:
+                    animator.SetBool("Idle Left", true);
+                    break;
+                case MovementState.RIGHT:
+                    animator.SetBool("Idle Right", true);
+                    break;
+                default:
+                    animator.SetBool("Idle Up", true);
+                    break;
+            }
+        }
     }
 
     private void ResetAnimator() {
@@ -74,6 +91,10 @@ public class Movement {
         animator.SetBool("Left", false);
         animator.SetBool("Up", false);
         animator.SetBool("Down", false);
+        animator.SetBool("Idle Down", false);
+        animator.SetBool("Idle Up", false);
+        animator.SetBool("Idle Right", false);
+        animator.SetBool("Idle Left", false);
     }
 
     protected void StopMoving() { 
