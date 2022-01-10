@@ -17,7 +17,8 @@ public class Player : AggressiveCreature {
     [SerializeField] private Slider selectedReloadSlider; 
     [SerializeField] private Weapon_SO defaultWeapon;
     [SerializeField] private DialogueUI dialogueUI;
-    [SerializeField] private BoxCollider2D feetCollider;
+    [SerializeField] private BoxCollider2D feetCollider; 
+    private bool tempCanAttack = false;
     private Inventory inventory;
     private LeftSlotsInventory leftSlotsInventory; 
     public Inventory Inventory => inventory;
@@ -30,12 +31,12 @@ public class Player : AggressiveCreature {
                 UIController.CanvasEnabled(true);
             } else {
                 UIController.CanvasEnabled(false); 
-            }
+            } 
             base.CanAttack = value;
         }
     }
     public override void Awake() {
-        CanAttack = CanAttack;// remove this
+        CanAttack = CanAttack; 
         base.Awake();
         inventory = GetComponent<Inventory>();
         leftSlotsInventory = GetComponent<LeftSlotsInventory>();
@@ -45,6 +46,7 @@ public class Player : AggressiveCreature {
 
     public override void Start() { 
         base.Start();
+        
         leftSlotsInventory.OnWeaponSlotsUpdated += UpdateWeapons;
         UpdateUI();
     }
@@ -180,6 +182,7 @@ public class Player : AggressiveCreature {
     }
 
     public void Disable() {
+        tempCanAttack = CanAttack;
         CanControl = false;
         CanAttack = false;
         RigidbodyMovement.CanControl = false;
@@ -187,62 +190,76 @@ public class Player : AggressiveCreature {
 
     public void Enable() {
         CanControl = true;
-        CanAttack = true;
+        CanAttack = tempCanAttack;
         RigidbodyMovement.CanControl = true;
 
+    }
+
+    public void Enable(bool CanControl = true, bool CanAttack = true) {
+        this.CanControl = CanControl;
+        this.CanAttack = CanAttack;
+        RigidbodyMovement.CanControl = CanControl; 
     }
 
     private void PointToMouse() {
         var direction = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()) - transform.position;
         var velocityDirection = RigidbodyMovement.Direction;
         if (velocityDirection.x > 0 || velocityDirection.y > 0 || velocityDirection.x < 0 || velocityDirection.y < 0) {
-            Animator.SetBool("isIdleDown", false);
-            Animator.SetBool("isIdleUp", false);
+            Animator.SetBool("Idle Down", false);
+            Animator.SetBool("Idle Up", false);
+            Animator.SetBool("Idle Right", false);
+            Animator.SetBool("Idle Left", false);
             if (direction.y < 0 && direction.y < Mathf.Abs(direction.x) &&
-                direction.y < -Mathf.Abs(direction.x)) {
-                transform.localScale = new Vector3(1, 1, 1);
-                Animator.SetBool("isWalking", false);
-                Animator.SetBool("isWalkingUp", false);
-                Animator.SetBool("isWalkingDown", true);
+                direction.y < -Mathf.Abs(direction.x)) { 
+                Animator.SetBool("Right", false);
+                Animator.SetBool("Up", false);
+                Animator.SetBool("Down", true);
+                Animator.SetBool("Left", false);
             } else if (direction.y > 0 && direction.y > Mathf.Abs(direction.x) &&
-                       direction.y > -Mathf.Abs(direction.x)) {
-                transform.localScale = new Vector3(1, 1, 1);
-                Animator.SetBool("isWalking", false);
-                Animator.SetBool("isWalkingDown", false);
-                Animator.SetBool("isWalkingUp", true);
-            } else if (direction.x < 0) {
-                transform.localScale = new Vector3(-1, 1, 1);
-                Animator.SetBool("isWalkingDown", false);
-                Animator.SetBool("isWalkingUp", false);
-                Animator.SetBool("isWalking", true);
-            } else if (direction.x >= 0) {
-                transform.localScale = new Vector3(1, 1, 1);
-                Animator.SetBool("isWalkingDown", false);
-                Animator.SetBool("isWalkingUp", false);
-                Animator.SetBool("isWalking", true);
+                       direction.y > -Mathf.Abs(direction.x)) { 
+                Animator.SetBool("Right", false);
+                Animator.SetBool("Down", false);
+                Animator.SetBool("Up", true);
+                Animator.SetBool("Left", false);
+            } else if (direction.x < 0) { 
+                Animator.SetBool("Down", false);
+                Animator.SetBool("Up", false);
+                Animator.SetBool("Right", false);
+                Animator.SetBool("Left", true);
+            } else if (direction.x >= 0) { 
+                Animator.SetBool("Down", false);
+                Animator.SetBool("Up", false);
+                Animator.SetBool("Right", true);
+                Animator.SetBool("Left", false);
             }
         } else {
-            Animator.SetBool("isWalkingDown", false);
-            Animator.SetBool("isWalking", false);
-            Animator.SetBool("isWalkingUp", false);
+            Animator.SetBool("Down", false);
+            Animator.SetBool("Right", false);
+            Animator.SetBool("Up", false);
+            Animator.SetBool("Left", false);
             if (direction.y < 0 && direction.y < Mathf.Abs(direction.x) &&
                 direction.y < -Mathf.Abs(direction.x)) {
-                Animator.SetBool("isIdleDown", true);
-                Animator.SetBool("isIdleUp", false);
+                Animator.SetBool("Idle Down", true);
+                Animator.SetBool("Idle Up", false);
+                Animator.SetBool("Idle Right", false);
+                Animator.SetBool("Idle Left", false);
                 transform.localScale = new Vector3(1, 1, 1);
             } else if (direction.y > 0 && direction.y > Mathf.Abs(direction.x) &&
                        direction.y > -Mathf.Abs(direction.x)) {
-                Animator.SetBool("isIdleDown", false);
-                Animator.SetBool("isIdle", false);
-                Animator.SetBool("isIdleUp", true);
+                Animator.SetBool("Idle Down", false);
+                Animator.SetBool("Idle Right", false);
+                Animator.SetBool("Idle Left", false);
+                Animator.SetBool("Idle Up", true);
             } else if (direction.x < 0) {
-                Animator.SetBool("isIdleDown", false);
-                Animator.SetBool("isIdleUp", false);
-                transform.localScale = new Vector3(-1, 1, 1);
+                Animator.SetBool("Idle Down", false);
+                Animator.SetBool("Idle Up", false);
+                Animator.SetBool("Idle Right", false);
+                Animator.SetBool("Idle Left", true); 
             } else if (direction.x >= 0) {
-                Animator.SetBool("isIdleDown", false);
-                Animator.SetBool("isIdleUp", false);
-                transform.localScale = new Vector3(1, 1, 1);
+                Animator.SetBool("Idle Down", false);
+                Animator.SetBool("Idle Up", false);
+                Animator.SetBool("Idle Right", true);
+                Animator.SetBool("Idle Left", false); 
             }
         }
     } 

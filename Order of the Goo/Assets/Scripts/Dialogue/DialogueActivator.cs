@@ -4,7 +4,9 @@ using System.Collections;
 
 namespace RPG.Dialogue {
     public class DialogueActivator : MonoBehaviour, IFHandler {
-        [SerializeField] Dialogue dialogue;  
+        [SerializeField] Dialogue dialogue;
+        [SerializeField] private bool activateOnEnable = false;
+        [SerializeField] private bool useHighlight = true;
         private DialogueUI dialogueUI;
         private DialogueSelectionUI dialogueSelectionUI;
         private Player player;
@@ -19,16 +21,28 @@ namespace RPG.Dialogue {
             dialogueSelectionUI = GameObject.FindWithTag("DialogueSelectionUI").GetComponent<DialogueSelectionUI>();
             spriteRenderer = transform.GetComponentInChildren<SpriteRenderer>();
             player = GameObject.FindWithTag("Player").GetComponent<Player>();
-        } 
+            if (activateOnEnable) {
+                gameObject.SetActive(false);
+            }
+        }
+        private void OnEnable() {
+            if (activateOnEnable) {
+                Fire();
+            }
+        }
 
         private void OnTriggerEnter2D(Collider2D collision) {
-            if (collision.gameObject == player.transform.GetChild(0).gameObject) 
-                spriteRenderer.color = Color.red;
+            if (useHighlight) {
+                if (collision.gameObject == player.transform.GetChild(0).gameObject)
+                    spriteRenderer.color = Color.red;
+            }
         }
 
         private void OnTriggerExit2D(Collider2D collision) {
-            if (collision.gameObject == player.transform.GetChild(0).gameObject)
-                spriteRenderer.color = Color.white;
+            if (useHighlight) {
+                if (collision.gameObject == player.transform.GetChild(0).gameObject)
+                    spriteRenderer.color = Color.white;
+            }
         }
 
         public void Fire() { 

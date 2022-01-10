@@ -39,7 +39,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Npc Collider
   - FTrigger
   m_SortingLayers:
   - name: Default
