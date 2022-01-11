@@ -51,6 +51,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 0}
+  useStartTrigger: 0
+  startTrigger:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &4842575819598201940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,10 +67,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945d3d74df777564b896aafd6870ad8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
   sliderPrefab: {fileID: 0}
   fadeOutDelay: 1
   yOffset: 0
   displayHealthBorder: 0
+  startHidden: 0
   useCustomSlider: 0
 --- !u!114 &4842575819598201941
 MonoBehaviour:
@@ -82,6 +90,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   creatureSpeed: 1
   creature_SO: {fileID: 0}
+  canControl: 1
 --- !u!114 &4842575819598201942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,7 +254,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -201237273
-  m_SortingLayer: 13
+  m_SortingLayer: 14
   m_SortingOrder: 1
   m_Sprite: {fileID: 1175626771, guid: d0401173c2763ec45ac1cc6e08ad822d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

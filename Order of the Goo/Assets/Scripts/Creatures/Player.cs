@@ -3,13 +3,14 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using RPG.UI;
 using RPG.Dialogue;
+using RPG.Saving;
 
 public interface IFHandler {
     public void Fire();
-}
-
+} 
+ 
 [RequireComponent(typeof(PlayerInput), typeof(Rigidbody2D), typeof(Collider2D)), RequireComponent(typeof(Inventory), typeof(LeftSlotsInventory))]
-public class Player : AggressiveCreature {
+public class Player : AggressiveCreature, ISaveable { 
     [Header("Player Controls")] [SerializeField]
     private Canvas playerInventoryUI;
     [SerializeField] private UISlotsController UIController;
@@ -21,7 +22,7 @@ public class Player : AggressiveCreature {
     private bool tempCanAttack = false;
     private Inventory inventory;
     private LeftSlotsInventory leftSlotsInventory; 
-    public Inventory Inventory => inventory;
+    public Inventory PlayerInventory => inventory;
     public LeftSlotsInventory LeftSlotsInventory => leftSlotsInventory;
     private DialogueConversant dialogueConversant;
     public override bool CanAttack {
@@ -262,5 +263,13 @@ public class Player : AggressiveCreature {
                 Animator.SetBool("Idle Left", false); 
             }
         }
-    } 
+    }
+
+    object ISaveable.CaptureState() {
+        return new SerializableVector3(transform.position);
+    }
+
+    void ISaveable.RestoreState(object state) {
+        transform.position = ((SerializableVector3)state).ToVector();
+    }
 }

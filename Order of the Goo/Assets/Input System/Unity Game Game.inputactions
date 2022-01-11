@@ -911,6 +911,54 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "SaveLoad",
+            "id": "9d91cdb8-b868-4e1f-badb-b286f869c35b",
+            "actions": [
+                {
+                    "name": "Save",
+                    "type": "Button",
+                    "id": "3e794517-cd63-4e09-a05d-9e631d38e557",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Load",
+                    "type": "Button",
+                    "id": "1b09e8f8-76cc-4aff-86e7-f58a4d499cf9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a9ab899d-e1d7-414e-8976-db494781737a",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Save",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "46d34206-f55e-4c37-b069-777f77540de2",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Load",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

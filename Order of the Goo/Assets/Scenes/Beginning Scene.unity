@@ -180,7 +180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2079664891541083581, guid: 67ef0ac4e64316d4093c70dcf804ddff, type: 3}
       propertyPath: orthographic size
-      value: 6.922791
+      value: 6.91
       objectReference: {fileID: 0}
     - target: {fileID: 2079664891541083582, guid: 67ef0ac4e64316d4093c70dcf804ddff, type: 3}
       propertyPath: m_Name
@@ -6344,25 +6344,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1473847138}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80098bf9513bb9f49b1ecf67112926fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ececeb0615af244f98ab43cd45aeaa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   repeat: 0
   onReachedEnd:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 552457709}
-        m_TargetAssemblyTypeName: SceneControl, Assembly-CSharp
-        m_MethodName: TeleportPlayerTo
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: -6.62,6.45
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 269428246}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -6387,6 +6375,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 960344513}
+        m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCameraBase, Cinemachine
+        m_MethodName: set_Priority
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2017454510}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -6401,24 +6401,24 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 552457709}
         m_TargetAssemblyTypeName: SceneControl, Assembly-CSharp
+        m_MethodName: TeleportPlayerTo
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: -6.62,6.45
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 552457709}
+        m_TargetAssemblyTypeName: SceneControl, Assembly-CSharp
         m_MethodName: EnablePlayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 960344513}
-        m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCameraBase, Cinemachine
-        m_MethodName: set_Priority
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 8
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -45659,14 +45659,14 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 6.922791
+    OrthographicSize: 6.91
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.7774608, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

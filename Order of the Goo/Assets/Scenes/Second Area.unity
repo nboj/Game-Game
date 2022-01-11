@@ -48498,7 +48498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2095686816246765705, guid: 005fa8e72388fbd44b576308a5b41dab, type: 3}
       propertyPath: portalID
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2095686816246765705, guid: 005fa8e72388fbd44b576308a5b41dab, type: 3}
       propertyPath: sceneToLoad
@@ -48527,11 +48527,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2079664891541083458, guid: 67ef0ac4e64316d4093c70dcf804ddff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.875
+      value: -0.61
       objectReference: {fileID: 0}
     - target: {fileID: 2079664891541083458, guid: 67ef0ac4e64316d4093c70dcf804ddff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.0625
+      value: -22.640001
       objectReference: {fileID: 0}
     - target: {fileID: 2079664891541083458, guid: 67ef0ac4e64316d4093c70dcf804ddff, type: 3}
       propertyPath: m_LocalPosition.z

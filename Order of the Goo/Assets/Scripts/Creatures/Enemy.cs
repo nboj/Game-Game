@@ -19,6 +19,7 @@ public class Enemy : AggressiveCreature {
         currentState = EnemyState.IDLE;
         startPos = transform.position;
         Health.OnDeath.AddListener(HandleDeath);
+        Health.OnRestore.AddListener(HandleRestore);
     }
 
     public enum EnemyState {
@@ -57,5 +58,15 @@ public class Enemy : AggressiveCreature {
         GetComponent<BehaviorTree>().enabled = false;
         GetComponentInChildren<SpriteRenderer>().color = Color.black;
         GetComponent<Rigidbody2D>().simulated = false;
+    }
+
+    public void HandleRestore() {
+        Health.ShowDisplay();
+        Animator.enabled = true;
+        Health.enabled = true;
+        GetComponent<Enemy>().enabled = true;
+        GetComponent<BehaviorTree>().enabled = true;
+        GetComponentInChildren<SpriteRenderer>().color = Color.white;
+        GetComponent<Rigidbody2D>().simulated = true;
     }
 } 

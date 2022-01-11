@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 4412429369629730504}
   - component: {fileID: 4412429369629730551}
   - component: {fileID: 4412429369629730548}
+  - component: {fileID: 5931829745736310849}
   m_Layer: 0
   m_Name: Goo
   m_TagString: Enemy
@@ -261,10 +262,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945d3d74df777564b896aafd6870ad8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
   sliderPrefab: {fileID: 3422833550426497303, guid: beeb5501e3b46ad429508805b28aeded, type: 3}
   fadeOutDelay: 3
   yOffset: 1.69
   displayHealthBorder: 0
+  startHidden: 0
   useCustomSlider: 0
 --- !u!114 &4412429369629730504
 MonoBehaviour:
@@ -280,8 +285,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   creatureSpeed: 5
   creature_SO: {fileID: 0}
+  canControl: 1
   weapons:
   - {fileID: 11400000, guid: 13ab669d829cc9c4791b5653b019bd4a, type: 2}
+  canAttack: 1
   enemy: {fileID: 11400000, guid: ffc3a3f89fac92b47b2de7b2144c4dd5, type: 2}
 --- !u!114 &4412429369629730551
 MonoBehaviour:
@@ -346,3 +353,16 @@ CapsuleCollider2D:
   m_Offset: {x: -0.01, y: 0.21}
   m_Size: {x: 1.1671934, y: 1.2281305}
   m_Direction: 0
+--- !u!114 &5931829745736310849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4412429369629730507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea9374b509b70f4bba37e4a2ca8cf00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueIdentifier: 

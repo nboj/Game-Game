@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using RPG.Saving;
 
 public class Portal : MonoBehaviour, IFHandler {
     [SerializeField] private string sceneToLoad;
@@ -31,9 +32,12 @@ public class Portal : MonoBehaviour, IFHandler {
 
     protected IEnumerator Transition() { 
         DontDestroyOnLoad(gameObject);
+        FindObjectOfType<SavingSystem>().Save("Save");
         yield return SceneManager.LoadSceneAsync(sceneToLoad);
+        FindObjectOfType<SavingSystem>().Load("Save");
         var portal = GetOtherPortal(); 
         UpdatePlayer(portal);
+        FindObjectOfType<SavingSystem>().Save("Save");
         Destroy(gameObject); 
     }
 

@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using RPG.Saving;
 
-
-public class Health : MonoBehaviour { 
+public class Health : MonoBehaviour, ISaveable { 
     public UnityEvent OnDeath;
+    public UnityEvent OnRestore;
     [SerializeField] private GameObject sliderPrefab;
     [Header("Healthbar Settings")] 
     [SerializeField] private float fadeOutDelay = 3;
@@ -24,7 +25,7 @@ public class Health : MonoBehaviour {
     private bool isDead;
     private GameObject sliderObject;
     private Slider slider;
-    private float totalHealth;
+    [SerializeField] private float totalHealth;
 
     public bool IsDead {
         get => isDead; 
@@ -135,5 +136,25 @@ public class Health : MonoBehaviour {
             return;
         Vector2 position = transform.position;
         Gizmos.DrawWireCube(new Vector3(position.x, position.y + yOffset, 0), new Vector3(2, 1f, 1f));
+    }
+
+    object ISaveable.CaptureState() { 
+        Dictionary<string, object> dict = new Dictionary<string, object>();
+        dict["totalHealth"] = totalHealth;
+        dict["maxHealth"] = maxHealth;
+        dict["isDead"] = IsDead;
+        return dict;
+    }
+
+    void ISaveable.RestoreState(object state) {
+        var savedState = (Dictionary<string, object>)state;
+        if ((bool)savedState["isDead"]) {
+            HandleDeath();
+        } else {
+            OnRestore.Invoke();
+        }
+        totalHealth = (float)savedState["totalHealth"];
+        maxHealth = (float)savedState["maxHealth"];
+        slider.value = totalHealth;
     }
 }   

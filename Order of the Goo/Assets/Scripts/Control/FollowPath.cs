@@ -2,7 +2,7 @@
 using UnityEngine.Events;
 
 public class FollowPath : MonoBehaviour {
-    [SerializeField] Path path;
+    [SerializeField] PathWay path;
     [SerializeField] private bool useStartTrigger;
     [SerializeField] private UnityEvent startTrigger;
     private Creature creature;
