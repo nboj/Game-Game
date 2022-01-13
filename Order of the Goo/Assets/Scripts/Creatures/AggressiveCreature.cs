@@ -22,6 +22,7 @@ public class AggressiveCreature : Creature {
     }
 
     public override void Start() {
+        base.Start();
     } 
 
     protected internal void UpdateReloadTimes() {
@@ -51,8 +52,9 @@ public class AggressiveCreature : Creature {
     } 
 
     protected internal void Fire(Vector2 target) {
+        Debug.Log("FIRED!");
         var weapon = GetSelectedWeapon();
-        if (!CanFire())
+        if (!CanFire() || !CanAttack)
             return;
         reloadDelays[selectedIndex] = Time.time;
         var weaponType = weapon.GetType();  
@@ -67,7 +69,7 @@ public class AggressiveCreature : Creature {
 
     protected internal override void SetEnabled(bool value) {
         base.SetEnabled(value);
-        fighter.enabled = value;
+        CanAttack = value;
     }
 
     private bool CanFire() {

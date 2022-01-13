@@ -11,8 +11,10 @@ public class QuestListUI : MonoBehaviour {
         UpdateQuests();
     } 
 
-    public void UpdateQuests() { 
-        transform.DetachChildren();
+    public void UpdateQuests() {
+        for (var i = transform.childCount - 1; i >= 0; i--) { 
+            Destroy(transform.GetChild(i).gameObject);
+        }
         var playerQuestList = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestList>();
         foreach (QuestStatus status in playerQuestList.Statuses) {
             var questItemInstance = Instantiate<QuestItemUI>(questPrefab, transform);

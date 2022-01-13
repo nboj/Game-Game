@@ -22,7 +22,7 @@ public class Portal : MonoBehaviour, IFHandler {
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D other) {
-        if (other.CompareTag("Player")) {
+        if (other.CompareTag("Player Root")) {
             Teleport();
         }
     }
@@ -32,18 +32,20 @@ public class Portal : MonoBehaviour, IFHandler {
 
     protected IEnumerator Transition() { 
         DontDestroyOnLoad(gameObject);
-        FindObjectOfType<SavingSystem>().Save("Save");
+        var savingSystem = FindObjectOfType<SavingSystem>();
+        savingSystem.Save("Save");
         yield return SceneManager.LoadSceneAsync(sceneToLoad);
-        FindObjectOfType<SavingSystem>().Load("Save");
-        var portal = GetOtherPortal(); 
+        var portal = GetOtherPortal();  
+        savingSystem.Load("Save"); 
         UpdatePlayer(portal);
-        FindObjectOfType<SavingSystem>().Save("Save");
+        savingSystem.Save("Save");
         Destroy(gameObject); 
     }
 
     protected void UpdatePlayer(Portal portal) {
         var player = GameObject.FindGameObjectWithTag("Player");
         player.transform.position = portal.Spawnpoint.position;
+        Debug.Log("Updated Player pos");
     }
 
     protected Portal GetOtherPortal() { 

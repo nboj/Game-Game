@@ -76,13 +76,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: FollowPath, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 3015092115227362961}
+        m_TargetAssemblyTypeName: QuestManager, Assembly-CSharp
+        m_MethodName: GiveQuest
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 3568926941959001581}
   - component: {fileID: 3568926941959001582}
   - component: {fileID: 3015092115227362961}
+  - component: {fileID: 269428256}
   m_Layer: 31
   m_Name: Mother
   m_TagString: Untagged
@@ -158,6 +159,7 @@ MonoBehaviour:
   creatureSpeed: 5
   creature_SO: {fileID: 11400000, guid: 8b884799b80859c4ab551b92ffcf40ac, type: 2}
   canControl: 0
+  startDisabled: 0
 --- !u!114 &3568926941959001577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,10 +259,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 598aa00c69d36c64797c9961b17540f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questToManage: {fileID: 0}
+  questToManage: {fileID: 11400000, guid: 4cb1c032b0027d941b64f8ca14fd4671, type: 2}
   onQuestComplete:
     m_PersistentCalls:
       m_Calls: []
+--- !u!210 &269428256
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3568926941959001573}
+  m_Enabled: 1
+  m_SortingLayerID: 2063604925
+  m_SortingLayer: 8
+  m_SortingOrder: 0
 --- !u!1 &3568926943474726257
 GameObject:
   m_ObjectHideFlags: 0

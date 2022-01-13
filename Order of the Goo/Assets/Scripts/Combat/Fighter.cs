@@ -30,10 +30,7 @@ public class Fighter : MonoBehaviour {
     }
     
     public void FireMelee(Vector2 target, MeleeWeapon_SO weapon) { 
-    } 
-    
-    private void GetDamage(Creature_SO creature) { 
-    } 
+    }  
 
     private void SetupProjectile(Projectile projectile, RangedWeapon_SO weapon, Vector2 target) { 
         projectile.Parent = gameObject;

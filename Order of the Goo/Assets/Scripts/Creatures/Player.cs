@@ -10,7 +10,7 @@ public interface IFHandler {
 } 
  
 [RequireComponent(typeof(PlayerInput), typeof(Rigidbody2D), typeof(Collider2D)), RequireComponent(typeof(Inventory), typeof(LeftSlotsInventory))]
-public class Player : AggressiveCreature, ISaveable { 
+public class Player : AggressiveCreature { 
     [Header("Player Controls")] [SerializeField]
     private Canvas playerInventoryUI;
     [SerializeField] private UISlotsController UIController;
@@ -37,8 +37,8 @@ public class Player : AggressiveCreature, ISaveable {
         }
     }
     public override void Awake() {
-        CanAttack = CanAttack; 
         base.Awake();
+        CanAttack = CanAttack; 
         inventory = GetComponent<Inventory>();
         leftSlotsInventory = GetComponent<LeftSlotsInventory>();
         dialogueConversant = GetComponent<DialogueConversant>();
@@ -46,8 +46,7 @@ public class Player : AggressiveCreature, ISaveable {
 
 
     public override void Start() { 
-        base.Start();
-        
+        base.Start(); 
         leftSlotsInventory.OnWeaponSlotsUpdated += UpdateWeapons;
         UpdateUI();
     }
@@ -263,13 +262,5 @@ public class Player : AggressiveCreature, ISaveable {
                 Animator.SetBool("Idle Left", false); 
             }
         }
-    }
-
-    object ISaveable.CaptureState() {
-        return new SerializableVector3(transform.position);
-    }
-
-    void ISaveable.RestoreState(object state) {
-        transform.position = ((SerializableVector3)state).ToVector();
-    }
+    } 
 }

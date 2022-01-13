@@ -97,8 +97,7 @@ public class Inventory : MonoBehaviour, ISaveable {
     void ISaveable.RestoreState(object state) {  
         var items = (Dictionary<string, int>)state;
         foreach (var item in items) {
-            entities[item.Value] = GetFromID(item.Key);
-            Debug.Log(item.Key);
+            entities[item.Value] = GetFromID(item.Key); 
         }
     }
 }

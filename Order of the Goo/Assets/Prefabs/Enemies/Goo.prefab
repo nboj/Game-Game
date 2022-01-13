@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 4412429369629730551}
   - component: {fileID: 4412429369629730548}
   - component: {fileID: 5931829745736310849}
+  - component: {fileID: -4760571001660422558}
   m_Layer: 0
   m_Name: Goo
   m_TagString: Enemy
@@ -265,12 +266,17 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
+  OnRestore:
+    m_PersistentCalls:
+      m_Calls: []
   sliderPrefab: {fileID: 3422833550426497303, guid: beeb5501e3b46ad429508805b28aeded, type: 3}
   fadeOutDelay: 3
   yOffset: 1.69
   displayHealthBorder: 0
   startHidden: 0
   useCustomSlider: 0
+  isEnabled: 1
+  totalHealth: 0
 --- !u!114 &4412429369629730504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,8 +290,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creatureSpeed: 5
-  creature_SO: {fileID: 0}
+  creature_SO: {fileID: 11400000, guid: ffc3a3f89fac92b47b2de7b2144c4dd5, type: 2}
   canControl: 1
+  startDisabled: 0
   weapons:
   - {fileID: 11400000, guid: 13ab669d829cc9c4791b5653b019bd4a, type: 2}
   canAttack: 1
@@ -366,3 +373,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueIdentifier: 
+--- !u!210 &-4760571001660422558
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4412429369629730507}
+  m_Enabled: 1
+  m_SortingLayerID: 2063604925
+  m_SortingLayer: 8
+  m_SortingOrder: 0

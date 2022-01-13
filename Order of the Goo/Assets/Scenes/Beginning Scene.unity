@@ -1206,11 +1206,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2095686816246765702, guid: 005fa8e72388fbd44b576308a5b41dab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.8
+      value: 10.8125
       objectReference: {fileID: 0}
     - target: {fileID: 2095686816246765702, guid: 005fa8e72388fbd44b576308a5b41dab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.71
+      value: 3.5625
       objectReference: {fileID: 0}
     - target: {fileID: 2095686816246765702, guid: 005fa8e72388fbd44b576308a5b41dab, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1271,17 +1271,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3568926941959001573, guid: 6374b0cc4af42b74eb6613c86526bb2c, type: 3}
   m_PrefabInstance: {fileID: 3568926942227248115}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &269428255 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3015092115227362961, guid: 6374b0cc4af42b74eb6613c86526bb2c, type: 3}
-  m_PrefabInstance: {fileID: 3568926942227248115}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 269428246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 598aa00c69d36c64797c9961b17540f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &366094909 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 366094909, guid: 6374b0cc4af42b74eb6613c86526bb2c, type: 3}
@@ -45558,6 +45547,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!210 &2017454523
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017454510}
+  m_Enabled: 1
+  m_SortingLayerID: 2063604925
+  m_SortingLayer: 8
+  m_SortingOrder: 0
 --- !u!1001 &2045991905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45666,7 +45666,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7774608, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -45723,26 +45723,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 366094910, guid: 6374b0cc4af42b74eb6613c86526bb2c, type: 3}
-      propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 269428255}
-    - target: {fileID: 366094910, guid: 6374b0cc4af42b74eb6613c86526bb2c, type: 3}
-      propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: GiveQuest
-      objectReference: {fileID: 0}
-    - target: {fileID: 366094910, guid: 6374b0cc4af42b74eb6613c86526bb2c, type: 3}
-      propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: QuestManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 366094910, guid: 6374b0cc4af42b74eb6613c86526bb2c, type: 3}
-      propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3015092115227362961, guid: 6374b0cc4af42b74eb6613c86526bb2c, type: 3}
-      propertyPath: questToManage
-      value: 
-      objectReference: {fileID: 11400000, guid: 4cb1c032b0027d941b64f8ca14fd4671, type: 2}
     - target: {fileID: 3568926941959001572, guid: 6374b0cc4af42b74eb6613c86526bb2c, type: 3}
       propertyPath: m_RootOrder
       value: 5

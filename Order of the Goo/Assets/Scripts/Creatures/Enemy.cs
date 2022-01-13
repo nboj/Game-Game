@@ -11,15 +11,17 @@ public class Enemy : AggressiveCreature {
 
     public EnemyState CurrentState => currentState;
     public Vector2 StartPos => startPos;
-
+    public override void Awake() {
+        base.Awake(); 
+        Health.OnDeath.AddListener(HandleDeath);
+        Health.OnRestore.AddListener(HandleRestore);
+    }
     public override void Start() {
         base.Start();
         CreatureSO = enemy;
         player = FindObjectOfType<Player>();
         currentState = EnemyState.IDLE;
         startPos = transform.position;
-        Health.OnDeath.AddListener(HandleDeath);
-        Health.OnRestore.AddListener(HandleRestore);
     }
 
     public enum EnemyState {
@@ -53,20 +55,21 @@ public class Enemy : AggressiveCreature {
     public void HandleDeath() {
         Health.HideDisplay();
         Animator.enabled = false;
-        Health.enabled = false;
-        GetComponent<Enemy>().enabled = false;
-        GetComponent<BehaviorTree>().enabled = false;
-        GetComponentInChildren<SpriteRenderer>().color = Color.black;
-        GetComponent<Rigidbody2D>().simulated = false;
+        SetEnabled(false); 
+        GetComponentInChildren<SpriteRenderer>().color = Color.black; 
     }
 
-    public void HandleRestore() {
+    protected internal override void SetEnabled(bool value) {
+        base.SetEnabled(value);
+        Health.enabled = value;
+        GetComponent<BehaviorTree>().enabled = value;
+        GetComponent<Rigidbody2D>().simulated = value;
+    }
+
+    public void HandleRestore() { 
+        SetEnabled(true);
         Health.ShowDisplay();
-        Animator.enabled = true;
-        Health.enabled = true;
-        GetComponent<Enemy>().enabled = true;
-        GetComponent<BehaviorTree>().enabled = true;
+        Animator.enabled = true;  
         GetComponentInChildren<SpriteRenderer>().color = Color.white;
-        GetComponent<Rigidbody2D>().simulated = true;
     }
 } 

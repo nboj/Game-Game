@@ -1,10 +1,13 @@
 using Pathfinding;
 using UnityEngine;
- 
-public class Creature : MonoBehaviour {
+using RPG.Saving;
+using System.Collections.Generic;
+
+public class Creature : MonoBehaviour, ISaveable {
     [SerializeField] private float creatureSpeed;
     [SerializeField] private Creature_SO creature_SO;
     [SerializeField] bool canControl = true;
+    [SerializeField] private bool startDisabled = false;
     private Health health;
     private Animator animator;
     private RigidbodyMovement rigidbodyMovement;
@@ -20,6 +23,12 @@ public class Creature : MonoBehaviour {
     }
 
     public virtual void Start() { 
+    }
+
+    public virtual void OnEnable() { 
+        if (startDisabled) {
+            SetEnabled(false);
+        }
     }
 
 
@@ -53,7 +62,30 @@ public class Creature : MonoBehaviour {
     }
 
     protected virtual internal void SetEnabled(bool value) {
-        health.enabled = value; 
+        CanControl = value;
+        if (value) {
+            health.Enable();
+        } else {
+            health.Disable();
+        }
+    }
+
+    object ISaveable.CaptureState() {
+        var dict = new Dictionary<string, object>();
+        dict["canControl"] = CanControl;
+        dict["creatureSpeed"] = CreatureSpeed;
+        dict["startDisabled"] = startDisabled;
+        dict["serializedPosition"] = new SerializableVector3(transform.position);
+        return dict; 
+    }
+
+    void ISaveable.RestoreState(object state) {
+        var dict = (Dictionary<string, object>)state;
+        CanControl = (bool)dict["canControl"];
+        creatureSpeed = (float)dict["creatureSpeed"];
+        startDisabled = (bool)dict["startDisabled"];
+        transform.position = ((SerializableVector3)dict["serializedPosition"]).ToVector();
+        Debug.Log("Updating pos in creature");
     }
 
     protected internal float CreatureSpeed => creatureSpeed; 

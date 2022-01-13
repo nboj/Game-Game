@@ -11,6 +11,8 @@ public class QuestCompletion : MonoBehaviour {
     }
 
     public void CompleteObjective(int objectiveIndex) {
-        playerQuestList.CompleteQuestObjective(quest, objectives[objectiveIndex]); 
+        if (playerQuestList != null) {
+            playerQuestList.CompleteQuestObjective(quest, objectives[objectiveIndex]);
+        }
     }
 }

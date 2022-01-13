@@ -1,5 +1,6 @@
 using System;
-using UnityEngine; 
+using UnityEngine;
+using System.Collections.Generic;
 
 namespace RPG.Combat {
     public class Projectile : MonoBehaviour {  
@@ -72,22 +73,22 @@ namespace RPG.Combat {
             Destroy(gameObject);
         }
 
-        private void OnTriggerEnter2D(Collider2D collider) {
-            if (collider.CompareTag(parent.tag)) {
+        private void OnCollisionEnter2D(Collision2D collider) {
+            if (collider.transform == parent.transform || collider.transform.IsChildOf(parent.transform)) {
                 return;
-            }
+            } 
 
             if (rangedWeapon.SplashRadius > 0) {
-                Collider2D[] hit = Physics2D.OverlapCircleAll(transform.position, rangedWeapon.SplashRadius);
-                for (int i = 0; i < hit.Length; i++) {
-                    var health = hit[i].GetComponent<Health>();
-                    if (health != null && !health.CompareTag(parent.tag)) {
-                        onHit(hit[i].gameObject);
-                    }
+                Collider2D[] hit = Physics2D.OverlapCircleAll(transform.position, rangedWeapon.SplashRadius); 
+                foreach (var child in hit) {
+                    var health = child.GetComponent<Health>(); 
+                    if (health != null && health.transform != parent.transform && !health.transform.IsChildOf(parent.transform)) {
+                        onHit(child.gameObject);
+                    } 
                 } 
             } else {
                 Health health = collider.gameObject.GetComponent<Health>();
-                if (health != null) { 
+                if (health != null && health.transform != parent.transform && !health.transform.IsChildOf(parent.transform)) { 
                     onHit(health.gameObject);
                 }
             } 
@@ -96,14 +97,15 @@ namespace RPG.Combat {
         }
 
         private void PlayDeath() {
-            GetComponent<Renderer>().enabled = false;
+            gameObject.SetActive(false);
+            Debug.Log("DEATHHHHOFHIUODHS");
             var deathParticles =  rangedWeapon.DeathParticles;
             if (deathParticles != null) { 
                 var deathVFX = Instantiate(deathParticles, transform.position, Quaternion.identity);
                 SetObjectRotation(projectileDirection, deathVFX.gameObject);
                 Destroy(deathVFX.gameObject, deathParticles.main.duration);
             }
-            Destroy(gameObject, deathParticles.main.duration);
+            Destroy(gameObject);
         }
 
         protected void SetObjectRotation(Vector2 direction, GameObject go) {
