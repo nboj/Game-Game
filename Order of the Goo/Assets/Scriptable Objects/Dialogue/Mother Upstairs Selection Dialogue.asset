@@ -1,0 +1,266 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8595823637834387870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: f28ee50c-b85e-4ced-838f-69a0914a3a1e
+  m_EditorClassIdentifier: 
+  text: Press "Tab" to view your inventory
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1036
+    y: 159
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 0}
+  avatarName: ........
+  onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &-3817375633847994313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: c6d4535e-bbd5-418f-b29f-987f64f31a5b
+  m_EditorClassIdentifier: 
+  text: Other Weapon 2
+  children:
+  - 5a865598-b6e9-4376-aa52-4423a6c11fb8
+  rect:
+    serializedVersion: 2
+    x: 263
+    y: 818
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: bb7853286f6573f469b5a559d9ae0f5b, type: 3}
+  avatarName: You
+  onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &-3721290870097698571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: a0a54953-2110-415b-a453-a096aa43f31d
+  m_EditorClassIdentifier: 
+  text: Axe
+  children:
+  - 5a865598-b6e9-4376-aa52-4423a6c11fb8
+  rect:
+    serializedVersion: 2
+    x: 267
+    y: 297
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: bb7853286f6573f469b5a559d9ae0f5b, type: 3}
+  avatarName: You
+  onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ad301a1a5676f74fa9e595776186f00, type: 3}
+  m_Name: Mother Upstairs Selection Dialogue
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 4049782735437551247}
+  - {fileID: 3199359641823275526}
+  - {fileID: -3721290870097698571}
+  - {fileID: 6104397554319822933}
+  - {fileID: -3817375633847994313}
+  - {fileID: 8212712475390691681}
+  - {fileID: 2291526008155500757}
+  - {fileID: 9091210242295201091}
+  - {fileID: -8595823637834387870}
+--- !u!114 &2291526008155500757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: 5a865598-b6e9-4376-aa52-4423a6c11fb8
+  m_EditorClassIdentifier: 
+  text: Good Choice! I see you like to use your nimbleness to throw axes at your
+    enemies!
+  children:
+  - 1ca5ecf2-2366-4063-994c-b8d575d350e0
+  rect:
+    serializedVersion: 2
+    x: 522
+    y: 298
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: 122ac23d1a9023541bfb8b8f7ea9d6d2, type: 3}
+  avatarName: Mother
+  onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &3199359641823275526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: 96567b84-c24c-4e66-aa82-8ef9210efdac
+  m_EditorClassIdentifier: 
+  text: Fireball
+  children:
+  - 20264a99-bd2b-42d7-b5cb-1bb46dd2d195
+  rect:
+    serializedVersion: 2
+    x: 276
+    y: 41
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: bb7853286f6573f469b5a559d9ae0f5b, type: 3}
+  avatarName: You
+  onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &4049782735437551247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: 970de989-ba22-419f-9cb2-6f8632171dc0
+  m_EditorClassIdentifier: 
+  text: Your father wanted you to have your very own weapon to protect yourself on
+    your adventures. There are four different types of weapons that he left. Which
+    would you like to have?
+  children:
+  - 96567b84-c24c-4e66-aa82-8ef9210efdac
+  - a0a54953-2110-415b-a453-a096aa43f31d
+  - bfdeb2e2-a566-4cdb-8ed8-01b5fa765037
+  - c6d4535e-bbd5-418f-b29f-987f64f31a5b
+  rect:
+    serializedVersion: 2
+    x: 18
+    y: 298
+    width: 200
+    height: 240
+  currentSpeaker: 0
+  avatarImage: {fileID: 2800000, guid: 122ac23d1a9023541bfb8b8f7ea9d6d2, type: 3}
+  avatarName: Mother
+  onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &6104397554319822933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: bfdeb2e2-a566-4cdb-8ed8-01b5fa765037
+  m_EditorClassIdentifier: 
+  text: Other Weapon 1
+  children:
+  - 5a865598-b6e9-4376-aa52-4423a6c11fb8
+  rect:
+    serializedVersion: 2
+    x: 265
+    y: 546
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: bb7853286f6573f469b5a559d9ae0f5b, type: 3}
+  avatarName: You
+  onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &8212712475390691681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: 20264a99-bd2b-42d7-b5cb-1bb46dd2d195
+  m_EditorClassIdentifier: 
+  text: Good choice! I see you like to harness that magic that is burrowed inside
+    you.
+  children:
+  - 1ca5ecf2-2366-4063-994c-b8d575d350e0
+  rect:
+    serializedVersion: 2
+    x: 525
+    y: 43
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: 122ac23d1a9023541bfb8b8f7ea9d6d2, type: 3}
+  avatarName: Mother
+  onEnterTrigger: 
+  onExitTrigger: 
+--- !u!114 &9091210242295201091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: 1ca5ecf2-2366-4063-994c-b8d575d350e0
+  m_EditorClassIdentifier: 
+  text: Now that you have your weapons, I will ask that you speak to someone on the
+    island for me. His name is jeff. Tell him your ready. I love you very much just
+    so you know!
+  children:
+  - f28ee50c-b85e-4ced-838f-69a0914a3a1e
+  rect:
+    serializedVersion: 2
+    x: 798
+    y: 155
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: 122ac23d1a9023541bfb8b8f7ea9d6d2, type: 3}
+  avatarName: Mother
+  onEnterTrigger: 
+  onExitTrigger: 

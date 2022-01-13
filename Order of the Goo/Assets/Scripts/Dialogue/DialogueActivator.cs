@@ -46,7 +46,8 @@ namespace RPG.Dialogue {
         }
 
         public void Fire() { 
-            if (!dialogueUI.Canvas.enabled && !dialogueSelectionUI.Canvas.enabled) { 
+                Debug.Log("FJSDJFISJIPFJPSDIJFOIS");
+            if (!dialogueUI.Canvas.enabled && !dialogueSelectionUI.Canvas.enabled) {
                 player.Disable(); 
                 player.DialogueConversant.CurrentDialogue = dialogue;
                 player.DialogueConversant.CurrentConverser = gameObject; 

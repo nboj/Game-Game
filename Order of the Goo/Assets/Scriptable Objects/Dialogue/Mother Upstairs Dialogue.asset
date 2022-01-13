@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2746636438116995474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a976c3afa14a0b4589ed0d495cbdcab, type: 3}
+  m_Name: 0e2c9aa9-79c7-495f-b71e-9c7d08bda3e2
+  m_EditorClassIdentifier: 
+  text: Here is a chest that your father left behind.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 34
+    y: 191
+    width: 200
+    height: 240
+  currentSpeaker: 1
+  avatarImage: {fileID: 2800000, guid: 122ac23d1a9023541bfb8b8f7ea9d6d2, type: 3}
+  avatarName: Mom
+  onEnterTrigger: 
+  onExitTrigger: Play Cutscene
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ad301a1a5676f74fa9e595776186f00, type: 3}
+  m_Name: Mother Upstairs Dialogue
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -2746636438116995474}

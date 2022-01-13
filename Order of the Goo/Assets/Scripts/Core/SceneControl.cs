@@ -38,4 +38,8 @@ public class SceneControl : MonoBehaviour
     public void EnablePlayerRenderer() {
         player.GetComponentInChildren<SpriteRenderer>().enabled = true;
     }
+
+    public void AddItemToPlayerInventory(Entity entity) {
+
+    }
 }
