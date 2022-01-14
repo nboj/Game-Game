@@ -135,6 +135,7 @@ public class Health : MonoBehaviour, ISaveable {
     
     private void HandleDeath() {
         isDead = true;
+        slider.value = 0;
         if (OnDeath != null)
             OnDeath.Invoke();
     }

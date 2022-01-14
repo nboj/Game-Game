@@ -13,12 +13,18 @@ public class Fighter : MonoBehaviour {
         OnHit += HitController;
     }
 
-    public void FireRanged(Vector2 target, RangedWeapon_SO weapon) {
+    public void FireRanged(Vector2 target, RangedWeapon_SO weapon, bool destroyAtTarget = false) {
         var projectileObject = Instantiate(weapon.Projectile, transform.position, weapon.Projectile.transform.rotation);
         var projectile = projectileObject.GetComponent<Projectile>();
-        SetupProjectile(projectile, weapon, target); 
+        SetupProjectile(projectile, weapon, target, destroyAtTarget);
     }
-    
+
+    public void FireRanged(Vector2 target, RangedWeapon_SO weapon, Vector2 startPos, bool destroyAtTarget = false) {
+        var projectileObject = Instantiate(weapon.Projectile, startPos, weapon.Projectile.transform.rotation);
+        var projectile = projectileObject.GetComponent<Projectile>();
+        SetupProjectile(projectile, weapon, target, destroyAtTarget);
+    }
+
     public void FireMagic(Vector2 target, MagicWeapon_SO weapon) {
         if (weapon.RangedMagic) {
             var projectileObject = Instantiate(weapon.MagicProjectile, transform.position, weapon.MagicProjectile.transform.rotation);
@@ -26,18 +32,29 @@ public class Fighter : MonoBehaviour {
             projectile.MagicWeapon = weapon;
             SetupProjectile(projectile, weapon, target);
             projectile.SetupTracking();
-        } 
+        }
     }
-    
+
+    public void FireMagic(Vector2 target, MagicWeapon_SO weapon, Vector2 startPos, bool destroyAtTarget = false) {
+        if (weapon.RangedMagic) {
+            var projectileObject = Instantiate(weapon.MagicProjectile, startPos, weapon.MagicProjectile.transform.rotation);
+            var projectile = projectileObject.GetComponent<MagicProjectile>();
+            projectile.MagicWeapon = weapon;
+            SetupProjectile(projectile, weapon, target, destroyAtTarget);
+            projectile.SetupTracking();
+        }
+    }
+
     public void FireMelee(Vector2 target, MeleeWeapon_SO weapon) { 
     }  
 
-    private void SetupProjectile(Projectile projectile, RangedWeapon_SO weapon, Vector2 target) { 
+    private void SetupProjectile(Projectile projectile, RangedWeapon_SO weapon, Vector2 target, bool destroyAtTarget = false) { 
         projectile.Parent = gameObject;
         projectile.transform.position += new Vector3(0, 1f, 0);
         projectile.RangedWeapon = weapon; 
         projectile.OnHit = OnHit; 
         projectile.SetRotation(target);
+        projectile.DestroyAtTarget = destroyAtTarget;
     }
 
     private void HitController(GameObject other) {
@@ -82,7 +99,8 @@ public class Fighter : MonoBehaviour {
         anim.SetTrigger("Hit");
         var duration = anim.GetCurrentAnimatorStateInfo(0).length; 
         yield return new WaitForSeconds(duration);
-        Destroy(textOb);
-        
+        Destroy(textOb); 
     }
+
+
 } 

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class RigidbodyMovement : Movement {
@@ -6,13 +7,20 @@ public class RigidbodyMovement : Movement {
     public RigidbodyMovement(float speed, Rigidbody2D rigidbody, Animator animator) : base(speed, animator) {
         this.rigidbody = rigidbody;
         Direction = Vector2.zero;
-    } 
+    }
 
     public void FixedUpdate() {
-        if (canControl)
-            rigidbody.velocity = Direction * MovementSpeed;
-        else {
+        if (canControl) {
+            rigidbody.MovePosition(rigidbody.position + Direction * MovementSpeed * Time.deltaTime);
             rigidbody.velocity = Vector2.zero;
-        }
+        }  
+    } 
+
+    public void Stop() {
+        SetDirection(Vector2.zero);
+    }
+
+    public void SetMovementSpeed(float speed) {
+        MovementSpeed = speed;
     }
 }

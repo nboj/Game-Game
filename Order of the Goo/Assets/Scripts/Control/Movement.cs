@@ -20,11 +20,14 @@ public class Movement {
         }
     }
 
-    public float MovementSpeed => movementSpeed;
+    public float MovementSpeed {
+        get => movementSpeed;
+        set => movementSpeed = value;
+    }
 
     public Vector2 Direction { 
         get => direction;
-        set => direction = value;
+        set { direction = value; }
     }
     
     private enum MovementState {
@@ -43,6 +46,7 @@ public class Movement {
     
     public void SetDirection(Vector2 direction) {
         this.direction = direction.normalized;
+        SetAnimator(direction);
     } 
 
     public void SetAnimator(Vector2 direction) {

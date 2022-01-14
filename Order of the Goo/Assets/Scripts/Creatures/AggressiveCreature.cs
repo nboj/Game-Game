@@ -13,6 +13,10 @@ public class AggressiveCreature : Creature {
     }
     private Fighter fighter;
 
+    public Fighter Fighter { 
+        get => fighter;
+    }
+
     public override void Awake() {
         base.Awake();
         reloadDelays = new List<float>();
@@ -47,9 +51,9 @@ public class AggressiveCreature : Creature {
         selectedIndex = index;
     }
 
-    protected internal Weapon_SO GetSelectedWeapon() {
+    public Weapon_SO GetSelectedWeapon() {
         return weapons[selectedIndex];
-    } 
+    }
 
     protected internal void Fire(Vector2 target) {
         Debug.Log("FIRED!");
@@ -57,12 +61,44 @@ public class AggressiveCreature : Creature {
         if (!CanFire() || !CanAttack)
             return;
         reloadDelays[selectedIndex] = Time.time;
-        var weaponType = weapon.GetType();  
-        if (weaponType == typeof(MagicWeapon_SO)) { 
+        var weaponType = weapon.GetType();
+        if (weaponType == typeof(MagicWeapon_SO)) {
             fighter.FireMagic(target, (MagicWeapon_SO)weapon);
-        } else if (weaponType == typeof(RangedWeapon_SO)) { 
+        } else if (weaponType == typeof(RangedWeapon_SO)) {
             fighter.FireRanged(target, (RangedWeapon_SO)weapon);
-        } else if (weaponType == typeof(MeleeWeapon_SO)) { 
+        } else if (weaponType == typeof(MeleeWeapon_SO)) {
+            fighter.FireMelee(target, (MeleeWeapon_SO)weapon);
+        }
+    }
+
+    protected internal void Fire(Vector2 target, Vector2 startPos) {
+        Debug.Log("FIRED!");
+        var weapon = GetSelectedWeapon();
+        if (!CanFire() || !CanAttack)
+            return;
+        reloadDelays[selectedIndex] = Time.time;
+        var weaponType = weapon.GetType();
+        if (weaponType == typeof(MagicWeapon_SO)) {
+            fighter.FireMagic(target, (MagicWeapon_SO)weapon, startPos);
+        } else if (weaponType == typeof(RangedWeapon_SO)) {
+            fighter.FireRanged(target, (RangedWeapon_SO)weapon, startPos);
+        } else if (weaponType == typeof(MeleeWeapon_SO)) {
+            fighter.FireMelee(target, (MeleeWeapon_SO)weapon);
+        }
+    }
+
+    protected internal void Fire(Vector2 target, Vector2 startPos, bool destroyAtTarget = false) {
+        Debug.Log("FIRED!");
+        var weapon = GetSelectedWeapon();
+        if (!CanFire() || !CanAttack)
+            return;
+        reloadDelays[selectedIndex] = Time.time;
+        var weaponType = weapon.GetType();
+        if (weaponType == typeof(MagicWeapon_SO)) {
+            fighter.FireMagic(target, (MagicWeapon_SO)weapon, startPos, destroyAtTarget);
+        } else if (weaponType == typeof(RangedWeapon_SO)) {
+            fighter.FireRanged(target, (RangedWeapon_SO)weapon, startPos, destroyAtTarget);
+        } else if (weaponType == typeof(MeleeWeapon_SO)) {
             fighter.FireMelee(target, (MeleeWeapon_SO)weapon);
         }
     }

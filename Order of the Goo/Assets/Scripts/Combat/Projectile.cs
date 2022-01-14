@@ -11,10 +11,22 @@ namespace RPG.Combat {
         private Rigidbody2D rb; 
         private float startRotation;
         private event OnHit onHit;
+        private bool destroyAtTarget = false;
         protected bool canControl = true;
+        private RangedWeapon_SO weapon;
 
         public virtual void Start() { 
             rb = GetComponent<Rigidbody2D>();
+        }
+
+        public RangedWeapon_SO Weapon {
+            get => weapon;
+            set => weapon = value;
+        }
+
+        public bool DestroyAtTarget {
+            get => destroyAtTarget;
+            set => destroyAtTarget = value;
         }
 
         public OnHit OnHit {
@@ -53,6 +65,9 @@ namespace RPG.Combat {
 
         private void UpdatePosition() { 
             transform.position += new Vector3(projectileDirection.x, projectileDirection.y, 0) * Time.deltaTime * rangedWeapon.ProjectileSpeed;
+            if (destroyAtTarget && Vector2.Distance(Target, transform.position) <= 0.2f) {
+                OnCollisionEnter2D(null);
+            }
         }
 
         private void RotateProjectile() {
@@ -67,16 +82,14 @@ namespace RPG.Combat {
             startRotation = rangedWeapon.Projectile.transform.eulerAngles.z;
             projectileDirection = direction.normalized;
             SetObjectRotation(this.projectileDirection, gameObject);
-        }
-
-        private void OnBecameInvisible() {
-            Destroy(gameObject);
-        }
+        } 
 
         private void OnCollisionEnter2D(Collision2D collider) {
-            if (collider.transform == parent.transform || collider.transform.IsChildOf(parent.transform)) {
-                return;
-            } 
+            if (collider != null) {
+                if (collider.transform == parent.transform || collider.transform.IsChildOf(parent.transform)) {
+                    return;
+                }
+            }
 
             if (rangedWeapon.SplashRadius > 0) {
                 Collider2D[] hit = Physics2D.OverlapCircleAll(transform.position, rangedWeapon.SplashRadius); 
@@ -86,7 +99,7 @@ namespace RPG.Combat {
                         onHit(child.gameObject);
                     } 
                 } 
-            } else {
+            } else if (collider != null) {
                 Health health = collider.gameObject.GetComponent<Health>();
                 if (health != null && health.transform != parent.transform && !health.transform.IsChildOf(parent.transform)) { 
                     onHit(health.gameObject);
@@ -97,8 +110,7 @@ namespace RPG.Combat {
         }
 
         private void PlayDeath() {
-            gameObject.SetActive(false);
-            Debug.Log("DEATHHHHOFHIUODHS");
+            gameObject.SetActive(false); 
             var deathParticles =  rangedWeapon.DeathParticles;
             if (deathParticles != null) { 
                 var deathVFX = Instantiate(deathParticles, transform.position, Quaternion.identity);
@@ -120,7 +132,7 @@ namespace RPG.Combat {
             transform.rotation = Quaternion.AngleAxis(rotation + startRotation, Vector3.forward); 
         }
 
-        public virtual void OnDrawGizmos() {
+        public virtual void OnDrawGizmos() { 
         }
     }
 }
