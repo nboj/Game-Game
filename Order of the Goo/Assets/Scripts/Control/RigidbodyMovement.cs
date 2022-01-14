@@ -17,7 +17,7 @@ public class RigidbodyMovement : Movement {
     } 
 
     public void Stop() {
-        SetDirection(Vector2.zero);
+        SetDirection(Vector2.zero); 
     }
 
     public void SetMovementSpeed(float speed) {

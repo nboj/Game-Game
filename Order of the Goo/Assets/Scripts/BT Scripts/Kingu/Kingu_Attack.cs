@@ -80,13 +80,15 @@ public class Kingu_Attack : Action {
 
     public void LaunchSlime() { 
         if (Time.time - startAttackDelay >= kinguSO.SlimeLauncherDelay && attackState == AttackingState.IDLE) {
-            kingu.RigidbodyMovement.Stop();
+            kingu.RigidbodyMovement.SetDirectionAndAnimation(Vector2.zero);
             ResetAnimator();
             kingu.RigidbodyMovement.SetAnimator(Vector2.down);
             animator.SetBool("Attack_2", true);
             StartCoroutine(SlimeStrike());
             startAttackDelay = Time.time;
-        } 
+        } else if (attackState != AttackingState.IDLE) {
+            attackState = AttackingState.IDLE;
+        }
     }
 
     private IEnumerator SlimeStrike() {

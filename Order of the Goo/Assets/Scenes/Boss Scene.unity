@@ -169,7 +169,7 @@ PlayableDirector:
   - key: {fileID: 0}
     value: {fileID: 0}
   - key: {fileID: 0}
-    value: {fileID: 903830705}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &176464254
@@ -44839,7 +44839,6 @@ GameObject:
   - component: {fileID: 903830701}
   - component: {fileID: 903830702}
   - component: {fileID: 903830704}
-  - component: {fileID: 903830705}
   m_Layer: 0
   m_Name: Kingu
   m_TagString: Untagged
@@ -45115,26 +45114,6 @@ MonoBehaviour:
   dialogue: {fileID: 11400000, guid: fdad5eeb88b4f804d9e3661d2dad80dc, type: 2}
   activateOnEnable: 0
   useHighlight: 0
---- !u!95 &903830705
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 903830692}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &953918238
 GameObject:
   m_ObjectHideFlags: 0

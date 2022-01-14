@@ -117,7 +117,7 @@ namespace RPG.Combat {
         }
 
         private void PlayDeath() {
-            if (indicator != null) 
+            if (Weapon.UseIndicator) 
                 Destroy(indicator.gameObject);
             gameObject.SetActive(false); 
             var deathParticles =  rangedWeapon.DeathParticles;
