@@ -19,7 +19,7 @@ public class Kingu_Attack : Action {
     public override void OnStart() {
         base.OnStart();
         kingu = GetComponent<Kingu>();
-        animator = transform.GetComponentInChildren<Animator>();
+        animator = transform.GetComponentInChildren<Animator>(); 
         kinguSO = (Kingu_SO)kingu.CreatureSO;
         startAttackDelay = Time.time;
         player = GameObject.FindWithTag("Player").GetComponent<Player>();

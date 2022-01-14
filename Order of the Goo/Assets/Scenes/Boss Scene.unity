@@ -150,7 +150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!320 &176464253
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -166,9 +166,9 @@ PlayableDirector:
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
-  - key: {fileID: -6485703364080013732, guid: 7ce06b0711ca2334e899a6b8414d8f07, type: 2}
-    value: {fileID: 1152102636}
-  - key: {fileID: -2607397175311046172, guid: 7ce06b0711ca2334e899a6b8414d8f07, type: 2}
+  - key: {fileID: 0}
+    value: {fileID: 0}
+  - key: {fileID: 0}
     value: {fileID: 903830705}
   m_ExposedReferences:
     m_References: []
@@ -204,19 +204,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 5f1f2350b50010b4383f29dd63f4cadf, type: 2}
     m_Events:
     - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 903830704}
-          m_TargetAssemblyTypeName: RPG.Dialogue.DialogueActivator, Assembly-CSharp
-          m_MethodName: Fire
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
 --- !u!1 &211680516
 GameObject:
   m_ObjectHideFlags: 0
@@ -45323,8 +45311,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1152102634}
-  - component: {fileID: 1152102636}
   - component: {fileID: 1152102635}
+  - component: {fileID: 1152102636}
   m_Layer: 0
   m_Name: Root
   m_TagString: Untagged
