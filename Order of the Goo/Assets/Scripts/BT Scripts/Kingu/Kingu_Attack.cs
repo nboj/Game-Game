@@ -11,7 +11,7 @@ public class Kingu_Attack : Action {
     private float startAttackDelay; 
     private Player player;
     private AttackingState attackState;
-    private Vector2 targetChargeLocation;
+    private Vector2 targetChargeLocation; 
     private enum AttackingState {
         ATTACKING,
         IDLE
@@ -23,7 +23,7 @@ public class Kingu_Attack : Action {
         kinguSO = (Kingu_SO)kingu.CreatureSO;
         startAttackDelay = Time.time;
         player = GameObject.FindWithTag("Player").GetComponent<Player>();
-        attackState = AttackingState.IDLE;
+        attackState = AttackingState.IDLE; 
     }
 
     public override TaskStatus OnUpdate() {
@@ -55,20 +55,30 @@ public class Kingu_Attack : Action {
             targetChargeLocation = player.transform.position + (player.transform.position - transform.position).normalized * EXTRA_DISTANCE_MULTIPLIER; 
             kingu.RigidbodyMovement.MovementSpeed = kinguSO.ChargeSpeed;
         }
-        if (attackState == AttackingState.ATTACKING) { 
-            if (Vector2.Distance(targetChargeLocation, transform.position) <= 0.2f) { 
+        if (attackState == AttackingState.ATTACKING) {
+            var distance = Vector2.Distance(targetChargeLocation, transform.position);
+            if (distance <= 0.2f) {
+                kingu.RigidbodyMovement.MovementSpeed = kingu.RigidbodyMovement.StartMovementSpeed;
                 startAttackDelay = Time.time;
-                kingu.RigidbodyMovement.Stop(); 
+                kingu.RigidbodyMovement.Stop();
                 attackState = AttackingState.IDLE;
                 ResetAnimator();
+            } else if (distance <= 0.5f) {
+                Debug.Log("0.5fasfas");
+                kingu.RigidbodyMovement.MovementSpeed = kingu.RigidbodyMovement.StartMovementSpeed/2;
+                kingu.RigidbodyMovement.SetDirectionAndAnimation((targetChargeLocation - (Vector2)transform.position).normalized);
             } else {
-                kingu.RigidbodyMovement.SetDirectionAndAnimation(targetChargeLocation - (Vector2)transform.position); 
+                kingu.RigidbodyMovement.SetDirectionAndAnimation((targetChargeLocation - (Vector2)transform.position));
             }
         }
     }
 
     public override void OnCollisionEnter2D(Collision2D other) { 
         base.OnCollisionEnter2D(other);
+        if (other.gameObject.layer != LayerMask.GetMask("Projectile")) {
+            transform.position = (Vector2)transform.position - kingu.RigidbodyMovement.Direction;
+            targetChargeLocation = transform.position;
+        }
         if (other.gameObject.CompareTag("Player") && kingu.CurrentAttackState == Kingu.AttackState.CHARGE && attackState == AttackingState.ATTACKING) {
             Debug.Log("Hit");
             var player = other.gameObject.GetComponent<Player>();

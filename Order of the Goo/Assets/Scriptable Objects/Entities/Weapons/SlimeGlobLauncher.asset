@@ -30,7 +30,7 @@ MonoBehaviour:
   damageModifier: 4
   splashRadius: 3
   projectile: {fileID: 6120313027751903022, guid: f3630dd28ed5bf14e881716099343d1a, type: 3}
-  projectileSpeed: 10
+  projectileSpeed: 20
   deathParticles: {fileID: 3290146800613351409, guid: 6173c5f7e0e65854ebf13869e7375016, type: 3}
   hasRotation: 1
   rotationSpeed: 360
