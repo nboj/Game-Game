@@ -23,4 +23,9 @@ public class RigidbodyMovement : Movement {
     public void SetMovementSpeed(float speed) {
         MovementSpeed = speed;
     }
+
+    internal void SetDirectionAndAnimation(Vector2 dir) {
+        SetDirection(dir);
+        SetAnimator(dir);
+    }
 }

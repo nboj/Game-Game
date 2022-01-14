@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Kingu
   m_EditorClassIdentifier: 
   creatureClass: 0
-  strength: 10
-  dexterity: 10
-  intelligence: 10
-  wisdom: 10
-  charisma: 10
-  constitution: 10
-  ac: 0
-  level: 1
-  resistancePercent: 100
+  strength: 15
+  dexterity: 15
+  intelligence: 15
+  wisdom: 15
+  charisma: 15
+  constitution: 15
+  ac: 20
+  level: 3
+  resistancePercent: 10.8
   chaseDistance: 10
   attackDistance: 1
   enemySpeed: 10
@@ -30,4 +30,5 @@ MonoBehaviour:
   chargeSpeed: 20
   chargeDelay: 1
   slimeLauncherDelay: 1
+  slimeStrikeDelay: 1
   swingDelay: 1

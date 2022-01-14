@@ -62,25 +62,38 @@ public class Kingu_Attack : Action {
                 attackState = AttackingState.IDLE;
                 ResetAnimator();
             } else {
-                kingu.RigidbodyMovement.SetDirection(targetChargeLocation - (Vector2)transform.position); 
+                kingu.RigidbodyMovement.SetDirectionAndAnimation(targetChargeLocation - (Vector2)transform.position); 
             }
+        }
+    }
+
+    public override void OnCollisionEnter2D(Collision2D other) { 
+        base.OnCollisionEnter2D(other);
+        if (other.gameObject.CompareTag("Player") && kingu.CurrentAttackState == Kingu.AttackState.CHARGE && attackState == AttackingState.ATTACKING) {
+            Debug.Log("Hit");
+            var player = other.gameObject.GetComponent<Player>();
+            if (player != null) {
+                kingu.Fighter.InvokeOnHit(player.gameObject);
+            } 
         }
     }
 
     public void LaunchSlime() { 
         if (Time.time - startAttackDelay >= kinguSO.SlimeLauncherDelay && attackState == AttackingState.IDLE) {
-            
-            Debug.Log("Launched");
-            animator.SetBool("Attack_2", true); 
-            kingu.Fire(Vector2.up * 10);
-            attackState = AttackingState.ATTACKING;
-            targetChargeLocation = player.transform.position;
-        }
-        if (attackState == AttackingState.ATTACKING) { 
-            // could turn into coroutine to create multiple projectiles 
-            kingu.Fire(targetChargeLocation, new Vector3(targetChargeLocation.x, Camera.main.ScreenToWorldPoint(new Vector3(0, Camera.main.pixelHeight)).y), true);
-            kingu.CurrentAttackState = Kingu.AttackState.CHARGE;
-        }
+            kingu.RigidbodyMovement.Stop();
+            ResetAnimator();
+            kingu.RigidbodyMovement.SetAnimator(Vector2.down);
+            animator.SetBool("Attack_2", true);
+            StartCoroutine(SlimeStrike());
+            startAttackDelay = Time.time;
+        } 
+    }
+
+    private IEnumerator SlimeStrike() {
+        kingu.Fire(Vector2.up * 10);
+        yield return new WaitForSeconds(kinguSO.SlimeStrikeDelay);
+        targetChargeLocation = player.transform.position;
+        kingu.Fire(targetChargeLocation, new Vector3(targetChargeLocation.x, Camera.main.ScreenToWorldPoint(new Vector3(0, Camera.main.pixelHeight)).y), true);
     }
 
     public void Swing() { } 
@@ -88,7 +101,6 @@ public class Kingu_Attack : Action {
     private void ResetAnimator() {
         animator.SetBool("Attack_1", false);
         animator.SetBool("Attack_2", false);
-        animator.SetBool("Attack_3", false);
-        animator.SetBool("Attack_1_init", false);
+        animator.SetBool("Attack_3", false); 
     }
 }

@@ -7,6 +7,7 @@ public class Kingu_SO : Enemy_SO {
     [Header("Attack Delays")]
     [SerializeField] private float chargeDelay;
     [SerializeField] private float slimeLauncherDelay;
+    [SerializeField] private float slimeStrikeDelay;
     [SerializeField] private float swingDelay;
 
     public float ChargeDelay {
@@ -24,4 +25,8 @@ public class Kingu_SO : Enemy_SO {
     public float ChargeSpeed {
         get => chargeSpeed;
     } 
+
+    public float SlimeStrikeDelay {
+        get => slimeStrikeDelay;
+    }
 }

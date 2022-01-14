@@ -13,6 +13,10 @@ public class Fighter : MonoBehaviour {
         OnHit += HitController;
     }
 
+    public void InvokeOnHit(GameObject go) {
+        OnHit(go);
+    }
+
     public void FireRanged(Vector2 target, RangedWeapon_SO weapon, bool destroyAtTarget = false) {
         var projectileObject = Instantiate(weapon.Projectile, transform.position, weapon.Projectile.transform.rotation);
         var projectile = projectileObject.GetComponent<Projectile>();
@@ -55,6 +59,7 @@ public class Fighter : MonoBehaviour {
         projectile.OnHit = OnHit; 
         projectile.SetRotation(target);
         projectile.DestroyAtTarget = destroyAtTarget;
+        projectile.Weapon = weapon;
     }
 
     private void HitController(GameObject other) {

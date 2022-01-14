@@ -154,15 +154,23 @@ public class Player : AggressiveCreature {
         }
     }
 
-    private void OnSpace() {  
-        if (!dialogueConversant.HasNext()) {
-            Enable();
-        }
-        if (dialogueUI.Canvas.enabled) {
-            dialogueUI.Next(); 
+    private void OnSpace() {
+        if (dialogueUI.Canvas.isActiveAndEnabled) {
+            if (!dialogueConversant.HasNext()) {
+                Enable();
+            }
+            if (dialogueUI.Canvas.enabled) {
+                dialogueUI.Next();
+            }
+        } else if (CanControl && CanAttack) {
+            Dodge();
         }
     }
     #endregion
+
+    private void Dodge() {
+        
+    }
 
     private new void SetSelectedIndex(int index) { 
         UIController.SetLeftSelectedSlot(index);

@@ -9,6 +9,7 @@ using RPG.Saving;
 public class Health : MonoBehaviour, ISaveable { 
     public UnityEvent OnDeath;
     public UnityEvent OnRestore;
+    public UnityEvent OnHit;
     [SerializeField] private GameObject sliderPrefab;
     [Header("Healthbar Settings")] 
     [SerializeField] private float fadeOutDelay = 3;
@@ -34,6 +35,14 @@ public class Health : MonoBehaviour, ISaveable {
 
     public bool IsEnabled {
         get => isEnabled;
+    }
+
+    public float TotalHealth {
+        get => totalHealth;
+    }
+
+    public float MaxHealth {
+        get => maxHealth;
     }
 
     private enum DisplayState {
@@ -144,6 +153,7 @@ public class Health : MonoBehaviour, ISaveable {
         if (!isEnabled)
             return;
         totalHealth -= amount;
+        OnHit.Invoke();
         if (totalHealth <= 0 && !isDead) {
             totalHealth = -1;
             HandleDeath();

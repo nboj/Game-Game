@@ -34,3 +34,5 @@ MonoBehaviour:
   deathParticles: {fileID: 3290146800613351409, guid: 6173c5f7e0e65854ebf13869e7375016, type: 3}
   hasRotation: 1
   rotationSpeed: 360
+  useIndicator: 1
+  indicatorParticles: {fileID: 198928468976585136, guid: eb461173e6fa624448c2b5f9541919dd, type: 3}

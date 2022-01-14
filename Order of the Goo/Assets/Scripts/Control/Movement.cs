@@ -46,7 +46,6 @@ public class Movement {
     
     public void SetDirection(Vector2 direction) {
         this.direction = direction.normalized;
-        SetAnimator(direction);
     } 
 
     public void SetAnimator(Vector2 direction) {
@@ -88,7 +87,7 @@ public class Movement {
                     break;
             }
         }
-    }
+    } 
 
     private void ResetAnimator() {
         animator.SetBool("Right", false);

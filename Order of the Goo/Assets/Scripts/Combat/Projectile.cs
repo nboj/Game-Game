@@ -14,9 +14,12 @@ namespace RPG.Combat {
         private bool destroyAtTarget = false;
         protected bool canControl = true;
         private RangedWeapon_SO weapon;
+        private GameObject indicator;
 
         public virtual void Start() { 
             rb = GetComponent<Rigidbody2D>();
+            if (Weapon.UseIndicator)
+                indicator = Instantiate(Weapon.IndicatorParticles, target, Quaternion.identity).gameObject;
         }
 
         public RangedWeapon_SO Weapon {
@@ -58,9 +61,13 @@ namespace RPG.Combat {
 
         public virtual void Update() {
             if (!canControl)
-                return;
+                return; 
             UpdatePosition();
             RotateProjectile();
+        }
+
+        private void OnBecameInvisible() {
+            Destroy(gameObject);
         }
 
         private void UpdatePosition() { 
@@ -110,6 +117,8 @@ namespace RPG.Combat {
         }
 
         private void PlayDeath() {
+            if (indicator != null) 
+                Destroy(indicator.gameObject);
             gameObject.SetActive(false); 
             var deathParticles =  rangedWeapon.DeathParticles;
             if (deathParticles != null) { 
