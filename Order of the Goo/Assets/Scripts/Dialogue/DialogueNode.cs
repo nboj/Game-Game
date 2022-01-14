@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-namespace RPG.Dialogue { 
-    [System.Serializable]
+namespace RPG.Dialogue {  
     public class DialogueNode : ScriptableObject { 
         public enum Speaker {
             PLAYER,
@@ -44,36 +43,30 @@ namespace RPG.Dialogue {
         }
 
         public string Text {
-            get => text;
-#if UNITY_EDITOR
+            get => text; 
             set {
-                if (!string.IsNullOrEmpty(AssetDatabase.GetAssetPath(this))) 
-                    Undo.RecordObject(this, "Changed Text");
+                //if (!string.IsNullOrEmpty(AssetDatabase.GetAssetPath(this))) 
+                    //Undo.RecordObject(this, "Changed Text");
                 text = value;
-            }
-#endif
+            } 
         }
 
         public List<string> Children {
-            get => children;
-#if UNITY_EDITOR
+            get => children; 
             set { 
-                if (!string.IsNullOrEmpty(AssetDatabase.GetAssetPath(this)))
-                    Undo.RecordObject(this, "Changed Children");
+                //if (!string.IsNullOrEmpty(AssetDatabase.GetAssetPath(this)))
+                  //  Undo.RecordObject(this, "Changed Children");
                 children = value;
-            }
-#endif
+            } 
         }
 
         public Rect Rect {
-            get => rect;
-#if UNITY_EDITOR
+            get => rect; 
             set {
-                if (!string.IsNullOrEmpty(AssetDatabase.GetAssetPath(this)))
-                    Undo.RecordObject(this, "Changed Rect");
+                //if (!string.IsNullOrEmpty(AssetDatabase.GetAssetPath(this)))
+                  //  Undo.RecordObject(this, "Changed Rect");
                 rect = value;
-            }
-#endif
+            } 
         }
     }
 }

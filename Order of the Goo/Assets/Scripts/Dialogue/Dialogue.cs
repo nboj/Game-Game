@@ -47,23 +47,23 @@ namespace RPG.Dialogue {
                 newRect.position = newPos;
                 node.Rect = newRect;
             }
-            if (!string.IsNullOrEmpty(AssetDatabase.GetAssetPath(this))) {
-                Undo.RecordObject(this, "Created new DialogueNode");
-            }
+            //if (!string.IsNullOrEmpty(AssetDatabase.GetAssetPath(this))) {
+                //Undo.RecordObject(this, "Created new DialogueNode");
+            //}
             nodes.Add(node);
             OnValidate();
         }
 
         public void RemoveNode(DialogueNode node) { 
-            if (!string.IsNullOrEmpty(AssetDatabase.GetAssetPath(this))) { 
-                Undo.RecordObject(node, "Deleted node");
-            }
+            //if (!string.IsNullOrEmpty(AssetDatabase.GetAssetPath(this))) { 
+                //Undo.RecordObject(node, "Deleted node");
+            //}
             nodes.Remove(node);
             OnValidate();
             foreach (var n in nodes) {
                 n.Children.Remove(node.name);
             }
-            Undo.DestroyObjectImmediate(node);
+            //Undo.DestroyObjectImmediate(node);
         }
 
         public void ChildNode(DialogueNode parentNode, DialogueNode childNode) {
@@ -75,13 +75,13 @@ namespace RPG.Dialogue {
             if (nodes.Count <= 0) {
                 CreateNewNode(null);
             }
-            if (!string.IsNullOrEmpty(AssetDatabase.GetAssetPath(this))) {
-                foreach (DialogueNode node in nodes) {
-                    if (string.IsNullOrEmpty(AssetDatabase.GetAssetPath(node))) { 
-                        AssetDatabase.AddObjectToAsset(node, this);
-                    }
-                }
-             }
+            //if (!string.IsNullOrEmpty(AssetDatabase.GetAssetPath(this))) {
+                //foreach (DialogueNode node in nodes) {
+                    //if (string.IsNullOrEmpty(AssetDatabase.GetAssetPath(node))) { 
+                        //AssetDatabase.AddObjectToAsset(node, this);
+                    //}
+                //}
+             //}
         }
 
         public void OnAfterDeserialize() {  
