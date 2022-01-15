@@ -55,8 +55,7 @@ public class AggressiveCreature : Creature {
         return weapons[selectedIndex];
     }
 
-    protected internal void Fire(Vector2 target) {
-        Debug.Log("FIRED!");
+    protected internal void Fire(Vector2 target) { 
         var weapon = GetSelectedWeapon();
         if (!CanFire() || !CanAttack)
             return;
@@ -71,8 +70,7 @@ public class AggressiveCreature : Creature {
         }
     }
 
-    protected internal void Fire(Vector2 target, Vector2 startPos) {
-        Debug.Log("FIRED!");
+    protected internal void Fire(Vector2 target, Vector2 startPos) { 
         var weapon = GetSelectedWeapon();
         if (!CanFire() || !CanAttack)
             return;
@@ -87,8 +85,7 @@ public class AggressiveCreature : Creature {
         }
     }
 
-    protected internal void Fire(Vector2 target, Vector2 startPos, bool destroyAtTarget = false) {
-        Debug.Log("FIRED!");
+    protected internal void Fire(Vector2 target, Vector2 startPos, bool destroyAtTarget = false) { 
         var weapon = GetSelectedWeapon();
         if (!CanFire() || !CanAttack)
             return;
@@ -117,6 +114,7 @@ public class AggressiveCreature : Creature {
     private void OnDrawGizmos() {
         Gizmos.color = Color.magenta;
         var RangedWeapon = GetSelectedWeapon() as RangedWeapon_SO;
-        Gizmos.DrawWireSphere(transform.position,  RangedWeapon.SplashRadius);
+        if (RangedWeapon != null)
+            Gizmos.DrawWireSphere(transform.position,  RangedWeapon.SplashRadius);
     }
 } 

@@ -20,6 +20,16 @@ public class Movement {
             canControl = value;
         }
     }
+    public enum MovementState {
+        UP,
+        RIGHT,
+        LEFT,
+        DOWN
+    }
+
+    public MovementState CurrentMovementState {
+        get => currentMovementState;
+    }
 
     public float MovementSpeed {
         get => movementSpeed;
@@ -35,12 +45,6 @@ public class Movement {
         get => startMovementSpeed;
     }
     
-    private enum MovementState {
-        UP,
-        RIGHT,
-        LEFT,
-        DOWN
-    }
 
     public Movement(float speed, Animator animator) {
         this.animator = animator;

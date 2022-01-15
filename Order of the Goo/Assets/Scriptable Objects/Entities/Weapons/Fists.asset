@@ -20,9 +20,36 @@ MonoBehaviour:
   weight: 0
   sprite: {fileID: 21300000, guid: a91aef8da45b068439ce542bb2f51520, type: 3}
   weaponRange: 0
-  hasSplashDamage: 0
+  hasSplashDamage: 1
   fireRate: 0
+  diceMultiplier: 1
   damageRollType: 1
-  weaponWidth: 0
+  damageClass: 3
+  damageClassMultiplier: 1
+  attackModifier: 0
+  damageModifier: 0
+  weaponLength: 1.72
+  weaponWidth: 0.69
   dexterity: 10
   strength: 10
+  meleeTransition:
+    _FadeDuration: 0.25
+    _Events:
+      _NormalizedTimes: []
+      _Callbacks: []
+      _Names: []
+    _Speed: 1
+    _Animations:
+    - {fileID: 7400000, guid: 1c69219c21f02914786ca2adebf38977, type: 2}
+    - {fileID: 7400000, guid: 2790c7bf29537d746b1e624e396d814b, type: 2}
+    - {fileID: 7400000, guid: 67c8a4a949691b343b3bc462cdb380dd, type: 2}
+    - {fileID: 7400000, guid: 420c9114b8999174dbc106a11cb20b46, type: 2}
+    _Speeds: []
+    _SynchronizeChildren: 
+    _Thresholds:
+    - {x: 0, y: 1}
+    - {x: 1, y: 0}
+    - {x: 0, y: -1}
+    - {x: -1, y: 0}
+    _DefaultParameter: {x: 0, y: 0}
+    _Type: 1

@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1650,14 +1650,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      doors_34: 1268739953
+      doors_10: -265827797
       doors_6: -1096955209
-      doors_58: 176352603
-      doors_42: -1926389338
-      doors_57: -1682093774
+      doors_2: -171678213
+      doors_21: -1622396647
       doors_16: 1259224601
       doors_71: 292894771
       doors_33: 2045307877
+      doors_58: 176352603
       doors_55: -1454182450
       doors_52: 1852418466
       doors_0: 684637448
@@ -1682,9 +1682,9 @@ TextureImporter:
       doors_29: 1003966924
       doors_24: -1245154983
       doors_59: -1850053169
+      doors_47: 603410029
       doors_13: -96355585
       doors_5: 1741755681
-      doors_47: 603410029
       doors_67: -803949552
       doors_44: -1525022832
       doors_28: -1303314729
@@ -1719,9 +1719,9 @@ TextureImporter:
       doors_45: 1401495095
       doors_23: -1806064482
       doors_9: 544406850
-      doors_2: -171678213
-      doors_10: -265827797
-      doors_21: -1622396647
+      doors_42: -1926389338
+      doors_57: -1682093774
+      doors_34: 1268739953
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

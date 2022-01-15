@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eceeb59a892d074db28203df8e4cd3a, type: 3}
+  m_Name: Player Walk
+  m_EditorClassIdentifier: 
+  _Up: {fileID: 7400000, guid: 96db789b928241b4a825cdc380530e43, type: 2}
+  _Right: {fileID: 7400000, guid: 123fa1f8f7f69034387e6e3d4b7763fa, type: 2}
+  _Down: {fileID: 7400000, guid: f5a26c3ab2a5f3a4e944688bc6f3ce38, type: 2}
+  _Left: {fileID: 7400000, guid: 320d281b993292149974ad5b12335de3, type: 2}

@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -22844,9 +22844,9 @@ TextureImporter:
       house_467: -464328629
       house_130: -1401111482
       house_739: -1533802695
-      house_758: -610838359
-      house_620: -1910180024
       house_892: -1991648259
+      house_620: -1910180024
+      house_758: -610838359
       house_491: 913775295
       house_1060: 1689496760
       house_156: -1080630791
@@ -22879,10 +22879,10 @@ TextureImporter:
       house_537: 473703042
       house_1046: -750638820
       house_459: 996017723
-      house_687: 1168953255
       house_1024: 1136858258
       house_57: 19953089
       house_601: 1051617277
+      house_687: 1168953255
       house_917: 1899967245
       house_309: -685778807
       house_930: 1696052905
@@ -23021,13 +23021,13 @@ TextureImporter:
       house_1053: 922601578
       house_743: 1687859082
       house_856: -620929812
-      house_864: 1699736153
+      house_1052: -704739023
       house_64: -324700775
       house_246: -585699785
       house_447: 1421412224
       house_912: -584109892
       house_121: 1881799589
-      house_1052: -704739023
+      house_864: 1699736153
       house_50: 1841155254
       house_732: -263325317
       house_560: -220198559
@@ -23280,28 +23280,28 @@ TextureImporter:
       house_666: 1122250710
       house_197: 1483375507
       house_558: -1926298493
-      house_769: 1234691571
       house_977: 506456338
+      house_1017: 1952869670
       house_41: 1268954679
       house_470: -879241613
       house_365: -70302816
-      house_1017: 1952869670
+      house_769: 1234691571
+      house_983: -1888373943
       house_759: 1068107129
       house_273: -1118976259
-      house_983: -1888373943
       house_193: -799216247
       house_812: -513188461
       house_61: -1859662285
       house_9: 1674988232
       house_517: 1509776722
       house_122: 1261995011
-      house_655: -222978584
+      house_846: 1101629444
       house_525: -1987256449
       house_96: 250658551
-      house_225: 740121696
-      house_846: 1101629444
-      house_345: 130245604
       house_1040: -389876910
+      house_225: 740121696
+      house_655: -222978584
+      house_345: 130245604
       house_346: 1287068638
       house_285: 610324803
       house_207: 454666358
@@ -23314,14 +23314,13 @@ TextureImporter:
       house_13: 1359620183
       house_473: -556280100
       house_76: -1088265829
-      house_542: 180580482
       house_989: 1444576253
-      house_433: 1751271372
+      house_542: 180580482
       house_969: 1481492262
       house_1020: 389618804
-      house_733: 2043473105
+      house_433: 1751271372
       house_403: 640866040
-      house_919: 1850303370
+      house_733: 2043473105
       house_767: 2142119897
       house_259: 1608039426
       house_652: 155969230
@@ -23329,6 +23328,7 @@ TextureImporter:
       house_374: 956250363
       house_68: -1468654691
       house_1011: 624693577
+      house_919: 1850303370
       house_1035: 1042853805
       house_715: -271183130
       house_580: 247975506
@@ -23340,10 +23340,10 @@ TextureImporter:
       house_67: -114516863
       house_412: -862597336
       house_1033: 1209670849
+      house_523: -1279674148
       house_146: -1559691660
       house_290: 1563579504
       house_495: 1668330568
-      house_523: -1279674148
       house_84: -2121837018
       house_24: 672407219
       house_545: -826503208

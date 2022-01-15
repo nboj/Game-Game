@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 530e556d4407947dcae7102ff497587d, type: 3}
+  m_Name: Player Graph
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"graph":{"title":null,"summary":null,"pan":{"x":0.0,"y":-15.0},"zoom":1.0,"elements":[{"nest":{"source":"Embed","macro":null,"embed":{"variables":{"collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":"Start","summary":null,"pan":{"x":-50.65584,"y":-38.0},"zoom":1.0,"elements":[{"coroutine":false,"defaultValues":{},"position":{"x":-214.0,"y":-233.0},"guid":"dc87ca33-fd45-4e58-8ed4-7f2e7fee4b6f","$version":"A","$type":"Unity.VisualScripting.OnEnterState","$id":"13"},{"coroutine":false,"defaultValues":{},"position":{"x":-212.0,"y":-124.0},"guid":"f73d0b3c-05cf-4cb3-a5ee-6267e203201d","$version":"A","$type":"Unity.VisualScripting.Update"},{"coroutine":false,"defaultValues":{},"position":{"x":-206.0,"y":2.0},"guid":"a07dc7fc-760b-4f4e-9b1d-a62689a11eba","$version":"A","$type":"Unity.VisualScripting.OnExitState"},{"containerType":"GameObject","defaultValues":{"target":null,"graphInput":null},"position":{"x":86.0,"y":-239.0},"guid":"a24752f4-142c-4550-a260-591f7068b662","$version":"A","$type":"Unity.VisualScripting.HasScriptGraph","$id":"19"},{"sourceUnit":{"$ref":"13"},"sourceKey":"trigger","destinationUnit":{"$ref":"19"},"destinationKey":"enter","guid":"c1a4265d-7278-4691-a033-c58d905499f2","$type":"Unity.VisualScripting.ControlConnection"}],"$version":"A"}},"isStart":true,"position":{"x":-227.0,"y":-40.0},"width":170.0,"guid":"0f2ffaae-3d34-4201-a8dc-7925ac04495b","$version":"A","$type":"Unity.VisualScripting.FlowState"}],"$version":"A"}}'
+    _objectReferences: []

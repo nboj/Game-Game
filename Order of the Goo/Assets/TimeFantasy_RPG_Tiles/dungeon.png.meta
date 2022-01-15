@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -12407,8 +12407,8 @@ TextureImporter:
       dungeon_202: -907141684
       dungeon_376: 1451959783
       dungeon_384: -1812918780
-      dungeon_445: 1746067989
-      dungeon_107: -1041179645
+      dungeon_255: -1432800011
+      dungeon_257: -916809323
       dungeon_388: 1986748372
       dungeon_338: 558962977
       dungeon_84: 1028685840
@@ -12467,17 +12467,17 @@ TextureImporter:
       dungeon_262: 1854235985
       dungeon_345: 846268573
       dungeon_21: 1339325134
-      dungeon_137: -2028333239
-      dungeon_416: 867561564
-      dungeon_371: -78845557
       dungeon_72: -306782092
+      dungeon_3: -658991968
+      dungeon_371: -78845557
+      dungeon_583: 1391591248
       dungeon_366: 1681319553
       dungeon_480: -1064649231
-      dungeon_3: -658991968
+      dungeon_137: -2028333239
       dungeon_207: 1175866264
       dungeon_61: -2006380006
+      dungeon_416: 867561564
       dungeon_304: -298853572
-      dungeon_583: 1391591248
       dungeon_333: 847137261
       dungeon_144: 1665662380
       dungeon_36: 434066571
@@ -12984,8 +12984,8 @@ TextureImporter:
       dungeon_143: 1298983812
       dungeon_486: -1873695755
       dungeon_252: -282411217
-      dungeon_257: -916809323
-      dungeon_255: -1432800011
+      dungeon_107: -1041179645
+      dungeon_445: 1746067989
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

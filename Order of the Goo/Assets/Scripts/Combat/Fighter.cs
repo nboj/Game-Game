@@ -2,15 +2,25 @@ using RPG.Combat;
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using Animancer;
+using Animancer.FSM;
 
 public delegate void OnHit(GameObject go);
 
 public class Fighter : MonoBehaviour {
     [SerializeField] private GameObject damageText;
+    [SerializeField] private Vector3 weaponOffeset; 
+    private DirectionalMixerState meleeState;
     public event OnHit OnHit; 
+    private HybridAnimancerComponent animancer; 
+#if UNITY_EDITOR
+    [SerializeField] float weaponWidth;
+    [SerializeField] float weaponLength;
+#endif
 
-    private void Start() { 
+    private void Start() {  
         OnHit += HitController;
+        animancer = transform.GetComponentInChildren<HybridAnimancerComponent>(); 
     }
 
     public void InvokeOnHit(GameObject go) {
@@ -49,8 +59,34 @@ public class Fighter : MonoBehaviour {
         }
     }
 
-    public void FireMelee(Vector2 target, MeleeWeapon_SO weapon) { 
+    public void FireMelee(Vector2 target, MeleeWeapon_SO weapon) {
+        float angle = GetLookatAngle(target);
+        var dir = (target - (Vector2)transform.position).normalized;
+        meleeState = (DirectionalMixerState)weapon.MeleeTransition.CreateStateAndApply(animancer); 
+        meleeState.Parameter = dir;
+        meleeState.Play(); 
+        if (weapon.HasSplashDamage) {
+            Collider2D[] hitColliders = Physics2D.OverlapBoxAll(transform.position + new Vector3(weapon.WeaponRange / 2f, 0f), new Vector2(weapon.WeaponLength, weapon.WeaponWidth), angle);
+            foreach (var collider in hitColliders) {  
+                var health = collider.GetComponent<Health>();
+                if (health != null && health.transform != transform) {
+                    InvokeOnHit(health.gameObject);
+                }
+            }
+        } else {
+            Collider2D hitCollider = Physics2D.OverlapBox(transform.position + new Vector3(weapon.WeaponRange / 2f, 0f), new Vector2(weapon.WeaponLength, weapon.WeaponWidth), angle);
+            var health = hitCollider.GetComponent<Health>();
+            if (health != null && health.transform != transform) { 
+                InvokeOnHit(health.gameObject);
+            }
+        }
     }  
+
+    private float GetLookatAngle(Vector2 target) {
+        Vector2 dir = (target - (Vector2)transform.position).normalized;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        return angle;
+    }
 
     private void SetupProjectile(Projectile projectile, RangedWeapon_SO weapon, Vector2 target, bool destroyAtTarget = false) { 
         projectile.Parent = gameObject;
@@ -97,7 +133,8 @@ public class Fighter : MonoBehaviour {
     } 
 
     private IEnumerator PlayHit(float totalDamage, GameObject go) { 
-        var textOb = Instantiate(damageText, go.transform.position, Quaternion.identity); 
+        var textOb = Instantiate(damageText, go.transform.position, Quaternion.identity, go.transform);
+        textOb.GetComponent<RectTransform>().transform.position = go.transform.position;
         var text = textOb.GetComponent<TextMeshPro>();
         var anim = textOb.GetComponent<Animator>();
         text.text = totalDamage.ToString();
@@ -107,5 +144,8 @@ public class Fighter : MonoBehaviour {
         Destroy(textOb); 
     }
 
-
+    private void OnDrawGizmos() {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(transform.position + new Vector3(weaponLength/2f, 0f) + weaponOffeset, new Vector2(weaponLength, weaponWidth));
+    }
 } 

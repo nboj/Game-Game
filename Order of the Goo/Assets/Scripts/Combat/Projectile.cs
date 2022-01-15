@@ -15,6 +15,7 @@ namespace RPG.Combat {
         protected bool canControl = true;
         private RangedWeapon_SO weapon;
         private GameObject indicator;
+        private bool collided = false;
 
         public virtual void Start() { 
             rb = GetComponent<Rigidbody2D>();
@@ -73,7 +74,7 @@ namespace RPG.Combat {
         private void UpdatePosition() { 
             transform.position += new Vector3(projectileDirection.x, projectileDirection.y, 0) * Time.deltaTime * rangedWeapon.ProjectileSpeed;
             if (destroyAtTarget && Vector2.Distance(Target, transform.position) <= 0.2f) {
-                OnCollisionEnter2D(null);
+                OnTriggerEnter2D(null);
             }
         }
 
@@ -89,31 +90,33 @@ namespace RPG.Combat {
             startRotation = rangedWeapon.Projectile.transform.eulerAngles.z;
             projectileDirection = direction.normalized;
             SetObjectRotation(this.projectileDirection, gameObject);
-        } 
+        }
 
-        private void OnCollisionEnter2D(Collision2D collider) {
+        private void OnTriggerEnter2D(Collider2D collider) {
             if (collider != null) {
                 if (collider.transform == parent.transform || collider.transform.IsChildOf(parent.transform)) {
                     return;
                 }
             }
-
-            if (rangedWeapon.SplashRadius > 0) {
-                Collider2D[] hit = Physics2D.OverlapCircleAll(transform.position, rangedWeapon.SplashRadius); 
-                foreach (var child in hit) {
-                    var health = child.GetComponent<Health>(); 
+            if (!collided) {
+                collided = true;
+                if (rangedWeapon.SplashRadius > 0) {
+                    Collider2D[] hit = Physics2D.OverlapCircleAll(transform.position, rangedWeapon.SplashRadius); 
+                    foreach (var child in hit) { 
+                        var health = child.GetComponent<Health>();
+                        if (health != null && health.transform != parent.transform && !health.transform.IsChildOf(parent.transform)) {
+                            onHit(child.gameObject);
+                        }
+                    }
+                } else if (collider != null) {
+                    Health health = collider.gameObject.GetComponent<Health>();
                     if (health != null && health.transform != parent.transform && !health.transform.IsChildOf(parent.transform)) {
-                        onHit(child.gameObject);
-                    } 
-                } 
-            } else if (collider != null) {
-                Health health = collider.gameObject.GetComponent<Health>();
-                if (health != null && health.transform != parent.transform && !health.transform.IsChildOf(parent.transform)) { 
-                    onHit(health.gameObject);
+                        onHit(health.gameObject);
+                    }
                 }
-            } 
-            canControl = false;
-            PlayDeath();
+                canControl = false;
+                PlayDeath();
+            }
         }
 
         private void PlayDeath() {
