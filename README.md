@@ -16,6 +16,7 @@
 #### "A" - Move Left
 #### "S" - Move Down
 #### "D" - Move Right
+### Other Bindings:
 #### "F" - Interact
 #### "Q" - Move selected item left
 #### "E" - Move selected item right
