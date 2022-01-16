@@ -14,7 +14,7 @@
 #### To run the game from the unity editor, follow the steps below:
 ##### - Download and install the newest Unity Hub
 ##### - Make sure that you have Unity version 2021.2.0f1 installed
-##### - From the Unity Hub, click on the projects panel. This should be located on the bottom left of your screen
+##### - From the Unity Hub, click on the projects panel. This should be located on the left of your screen
 ##### - Click open and select the "Order of the Goo" folder from this git repository that you installed
 ##### - After Unity is open, find the Project folder tab where all the project files are located
 ##### - If you cannot find this, look at the top and find the "Window" dropdown, go to "Layouts", and click on "Reset All Layouts". This will reset all Unity layouts to Unity's default layout. Then the Project panel should be located in the bottom left of your screen.
