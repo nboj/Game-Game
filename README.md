@@ -30,6 +30,9 @@
 #### "S" - Move Down
 #### "D" - Move Right
 ### Other Bindings:
+#### "K" - Save Game
+#### "L" - Load Game
+#### "Delete Key" Delete Save
 #### "F" - Interact
 #### "Q" - Move selected item left
 #### "E" - Move selected item right
