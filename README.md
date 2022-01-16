@@ -3,6 +3,7 @@
 
 # How to play
 ### Please download this git repository, open the build folder, and run the executable to play the game
+### To view the source files and scripts, open the "Order of the Goo" folder, open the "Assets" folder, then open the "Scripts" Folder. 
 
 ### If you run into any issues my contacts are:
 ### Email: christian.auman@outlook.com
