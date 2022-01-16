@@ -18,7 +18,7 @@
 ##### - Click open and select the "Order of the Goo" folder from this git repository that you installed
 ##### - After Unity is open, find the Project folder tab where all the project files are located
 ##### - If you cannot find this, look at the top and find the "Window" dropdown, go to "Layouts", and click on "Reset All Layouts". This will reset all Unity layouts to Unity's default layout. Then the Project panel should be located in the bottom left of your screen.
-##### - After you found the Project panel, locate the "Scenes" folder, click the dropdown arrow, and double click on the "Beginning Scene" (NOT "Beginning Scene 1")
+##### - After you found the Project panel, locate the "Scenes" folder, click the dropdown arrow, and double click on the "Title Scene"
 ##### - When open, click the Arrow at the top/middle of your screen to run the game.
 ##### - If you followed all of those steps, you should have the game running through the unity editor. If you run into any issues, please contact me with the contact information above
 
