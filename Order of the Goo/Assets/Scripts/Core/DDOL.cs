@@ -1,7 +1,13 @@
 using UnityEngine; 
 
 public class DDOL : MonoBehaviour {
-    private void Awake() {
-        DontDestroyOnLoad(this); 
+    private static DDOL instance;
+    public void Awake() {
+        if (instance == null) {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        } else {
+            Destroy(gameObject);
+        }
     }
 }

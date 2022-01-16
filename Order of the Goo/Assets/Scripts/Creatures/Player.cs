@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using RPG.UI;
 using RPG.Dialogue;
 using RPG.Saving;
+using Animancer;
 
 public interface IFHandler {
     public void Fire();
