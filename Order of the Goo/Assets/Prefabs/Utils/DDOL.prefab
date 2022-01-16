@@ -389,7 +389,7 @@ Animator:
   m_GameObject: {fileID: 115155900556619770}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 00d2e42cb9de3b74ca7c0c65813bb2fe, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1553,7 +1553,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 22812.855}
+  m_AnchoredPosition: {x: 0, y: 22560.842}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &6457762186079963034
@@ -2166,7 +2166,7 @@ MonoBehaviour:
   weapons:
   - {fileID: 11400000, guid: 13ab669d829cc9c4791b5653b019bd4a, type: 2}
   - {fileID: 11400000, guid: f2e814b017d0d0045b70207251bf3ae6, type: 2}
-  - {fileID: 11400000, guid: 6c3026906e8a74842805d1d7dbce7280, type: 2}
+  - {fileID: 11400000, guid: f0c1fcc8bcb640847948666f44ee65ff, type: 2}
   canAttack: 1
   playerInventoryUI: {fileID: 1013125333792405019}
   UIController: {fileID: 1013125333800734129}

@@ -125525,7 +125525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8934044209768380128, guid: 2f95ad4994f17734faee2b889cc5c042, type: 3}
       propertyPath: sceneToLoad
-      value: Boss Scene Entrance
+      value: Boss Scene
       objectReference: {fileID: 0}
     - target: {fileID: 8934044209768380134, guid: 2f95ad4994f17734faee2b889cc5c042, type: 3}
       propertyPath: m_RootOrder

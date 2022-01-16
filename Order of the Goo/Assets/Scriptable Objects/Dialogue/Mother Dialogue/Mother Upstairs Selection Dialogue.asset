@@ -24,7 +24,7 @@ MonoBehaviour:
   avatarImage: {fileID: 0}
   avatarName: ........
   onEnterTrigger: 
-  onExitTrigger: 
+  onExitTrigger: EnablePlayer
 --- !u!114 &-3817375633847994313
 MonoBehaviour:
   m_ObjectHideFlags: 0

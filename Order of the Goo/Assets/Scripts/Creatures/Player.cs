@@ -3,8 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using RPG.UI;
 using RPG.Dialogue;
-using RPG.Saving;
-using Animancer;
+using UnityEngine.SceneManagement;
 
 public interface IFHandler {
     public void Fire();
@@ -43,6 +42,12 @@ public class Player : AggressiveCreature {
         inventory = GetComponent<Inventory>();
         leftSlotsInventory = GetComponent<LeftSlotsInventory>();
         dialogueConversant = GetComponent<DialogueConversant>();
+        Health.OnDeath.AddListener(HandleDeath);
+    }
+
+    private void HandleDeath() {
+        Health.Heal(Health.MaxHealth);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
 

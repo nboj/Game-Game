@@ -9,7 +9,10 @@ public class Enemy : AggressiveCreature {
     private Player player;
     private Vector2 startPos;
 
-    public EnemyState CurrentState => currentState;
+    public EnemyState CurrentState {
+        get => currentState;
+        set => currentState = value;
+    }
     public Vector2 StartPos => startPos;
     public override void Awake() {
         base.Awake(); 

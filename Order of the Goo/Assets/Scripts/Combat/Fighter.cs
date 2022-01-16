@@ -10,8 +10,8 @@ public delegate void OnHit(GameObject go);
 public class Fighter : MonoBehaviour {
     [SerializeField] private GameObject damageText;
     [SerializeField] private Vector3 weaponOffeset;  
-    public event OnHit OnHit; 
-    private HybridAnimancerComponent animancer; 
+    public event OnHit OnHit;
+    private Animator animator;
 #if UNITY_EDITOR
     [SerializeField] float weaponWidth;
     [SerializeField] float weaponLength;
@@ -19,7 +19,7 @@ public class Fighter : MonoBehaviour {
 
     private void Start() {  
         OnHit += HitController;
-        animancer = transform.GetComponentInChildren<HybridAnimancerComponent>(); 
+        animator = GetComponentInChildren<Animator>();
     }
 
     public void InvokeOnHit(GameObject go) {
@@ -60,8 +60,8 @@ public class Fighter : MonoBehaviour {
 
     public void FireMelee(Vector2 target, MeleeWeapon_SO weapon) {
         float angle = GetLookatAngle(target);
-        var dir = (target - (Vector2)transform.position).normalized; 
-        animancer.Play(weapon.MeleeTransition);
+        var dir = (target - (Vector2)transform.position).normalized;
+        animator.runtimeAnimatorController = weapon.OverrideAnimator;
         if (weapon.HasSplashDamage) {
             Collider2D[] hitColliders = Physics2D.OverlapBoxAll(transform.position + new Vector3(weapon.WeaponRange / 2f, 0f), new Vector2(weapon.WeaponLength, weapon.WeaponWidth), angle);
             foreach (var collider in hitColliders) {  

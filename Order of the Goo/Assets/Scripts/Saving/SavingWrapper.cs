@@ -26,6 +26,8 @@ namespace RPG.Saving {
                 Save();
             } else if (Keyboard.current.lKey.wasReleasedThisFrame) {
                 Load();
+            } else if (Keyboard.current.deleteKey.wasReleasedThisFrame) {
+                savingSystem.Delete(saveFileName);
             }
         }
     }

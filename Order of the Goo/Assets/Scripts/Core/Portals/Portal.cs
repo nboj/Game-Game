@@ -2,11 +2,13 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using RPG.Saving;
+using UnityEngine.Events;
 
 public class Portal : MonoBehaviour, IFHandler {
     [SerializeField] private string sceneToLoad;
     [SerializeField] private PortalID portalID;
     [SerializeField] private Transform spawnpoint;
+    [SerializeField] private UnityEvent onEnter;
 
     public PortalID PID {
         get => portalID;
@@ -30,7 +32,8 @@ public class Portal : MonoBehaviour, IFHandler {
     protected virtual void OnTriggerExit2D(Collider2D other) {
     }
 
-    protected IEnumerator Transition() { 
+    protected IEnumerator Transition() {
+        onEnter.Invoke();
         DontDestroyOnLoad(gameObject);
         var savingSystem = FindObjectOfType<SavingSystem>();
         savingSystem.Save("Save");
