@@ -3,7 +3,7 @@
 
 # How to play
 ### Please download this git repository, open the build folder, and run the executable to play the game
-### To view the source files and scripts, open the "Order of the Goo" folder, open the "Assets" folder, then open the "Scripts" Folder. 
+### To view the source files and scripts, open the "Order of the Goo" folder, open the "Assets" folder, then open the "Scripts" Folder. All of the scripts are sorted into categories that are relevent to the scripts. Everything in this game was coded in c#.
 
 ### If you run into any issues my contacts are:
 ### Email: christian.auman@outlook.com
@@ -15,7 +15,7 @@
 ##### - Download and install the newest Unity Hub
 ##### - Make sure that you have Unity version 2021.2.0f1 installed
 ##### - From the Unity Hub, click on the projects panel. This should be located on the bottom left of your screen
-##### - Click open and select the "OrderOfTheGoo" folder from this git repository that you installed
+##### - Click open and select the "Order of the Goo" folder from this git repository that you installed
 ##### - After Unity is open, find the Project folder tab where all the project files are located
 ##### - If you cannot find this, look at the top and find the "Window" dropdown, go to "Layouts", and click on "Reset All Layouts". This will reset all Unity layouts to Unity's default layout. Then the Project panel should be located in the bottom left of your screen.
 ##### - After you found the Project panel, locate the "Scenes" folder, click the dropdown arrow, and double click on the "Beginning Scene" (NOT "Beginning Scene 1")
