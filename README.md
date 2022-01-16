@@ -47,7 +47,7 @@
 
 ## Credits
 ### Christian Auman
-#### - Game Developer
+#### - Game Developer/Programmer
 ### Preston Kruty
 #### - Artist
 ### Jack Shuble
