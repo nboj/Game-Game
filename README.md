@@ -43,6 +43,7 @@
 
 ## Other Information
 ### The game has six total areas that you can visit. The final area is a boss fight and once you reach that area, the game is over.
+### Due to the time constraints we had, we were unable to fully finish the game developement. Please take a look at all of the custom scripts that were made because that's what most of the time went into.
 
 ## Credits
 ### Christian Auman
