@@ -27,8 +27,8 @@ MonoBehaviour:
   enemySpeed: 10
   repelDistance: 0.5
   enemySprite: {fileID: 0}
-  chargeSpeed: 20
+  chargeSpeed: 30
   chargeDelay: 1
-  slimeLauncherDelay: 1
+  slimeLauncherDelay: 0.7
   slimeStrikeDelay: 1
   swingDelay: 1

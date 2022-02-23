@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -16122,16 +16122,16 @@ TextureImporter:
       outside_520: -1378467380
       outside_118: 293521848
       outside_125: -619963787
-      outside_694: 1539852913
-      outside_302: -1487028756
-      outside_494: 1564828668
       outside_462: -1968377195
+      outside_302: -1487028756
+      outside_326: 816826600
+      outside_694: 1539852913
       outside_217: 450243502
       outside_4: -140263202
-      outside_326: 816826600
       outside_367: -212505411
-      outside_276: -2055077457
+      outside_494: 1564828668
       outside_524: 809514956
+      outside_276: -2055077457
       outside_353: -934162156
       outside_347: 389337833
       outside_736: 1687953939
@@ -16171,8 +16171,8 @@ TextureImporter:
       outside_67: -242686033
       outside_99: -479758672
       outside_597: 670799789
-      outside_244: -1953308739
       outside_550: -266347060
+      outside_244: -1953308739
       outside_691: -2008433485
       outside_622: 229323031
       outside_537: 592884237
@@ -16386,8 +16386,8 @@ TextureImporter:
       outside_756: -1829515926
       outside_44: -2023623110
       outside_580: 2028559416
-      outside_199: -478383164
       outside_746: -237229419
+      outside_199: -478383164
       outside_255: 530176099
       outside_535: -776863968
       outside_155: -1737156482

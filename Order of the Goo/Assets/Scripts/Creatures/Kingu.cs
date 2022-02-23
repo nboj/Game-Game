@@ -21,6 +21,7 @@ public class Kingu : Enemy {
 
     public override void Start() {
         base.Start();
+        CurrentState = EnemyState.ATTACK;
         RigidbodyMovement.Stop();
         Health.OnHit.AddListener(ProcessHealth);
     }

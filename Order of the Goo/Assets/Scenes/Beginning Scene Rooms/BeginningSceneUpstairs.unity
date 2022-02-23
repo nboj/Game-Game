@@ -1450,6 +1450,34 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1319112956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319112931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82424610b00726247b5d3330036e98ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: EnablePlayer
+  onTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 197982176}
+        m_TargetAssemblyTypeName: SceneControl, Assembly-CSharp
+        m_MethodName: EnablePlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1319116651
 GameObject:
   m_ObjectHideFlags: 0
@@ -2439,11 +2467,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2079664891541083458, guid: 67ef0ac4e64316d4093c70dcf804ddff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.5625
+      value: 0.43749988
       objectReference: {fileID: 0}
     - target: {fileID: 2079664891541083458, guid: 67ef0ac4e64316d4093c70dcf804ddff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.25
+      value: -9.9375
       objectReference: {fileID: 0}
     - target: {fileID: 2079664891541083458, guid: 67ef0ac4e64316d4093c70dcf804ddff, type: 3}
       propertyPath: m_LocalPosition.z

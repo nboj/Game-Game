@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -5416,36 +5416,36 @@ TextureImporter:
       world_201: -2109718008
       world_107: -109135230
       world_70: 1584098613
-      world_10: 477644291
-      world_109: 1798329957
       world_78: 67552544
-      world_15: -1289752006
       world_122: -530770606
-      world_105: 1300626912
-      world_126: 697374026
-      world_112: -1722264781
-      world_131: -1582396953
-      world_0: -1307821816
-      world_6: 53069541
-      world_155: -1450542900
       world_180: 844913868
-      world_2: -1918509224
+      world_10: 477644291
+      world_112: -1722264781
+      world_105: 1300626912
+      world_109: 1798329957
+      world_126: 697374026
+      world_131: -1582396953
       world_108: -614884395
+      world_0: -1307821816
+      world_155: -1450542900
+      world_6: 53069541
+      world_2: -1918509224
       world_200: -1736055959
       world_1: 350820541
       world_53: 2132779371
+      world_15: -1289752006
       world_56: 1127350361
       world_88: 1901211588
-      world_215: 1694013046
       world_79: -1662490609
       world_145: 1101139843
       world_147: -1741516455
       world_250: 676295438
+      world_215: 1694013046
       world_174: 900487958
       world_63: 1759458945
-      world_148: -1470769763
       world_198: -608298337
       world_243: -2029385791
+      world_148: -1470769763
       world_192: 2089048797
       world_48: -567211181
       world_77: 545127090

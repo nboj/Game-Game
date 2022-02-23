@@ -11,8 +11,7 @@ public class RigidbodyMovement : Movement {
 
     public void FixedUpdate() {
         if (canControl) {
-            rigidbody.MovePosition(rigidbody.position + Direction * MovementSpeed * Time.deltaTime);
-            rigidbody.velocity = Vector2.zero;
+            TranslateUsingPhysics(Direction * MovementSpeed);
         }  
     } 
 
@@ -27,5 +26,17 @@ public class RigidbodyMovement : Movement {
     internal void SetDirectionAndAnimation(Vector2 dir) {
         SetDirection(dir);
         SetAnimator(dir);
+    }
+
+    public void TranslateUsingPhysics(Vector2 positionTranslation) {
+        rigidbody.MovePosition(rigidbody.position + positionTranslation * Time.deltaTime);
+    }
+
+    public void TranslateUsingPhysicsRaw(Vector2 positionTranslation) {
+        rigidbody.MovePosition(positionTranslation);
+    }
+
+    public void AddForce(Vector2 force) {
+        rigidbody.AddForce(force);
     }
 }

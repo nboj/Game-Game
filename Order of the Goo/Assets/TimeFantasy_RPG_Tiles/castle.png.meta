@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -4132,13 +4132,13 @@ TextureImporter:
       castle_45: -1681454791
       castle_73: -562929864
       castle_38: 1579694286
-      castle_64: 561018533
+      castle_154: -1043657647
       castle_103: 1051720094
+      castle_64: 561018533
       castle_7: 957733176
       castle_52: -1835220156
       castle_106: 1333003944
       castle_55: -1150287846
-      castle_154: -1043657647
       castle_147: -2087796580
       castle_123: 1391420931
       castle_56: 345812766
@@ -4195,8 +4195,8 @@ TextureImporter:
       castle_163: -1606732445
       castle_93: 705238193
       castle_53: 1549927642
-      castle_36: -515017997
       castle_136: 915763352
+      castle_36: -515017997
       castle_72: 97054969
       castle_104: 150588577
       castle_105: -1925613271

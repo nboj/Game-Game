@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eceeb59a892d074db28203df8e4cd3a, type: 3}
+  m_Name: Player Fists
+  m_EditorClassIdentifier: 
+  _Up: {fileID: 7400000, guid: 1c69219c21f02914786ca2adebf38977, type: 2}
+  _Right: {fileID: 7400000, guid: 2790c7bf29537d746b1e624e396d814b, type: 2}
+  _Down: {fileID: 7400000, guid: 67c8a4a949691b343b3bc462cdb380dd, type: 2}
+  _Left: {fileID: 7400000, guid: 420c9114b8999174dbc106a11cb20b46, type: 2}

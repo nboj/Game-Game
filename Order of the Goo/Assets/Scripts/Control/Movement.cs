@@ -3,6 +3,7 @@ using UnityEngine;
 public class Movement {
     protected bool canControl = true; 
     private float movementSpeed;
+    private float startMovementSpeed;
     private Vector2 direction;
     private Animator animator;
     private MovementState currentMovementState;
@@ -19,6 +20,16 @@ public class Movement {
             canControl = value;
         }
     }
+    public enum MovementState {
+        UP,
+        RIGHT,
+        LEFT,
+        DOWN
+    }
+
+    public MovementState CurrentMovementState {
+        get => currentMovementState;
+    }
 
     public float MovementSpeed {
         get => movementSpeed;
@@ -29,19 +40,18 @@ public class Movement {
         get => direction;
         set { direction = value; }
     }
-    
-    private enum MovementState {
-        UP,
-        RIGHT,
-        LEFT,
-        DOWN
+
+    public float StartMovementSpeed { 
+        get => startMovementSpeed;
     }
+    
 
     public Movement(float speed, Animator animator) {
         this.animator = animator;
         movementSpeed = speed;
         direction = Vector2.zero;
         currentMovementState = MovementState.DOWN;
+        startMovementSpeed = speed;
     } 
     
     public void SetDirection(Vector2 direction) {

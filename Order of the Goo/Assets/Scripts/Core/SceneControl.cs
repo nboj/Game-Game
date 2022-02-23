@@ -24,7 +24,7 @@ public class SceneControl : MonoBehaviour
     }
 
     public void EnablePlayer() {
-        player.Enable();
+        player.Enable(true);
     }
 
     public void DisablePlayer() {

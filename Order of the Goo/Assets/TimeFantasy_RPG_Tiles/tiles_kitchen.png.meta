@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -642,7 +642,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tiles_kitchen_22: -716091634
+      tiles_kitchen_19: 1565146741
       tiles_kitchen_15: 199999927
       tiles_kitchen_16: -193276525
       tiles_kitchen_2: -601390469
@@ -665,7 +665,7 @@ TextureImporter:
       tiles_kitchen_5: -769717128
       tiles_kitchen_21: -321365840
       tiles_kitchen_6: 244624083
-      tiles_kitchen_19: 1565146741
+      tiles_kitchen_22: -716091634
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
