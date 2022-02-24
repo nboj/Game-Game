@@ -1,0 +1,2808 @@
+fileFormatVersion: 2
+guid: ebaf0cdffd4847242bc170d98fb866bf
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 30
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kingu prite sheet psd_0
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 2497
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9257278067337b048bd9463b4979a9e9
+      internalID: 1508109735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2497
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92b60706adf66fd4e9af87a5c08e48c0
+      internalID: 1190833653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_2
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 2497
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13a86913403386249aa9c913a712afb1
+      internalID: -1818787226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2497
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e8f3c35e18aaf4a9e81aaf8e8bb949
+      internalID: 93602977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_4
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 2497
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd1190631eecdc4396120594db68d5f
+      internalID: 497560049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_5
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 2497
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6fe785ca7dbd6845b4533a7a8e4e00f
+      internalID: -478844737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 2305
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b5d8e89dca444498b46ccd82e674c3
+      internalID: -104951087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2305
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f7c1b7cbec43b74ea2615bd45569191
+      internalID: -1650017502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_8
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 2305
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc2045f485fcdb244ab8302ebe3ddac7
+      internalID: -1269936965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_9
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2305
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb1505dd5840a8a45bca3ea742b2fb8d
+      internalID: -2131920018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_10
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 2305
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b306614e129511d48bcfbe9e93cabb89
+      internalID: 145089119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2305
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c9adbf1d10b5a41b106ff93029ae23
+      internalID: 1458169713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_12
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 2305
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1302e0c102b5f1944b042e214e89f5f5
+      internalID: 837745357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_13
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 2305
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc0565c4ff5594499c8608c335483de
+      internalID: 597348508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_14
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 2305
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cb9f2b99d0926e459bc62a58f2a85e5
+      internalID: -2103825324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 2113
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f88014331139344888a8d10a5b4698f
+      internalID: 1120859548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2113
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfbccac9342c5c04ca6e69cc302b2367
+      internalID: -1488195867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_17
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 2113
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0644bb40366e6c84a8c6ab5a51742fe6
+      internalID: -1400638884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_18
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2113
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e4ef166935ac64cba3a46378268dc7
+      internalID: 632998703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_19
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 2113
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1bd07a0f56fe1a46a5c0d3b1d7cabb1
+      internalID: 988446614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_20
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2113
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1643864c64e566342a189b1fa43ccb30
+      internalID: 2141502563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_21
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 2113
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 521a2f9ae1ea55449ab8e749dc156e0c
+      internalID: -1670342817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_22
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 2113
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b8b5da3341a744489aefbf52d62ada5
+      internalID: -797011567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_23
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 2113
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d30bc49b239ff04d9c06e55c88e4d3f
+      internalID: -1420044861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_24
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1921
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e2f06086741d2943bf94363bb30faf1
+      internalID: -782037006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_25
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1921
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8dea50c0f323d84998406705a5da8ae
+      internalID: 1801765267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_26
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1921
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7021044acc740954198932ff583645bc
+      internalID: -1383829385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_27
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1921
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c67843d97975549ada6683339cef61
+      internalID: -227364065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_28
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1921
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5301a592a0ecba049b21dda99a030ee7
+      internalID: -1411185497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_29
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1921
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfdc0b11e5fed39468744e5837ff95ec
+      internalID: -782269366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_30
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1921
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 963e138ac3afebc4b8c18295f8d17686
+      internalID: -1368622647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_31
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1921
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90d5510ef7ce0914e9795f775d51fc87
+      internalID: 2079097145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_32
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1921
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6665c165c09fa97459857eee536459e9
+      internalID: -1828923434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_33
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1921
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60ca05b9b84514443afc5e4f78629563
+      internalID: 1525065533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_34
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1729
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d54d221a018c4ad48afd0152e1191bd7
+      internalID: 677532551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_35
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1729
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4426a28ac89d6c248a9ace1d4e2de78b
+      internalID: 1843706772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_36
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1729
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fefdb3590301dc4a83362189d20723a
+      internalID: -1975807438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_37
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1729
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a686fccc4e1e9f54cbb2c1835c2aa6e8
+      internalID: -527547121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_38
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1729
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbee76521b9cd2243a4b14877dbbcec3
+      internalID: -2113646728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_39
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1729
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79aefcfaf1894e74a9d7279ae9218fff
+      internalID: 1545578424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_40
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1537
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7298f515f5c4e634eb2cfa51fe23a8d0
+      internalID: -1125909363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_41
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1537
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce7b276b0bf161842b3e6a47de1fd4ce
+      internalID: 725405819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_42
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1537
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b26080031ff4a84ebcb4378981c2d39
+      internalID: 647663115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_43
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1537
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6774fb82d9a4ea840aac235b17680c8f
+      internalID: -1172684790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_44
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1537
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b325c90444bad842a22258f6e1cf12e
+      internalID: 1827658422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_45
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1537
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc225062ddbe734c9105d29f4fe1c75
+      internalID: -1060165316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_46
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1537
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 312255155b7cd764d9700ccb7256fec3
+      internalID: 279824444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_47
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1537
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b38b4ddc8fe4814b8188bd48c11e02a
+      internalID: -723154861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_48
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 1537
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b1bccb1e6d6af45820e7e7453ff094
+      internalID: 429716277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_49
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1345
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e447a42229eb8834dbc2bbecd2ef572e
+      internalID: -817195720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_50
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1345
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 402de77ea55e6a448bb4f0f4f8dfb9fe
+      internalID: 1210010329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_51
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1345
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94ce9afa49c60b940bb962c4fb25a586
+      internalID: 465205062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_52
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1345
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e730c58bcd4a7a4b95c89203dead6c1
+      internalID: -1479882273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_53
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1345
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 732ae9fb16fc5dc4a88f8ca7b5515440
+      internalID: -954549037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_54
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1345
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba02a7c162b17a41b261b312313bc4c
+      internalID: -58319114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_55
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1345
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 092722c641d164044b66d98779bd03db
+      internalID: 1064715095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_56
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1345
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d97ce98a14703bf409f7638ac52d9a6b
+      internalID: 1504723444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_57
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 1345
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061f18481b5fd60499982d4181dd6365
+      internalID: 278962988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_58
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1153
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 049f15341b4328641a7e1e786c603a11
+      internalID: 754245546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_59
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1153
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34b952457a9537f43a4cca2241fbfb27
+      internalID: -1996139245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_60
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1153
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3556ebdc1794b38458d9aeba1b52c0f0
+      internalID: -847667138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_61
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1153
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d6cb6c6070e9b4786c327288038ea6
+      internalID: -688667176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_62
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1153
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b4233e1339ee744a8d091168d45d213
+      internalID: -988501604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_63
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1153
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2c6ff87a18c9914cb8e3a12c0bd05e7
+      internalID: -1358282621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_64
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1153
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24477534b205956448886c3856532c69
+      internalID: 1481680512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_65
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1153
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ada1a00e84491f94cbc713f8d7b04c4b
+      internalID: 1520347435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_66
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1153
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc7ccde22b816ec47b5fcac391181baf
+      internalID: -227181425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_67
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1153
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30e9bb7fa3104854b8d19fdfd2635b43
+      internalID: -150619033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_68
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 961
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a48fd524a3a3b458d19b6f20f1026d
+      internalID: 214575681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_69
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 961
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e7d291fd282cd347a839421c13cbfd5
+      internalID: -500343854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_70
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 961
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9047d1b8d49b13c4b95fa4a4a12dc9e6
+      internalID: -1131524995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_71
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 961
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3428dcafb35e9c4ea42fa0e19106bc0
+      internalID: 14697991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_72
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 961
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d78fce28a7b214282a87f61e3fa15d
+      internalID: -1267395247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_73
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 961
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e02b73fc5d32ff4989b227b21624b1f
+      internalID: 1349148243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_74
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 769
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c40058bba92ee54b93c5ecda6d57175
+      internalID: -1904008956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_75
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 769
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7873ded98e9046548844ab2c083e2478
+      internalID: -2106439277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_76
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 769
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3858410b4ac6a754390bef74ee86696f
+      internalID: -1275552054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_77
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 769
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 732431c4be8d18e46a366e9ba1ae70e4
+      internalID: -1652242988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_78
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 769
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2770c627b48a3254cb6faa73533e1028
+      internalID: -944647096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_79
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 769
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d924c3c52fb3c3448b2e54a4c550d1be
+      internalID: 1884661015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_80
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 769
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e0924a5d524004394d5ca3ff401315
+      internalID: 783120773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_81
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 769
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ae3e40c46ed304fa2d4caae559de8c
+      internalID: 25771513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_82
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 769
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58d1b394f9b13604492275739b23d4c8
+      internalID: -1141538541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_83
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 577
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 868493d7a66ee194f90423288892ae14
+      internalID: -844919319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_84
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 577
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66023d631dd94bb44a0f7e74b461df86
+      internalID: -1745776352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_85
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 577
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2459474c49c4db844a25b727bed475c1
+      internalID: -909439935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_86
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 577
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 106f590b3fca9eb4d99b29bb7f0cb429
+      internalID: -1259164472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_87
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 577
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e800d63f8f001428c9d142b3914c20
+      internalID: -1923144318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_88
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 577
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f971e616640f7eb49bdafbe5cd13346a
+      internalID: -1600186348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_89
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 577
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f40f008fa36eb34683c5821b0191ebe
+      internalID: 366165921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_90
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 577
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27184e7920e4f7044b0e5e10613bf3eb
+      internalID: -662976006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_91
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 577
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc0cc11c45ee91645a4b7f9a66793aef
+      internalID: 2046737642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_92
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 577
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02fd01a1c3ea99746b830cd71852da69
+      internalID: 2062655251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_93
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 385
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16323891fa0b0694b8f8db06a1789b4c
+      internalID: -71341945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_94
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 385
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37f8cfa5a5059e54b879f875bbe1557c
+      internalID: 815229825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_95
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 385
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51503816f5d88c4418d656f91f00e282
+      internalID: -1907728902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_96
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 385
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 425a06f88cc569c409c4ab424e009af1
+      internalID: -190268120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_97
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 385
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05b35201617e2604a872c269858c6b66
+      internalID: 152015276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_98
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 385
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38de7e889a1efe5428ea4cbd07a992c5
+      internalID: -532298668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_99
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 385
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 232a771e27815a742903bdd656b11bd6
+      internalID: -75805209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_100
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 385
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6087fdc4c2dfd56478a2043416e4c277
+      internalID: -2040047432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_101
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 385
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2965ab3ab7c5ae749ab2e9dece125014
+      internalID: -1264983416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_102
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 385
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc477b7fc537ab54da528a45eb5733b0
+      internalID: 1506149367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_103
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 385
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5344c7166ea18e469e4ad3796113d54
+      internalID: -444074067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_104
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 385
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ea685277208d264ab4198af2dd2abc2
+      internalID: -1787260171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_105
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 193
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d1070d91c5d6774fa8c9be234dad985
+      internalID: 2017591509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_106
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 193
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d69728e88e3cb44a3dd2dea1bf2dcb
+      internalID: 2028808522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_107
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 193
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 084a62452c13f9a4ab774b4e4ea458e5
+      internalID: 872095620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_108
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 193
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7302b71c68a9144da5c078253e10e4a
+      internalID: -1381645849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_109
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 193
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e27e8b3e18c62e04c8da5e3fde8cf942
+      internalID: 1155536086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_110
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 193
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99121c1fb27206a41a6be4f83934ee3e
+      internalID: -545782312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_111
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f7711d9719eda942839fdeed0b9de34
+      internalID: -87456485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_112
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd9db21b7a60f5144a44ef36e2f28bf2
+      internalID: 1029690516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_113
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8fb4f0d2229b5d469c9c45c364c9a31
+      internalID: 1720771804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_114
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6853227ded5343047a5de96b466abc57
+      internalID: -2092170513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_115
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a5496a860d576a48a19e5f6bac7eafe
+      internalID: 1382615725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_116
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea990c676379ba4895177893988a329
+      internalID: 1288265844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_117
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5459c42d8485fe4fb2321b95482307f
+      internalID: 539076890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_118
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d260e5c1af4b7674684f3e4580470b29
+      internalID: 1684828885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_119
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b888974a6515a68449cd5b66e969a672
+      internalID: 1713314499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kingu prite sheet psd_120
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 1
+        width: 96
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ed7802d79ec54b4e95e7e705c20a0c5
+      internalID: 564093550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      kingu prite sheet psd_74: -1904008956
+      kingu prite sheet psd_112: 1029690516
+      kingu prite sheet psd_41: 725405819
+      kingu prite sheet psd_21: -1670342817
+      kingu prite sheet psd_115: 1382615725
+      kingu prite sheet psd_22: -797011567
+      kingu prite sheet psd_35: 1843706772
+      kingu prite sheet psd_66: -227181425
+      kingu prite sheet psd_19: 988446614
+      kingu prite sheet psd_100: -2040047432
+      kingu prite sheet psd_90: -662976006
+      kingu prite sheet psd_24: -782037006
+      kingu prite sheet psd_117: 539076890
+      kingu prite sheet psd_13: 597348508
+      kingu prite sheet psd_45: -1060165316
+      kingu prite sheet psd_109: 1155536086
+      kingu prite sheet psd_49: -817195720
+      kingu prite sheet psd_88: -1600186348
+      kingu prite sheet psd_106: 2028808522
+      kingu prite sheet psd_5: -478844737
+      kingu prite sheet psd_56: 1504723444
+      kingu prite sheet psd_58: 754245546
+      kingu prite sheet psd_86: -1259164472
+      kingu prite sheet psd_82: -1141538541
+      kingu prite sheet psd_16: -1488195867
+      kingu prite sheet psd_23: -1420044861
+      kingu prite sheet psd_60: -847667138
+      kingu prite sheet psd_101: -1264983416
+      kingu prite sheet psd_105: 2017591509
+      kingu prite sheet psd_94: 815229825
+      kingu prite sheet psd_98: -532298668
+      kingu prite sheet psd_64: 1481680512
+      kingu prite sheet psd_32: -1828923434
+      kingu prite sheet psd_79: 1884661015
+      kingu prite sheet psd_39: 1545578424
+      kingu prite sheet psd_102: 1506149367
+      kingu prite sheet psd_116: 1288265844
+      kingu prite sheet psd_7: -1650017502
+      kingu prite sheet psd_15: 1120859548
+      kingu prite sheet psd_14: -2103825324
+      kingu prite sheet psd_104: -1787260171
+      kingu prite sheet psd_17: -1400638884
+      kingu prite sheet psd_78: -944647096
+      kingu prite sheet psd_25: 1801765267
+      kingu prite sheet psd_6: -104951087
+      kingu prite sheet psd_89: 366165921
+      kingu prite sheet psd_30: -1368622647
+      kingu prite sheet psd_12: 837745357
+      kingu prite sheet psd_42: 647663115
+      kingu prite sheet psd_46: 279824444
+      kingu prite sheet psd_97: 152015276
+      kingu prite sheet psd_52: -1479882273
+      kingu prite sheet psd_70: -1131524995
+      kingu prite sheet psd_9: -2131920018
+      kingu prite sheet psd_34: 677532551
+      kingu prite sheet psd_96: -190268120
+      kingu prite sheet psd_67: -150619033
+      kingu prite sheet psd_3: 93602977
+      kingu prite sheet psd_75: -2106439277
+      kingu prite sheet psd_77: -1652242988
+      kingu prite sheet psd_18: 632998703
+      kingu prite sheet psd_11: 1458169713
+      kingu prite sheet psd_2: -1818787226
+      kingu prite sheet psd_59: -1996139245
+      kingu prite sheet psd_71: 14697991
+      kingu prite sheet psd_76: -1275552054
+      kingu prite sheet psd_48: 429716277
+      kingu prite sheet psd_36: -1975807438
+      kingu prite sheet psd_44: 1827658422
+      kingu prite sheet psd_83: -844919319
+      kingu prite sheet psd_65: 1520347435
+      kingu prite sheet psd_69: -500343854
+      kingu prite sheet psd_0: 1508109735
+      kingu prite sheet psd_20: 2141502563
+      kingu prite sheet psd_72: -1267395247
+      kingu prite sheet psd_27: -227364065
+      kingu prite sheet psd_80: 783120773
+      kingu prite sheet psd_61: -688667176
+      kingu prite sheet psd_1: 1190833653
+      kingu prite sheet psd_118: 1684828885
+      kingu prite sheet psd_26: -1383829385
+      kingu prite sheet psd_107: 872095620
+      kingu prite sheet psd_113: 1720771804
+      kingu prite sheet psd_31: 2079097145
+      kingu prite sheet psd_120: 564093550
+      kingu prite sheet psd_73: 1349148243
+      kingu prite sheet psd_53: -954549037
+      kingu prite sheet psd_57: 278962988
+      kingu prite sheet psd_85: -909439935
+      kingu prite sheet psd_10: 145089119
+      kingu prite sheet psd_47: -723154861
+      kingu prite sheet psd_119: 1713314499
+      kingu prite sheet psd_33: 1525065533
+      kingu prite sheet psd_87: -1923144318
+      kingu prite sheet psd_8: -1269936965
+      kingu prite sheet psd_92: 2062655251
+      kingu prite sheet psd_38: -2113646728
+      kingu prite sheet psd_29: -782269366
+      kingu prite sheet psd_50: 1210010329
+      kingu prite sheet psd_55: 1064715095
+      kingu prite sheet psd_84: -1745776352
+      kingu prite sheet psd_37: -527547121
+      kingu prite sheet psd_108: -1381645849
+      kingu prite sheet psd_51: 465205062
+      kingu prite sheet psd_28: -1411185497
+      kingu prite sheet psd_40: -1125909363
+      kingu prite sheet psd_62: -988501604
+      kingu prite sheet psd_103: -444074067
+      kingu prite sheet psd_54: -58319114
+      kingu prite sheet psd_114: -2092170513
+      kingu prite sheet psd_63: -1358282621
+      kingu prite sheet psd_111: -87456485
+      kingu prite sheet psd_68: 214575681
+      kingu prite sheet psd_81: 25771513
+      kingu prite sheet psd_4: 497560049
+      kingu prite sheet psd_43: -1172684790
+      kingu prite sheet psd_110: -545782312
+      kingu prite sheet psd_91: 2046737642
+      kingu prite sheet psd_93: -71341945
+      kingu prite sheet psd_99: -75805209
+      kingu prite sheet psd_95: -1907728902
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
